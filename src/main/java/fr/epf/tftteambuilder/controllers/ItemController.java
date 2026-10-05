@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @CrossOrigin
-@RequestMapping("items")
+@RequestMapping("item")
 @RestController
 public class ItemController {
     private final ItemService itemService;
 
-    
+
 }
