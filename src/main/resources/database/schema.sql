@@ -27,9 +27,10 @@ create table unit (
 );
 
 create table unit_trait (
+    id serial primary key,
      unit_id integer not null,
      trait_id varchar(255) not null,
-     constraint pk_unit_trait primary key (unit_id, trait_id),
+     constraint pk_unit_trait unique (unit_id, trait_id),
      constraint fk_unit_trait_unit
          foreign key (unit_id) references unit(id),
      constraint fk_unit_trait_trait
