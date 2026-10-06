@@ -24,7 +24,7 @@ public class UnitController {
     }
 
     @GetMapping("/{id}")
-    public Unit getUnitById(@PathVariable @RequestParam String id) {
+    public Unit getUnitById(@PathVariable String id) {
         return unitRepository.findById(id).orElse(null);
     }
 }
