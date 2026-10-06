@@ -21,7 +21,7 @@ create table trait (
 );
 
 create table unit (
-   id serial primary key,
+   id varchar(255) primary key,
    name varchar(255) not null,
    image_link varchar(255)
 );
