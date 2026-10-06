@@ -1,10 +1,13 @@
 package fr.epf.tftteambuilder.controllers;
 
+import fr.epf.tftteambuilder.models.Trait;
 import fr.epf.tftteambuilder.repositories.TraitRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RequestMapping("trait")
 @RestController
@@ -14,12 +17,12 @@ public class TraitController {
     public TraitController(TraitRepository TraitRepository) { this.TraitRepository = TraitRepository; }
 
     @GetMapping("/all")
-    public Object getAllTraits() {
+    public List<Trait> getAllTraits() {
         return TraitRepository.findAll();
     }
 
     @GetMapping("/{id}")
-    public Object getTraitById(@PathVariable String id) {
-        return TraitRepository.findById(id);
+    public Trait getTraitById(@PathVariable String id) {
+        return TraitRepository.findById(id).orElse(null);
     }
 }
