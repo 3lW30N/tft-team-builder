@@ -1,3 +1,14 @@
 spring:
   application:
     name: tft-team-builder
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/database
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

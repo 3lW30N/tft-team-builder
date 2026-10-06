@@ -1,4 +1,4 @@
-package fr.epf.tftteambuilder.repositories;
+package fr.epf.tftteambuilder.models;
 
 import jakarta.persistence.*;
 

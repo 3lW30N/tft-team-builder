@@ -1,5 +1,6 @@
-package fr.epf.tftteambuilder.repositories;
+package fr.epf.tftteambuilder.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -17,10 +18,12 @@ public class Item {
     private String imageLink;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
     @JoinColumn(name = "component1_id")
     private Item component1;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
     @JoinColumn(name = "component2_id")
     private Item component2;
 
