@@ -1,7 +1,6 @@
 package fr.epf.tftteambuilder.controllers;
 
 import fr.epf.tftteambuilder.models.Item;
-import fr.epf.tftteambuilder.services.ItemService;
 import fr.epf.tftteambuilder.repositories.ItemRepository;
 import org.springframework.web.bind.annotation.*;
 
