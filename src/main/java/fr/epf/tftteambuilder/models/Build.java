@@ -14,6 +14,10 @@ public class Build {
     private Double avgPlacement;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @Column(name="unit_id")
+    private Unit unit;
+
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item1_id")
     private Item item1;
 
