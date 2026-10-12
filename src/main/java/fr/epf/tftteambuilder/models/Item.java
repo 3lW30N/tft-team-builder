@@ -66,5 +66,9 @@ public class Item {
     public void setComponent2(Item component2) {
         this.component2 = component2;
     }
+    public void equals(Item component1, Item component2) {
+        this.component1 = component1;
+        this.component2 = component2;
+    }
 
 }
