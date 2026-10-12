@@ -4,10 +4,7 @@ import fr.epf.tftteambuilder.models.Item;
 import fr.epf.tftteambuilder.repositories.ItemRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class ItemService {
@@ -59,10 +56,35 @@ public class ItemService {
 
     public List<Integer> similarityScore(
             List<List<Item>> craftCombinations,
-            List<List<Item>> compositionItems) {
+            List<List<Item>> compositionItems)
+    {
+
+        Map<String, Integer> dictionary = new HashMap<String, Integer>();
+        // initialisation de la hashmap :
+        for (List<Item> items : craftCombinations) {
+            for (Item item : items) {
+                dictionary.put(item.getName(), 0);
+            }
+        }
 
         for (int i = 0; i < craftCombinations.size(); i++) {
+            for (int k = 0 ; k < compositionItems.size() ; k++)
+                for (int l = 0 ; l < compositionItems.get(i).size() ; l++)
+                    for ()
 
+                List<Item> compoRn = new ArrayList<>(compositionItems); // un simple copy de la compo actuellement étudiée
+
+
+
+                    }
+
+                    }
+
+
+                }
+
+
+            }
         }
 
     }
