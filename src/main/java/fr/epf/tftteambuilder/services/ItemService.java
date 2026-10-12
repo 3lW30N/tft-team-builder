@@ -56,4 +56,15 @@ public class ItemService {
         }
     }
 
+
+    public List<Integer> similarityScore(
+            List<List<Item>> craftCombinations,
+            List<List<Item>> compositionItems) {
+
+        for (int i = 0; i < craftCombinations.size(); i++) {
+
+        }
+
+    }
+
 }
