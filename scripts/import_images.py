@@ -22,7 +22,7 @@ DB = dict(
 
 STATIC = PROJECT_ROOT / "src/main/resources/static"
 CHAMPION_JSON = STATIC / "img/champion/champion.json"
-ITEM_JSON = STATIC / "img/item/item.json"
+ITEM_JSON = STATIC / "img/item/item/item.json"
 
 # (dossier, préfixe des fichiers, chemin enregistré en base, mot d'emblème)
 ITEM_SOURCES = [
