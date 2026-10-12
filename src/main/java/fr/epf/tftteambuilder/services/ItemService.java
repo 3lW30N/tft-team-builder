@@ -52,41 +52,38 @@ public class ItemService {
             }
         }
     }
-
-
     public List<Integer> similarityScore(
             List<List<Item>> craftCombinations,
-            List<List<Item>> compositionItems)
+            List<Item> compositionItems)
     {
+        Map<String, Integer> dictionary = new HashMap<>();
 
-        Map<String, Integer> dictionary = new HashMap<String, Integer>();
-        // initialisation de la hashmap :
-        for (List<Item> items : craftCombinations) {
-            for (Item item : items) {
-                dictionary.put(item.getName(), 0);
-            }
+        // Quantité de chaque item recherché dans la composition.
+        for (Item item : compositionItems) {
+            String name = item.getName();
+            dictionary.put(name, dictionary.getOrDefault(name, 0) + 1);
         }
 
-        for (int i = 0; i < craftCombinations.size(); i++) {
-            for (int k = 0 ; k < compositionItems.size() ; k++)
-                for (int l = 0 ; l < compositionItems.get(i).size() ; l++)
-                    for ()
+        List<Integer> scores = new ArrayList<>();
 
-                List<Item> compoRn = new ArrayList<>(compositionItems); // un simple copy de la compo actuellement étudiée
+        for (List<Item> possibleItemCombinaison : craftCombinations) {
+            // Chaque combinaison dispose des mêmes quantités au départ.
+            Map<String, Integer> remainingItems = new HashMap<>(dictionary);
+            int score = 0;
 
+            for (Item item : possibleItemCombinaison) {
+                String name = item.getName();
+                int remaining = remainingItems.getOrDefault(name, 0);
 
-
-                    }
-
-                    }
-
-
+                if (remaining > 0) {
+                    remainingItems.put(name, remaining - 1);
+                    score++;
                 }
-
-
             }
+
+            scores.add(score);
         }
 
+        return scores;
     }
 
-}
