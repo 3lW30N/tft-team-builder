@@ -613,7 +613,7 @@
         "units": [
           "Ahri",
           "Morgana",
-          "Sentry",
+          "Pebbles",
           "Sett",
           "Karma18",
           "Krug18",
@@ -1044,7 +1044,7 @@
           "Diana",
           "Hecarim",
           "Morgana",
-          "Sentry",
+          "Pebbles",
           "Brambleback18",
           "Kog Maw18_AD",
           "Sentinel18",
@@ -3619,11 +3619,11 @@
       },
       {
         "cluster_id": "425024",
-        "name": "Riftbeast Sentry",
+        "name": "Riftbeast Pebbles",
         "units": [
           "Elder Dragon",
           "Gnar Small",
-          "Sentry",
+          "Pebbles",
           "Brambleback18",
           "Krug18",
           "Murkwolf18",
@@ -3631,7 +3631,7 @@
           "Taric18"
         ],
         "stars": [
-          "Sentry",
+          "Pebbles",
           "Scuttlecrab18",
           "Krug18",
           "Cinderling18",
@@ -3640,7 +3640,7 @@
         "stars_4": [],
         "builds": [
           {
-            "unit": "Sentry",
+            "unit": "Pebbles",
             "items": [
               "Hextech Gunblade",
               "Jeweled Gauntlet",
@@ -4454,7 +4454,7 @@
         "units": [
           "Hecarim",
           "Morgana",
-          "Sentry",
+          "Pebbles",
           "Sett",
           "Teemo",
           "Kog Maw18_AD",
@@ -5526,7 +5526,7 @@
         "name": "Invoker Nidalee18_AP",
         "units": [
           "Morgana",
-          "Sentry",
+          "Pebbles",
           "Kog Maw18_AD",
           "Nidalee18_AP",
           "Scuttlecrab18",
@@ -8057,7 +8057,7 @@
           "Kayle",
           "Leona",
           "Sejuani",
-          "Sentry",
+          "Pebbles",
           "Teemo",
           "Gromp18_AP",
           "Scuttlecrab18"
@@ -8067,7 +8067,7 @@
           "Teemo",
           "Scuttlecrab18",
           "Sejuani",
-          "Sentry",
+          "Pebbles",
           "Leona",
           "Kayle",
           "Akali_AD",
