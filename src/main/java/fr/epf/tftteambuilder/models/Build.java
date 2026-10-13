@@ -14,7 +14,7 @@ public class Build {
     private Double avgPlacement;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @Column(name="unit_id")
+    @JoinColumn(name="unit_id")
     private Unit unit;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -71,6 +71,10 @@ public class Build {
     public void setItem3(Item item3) {
         this.item3 = item3;
     }
+
+    public Unit getUnit() {return unit;}
+
+    public void setUnit(Unit unit) {this.unit = unit;}
 
     public Integer getStars() {
         return stars;

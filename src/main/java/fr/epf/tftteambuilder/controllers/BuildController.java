@@ -1,11 +1,10 @@
 package fr.epf.tftteambuilder.controllers;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import fr.epf.tftteambuilder.models.Build;
+import fr.epf.tftteambuilder.models.Unit;
 import fr.epf.tftteambuilder.repositories.BuildRepository;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,17 +18,19 @@ public class BuildController {
     public BuildController(BuildRepository buildRepository) { this.buildRepository = buildRepository; }
 
     @GetMapping("/all")
+    @JsonIgnore
     public List<Build> getAllBuilds() {
         return buildRepository.findAll();
     }
-    
-    @GetMapping("{unit_id}")
-    public Build getBuildByUnitId(@RequestParam Long unit_id) {
-        return buildRepository.findByUnitId(unit_id).orElse(null);
-    }
 
     @GetMapping("/{id}")
-    public Build getBuildById(@RequestParam Long id) {
+    public Build getBuildById(@PathVariable Long id) {
         return buildRepository.findById(id).orElse(null);
+    }
+
+    @GetMapping("/{buildId}/unit")
+    public Unit getUnitByBuildId(@PathVariable String buildId) {
+        Build build = buildRepository.findById(buildId);
+        return build.getUnit();
     }
 }
