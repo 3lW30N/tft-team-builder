@@ -25,6 +25,7 @@ create table trait (
 create table unit (
                       id varchar(255) primary key,
                       name varchar(255) not null,
+                      tier integer,
                       image_link varchar(255)
 );
 
