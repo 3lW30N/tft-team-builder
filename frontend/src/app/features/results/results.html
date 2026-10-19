@@ -1,0 +1,117 @@
+<section class="results">
+  <div class="results-head">
+    <div>
+      <h1>Closest meta comps</h1>
+      <p class="sub">Ranked by how much of each comp you already have on your board.</p>
+    </div>
+    <button class="btn btn-ghost" (click)="editBoard()">← Edit board</button>
+  </div>
+
+  <!-- Your board summary -->
+  @if (!store.isEmpty()) {
+    <div class="your-board card">
+      <div class="yb-group">
+        <span class="yb-label">Your champions</span>
+        <div class="yb-units">
+          @for (slot of store.slots(); track slot.unit.id) {
+            <tft-portrait [unit]="slot.unit" [stars]="slot.stars" style="--size: 44px" />
+          }
+        </div>
+      </div>
+      @if (store.items().length) {
+        <div class="yb-group">
+          <span class="yb-label">Your items</span>
+          <div class="yb-items">
+            @for (it of store.items(); track $index) {
+              <tft-item-icon [item]="it" style="--size: 28px" />
+            }
+          </div>
+        </div>
+      }
+    </div>
+  }
+
+  @if (loading()) {
+    <div class="loading">
+      <div class="spinner"></div>
+      <p>Scanning the meta…</p>
+    </div>
+  } @else if (!store.hasUnits()) {
+    <div class="empty card">
+      <h3>No champions to match</h3>
+      <p>Head back and add the champions you're currently playing.</p>
+      <a routerLink="/" class="btn btn-primary">Build your board</a>
+    </div>
+  } @else if (noComps()) {
+    <div class="empty card">
+      <h3>No meta comps available yet</h3>
+      <p>
+        The comps endpoint isn't returning data. Once the API exposes
+        <code>GET /comp/all</code>, rankings will appear here automatically.
+      </p>
+      <a routerLink="/" class="btn btn-ghost">Back to builder</a>
+    </div>
+  } @else if (topMatches().length === 0) {
+    <div class="empty card">
+      <h3>No close matches</h3>
+      <p>None of the current meta comps overlap with your board. Try a different core.</p>
+      <a routerLink="/" class="btn btn-ghost">Edit board</a>
+    </div>
+  } @else {
+    <ol class="match-list">
+      @for (m of topMatches(); track m.comp.id) {
+        <li class="match card">
+          <a class="match-link" [routerLink]="['/comp', m.comp.id]">
+            <!-- score ring -->
+            <div class="score" [class]="scoreClass(m.score)">
+              <span class="score-num">{{ m.score }}</span>
+              <span class="score-pct">%</span>
+            </div>
+
+            <!-- comp info -->
+            <div class="match-body">
+              <div class="match-title-row">
+                <h3 class="match-title">{{ m.comp.name }}</h3>
+                <div class="match-stats">
+                  @if (m.comp.avgPlacement != null) {
+                    <span class="chip" title="Average placement">#{{ m.comp.avgPlacement | number: '1.1-2' }} avg</span>
+                  }
+                  @if (m.comp.winRate != null) {
+                    <span class="chip" title="Win rate">{{ m.comp.winRate | number: '1.0-1' }}% win</span>
+                  }
+                  @if (m.comp.levelling) { <span class="chip">{{ m.comp.levelling }}</span> }
+                </div>
+              </div>
+
+              <!-- reasons -->
+              @if (m.reasons.length) {
+                <ul class="reasons">
+                  @for (r of m.reasons; track r) { <li>{{ r }}</li> }
+                </ul>
+              }
+
+              <!-- comp units: owned highlighted, missing dimmed -->
+              <div class="comp-units">
+                @for (b of m.comp.builds; track b.unitId) {
+                  <div class="cu" [class.owned]="m.matchedUnits.includes(b.unitId)"
+                       [class.missing]="m.missingUnits.includes(b.unitId)">
+                    <tft-portrait [unit]="unitFor(b.unitId)" [stars]="b.stars" style="--size: 40px" />
+                    @if (b.items.length) {
+                      <div class="cu-items">
+                        @for (it of b.items; track $index) {
+                          @if (it) { <tft-item-icon [item]="it" style="--size: 16px" /> }
+                        }
+                      </div>
+                    }
+                  </div>
+                }
+              </div>
+            </div>
+
+            <span class="match-cta">Details →</span>
+          </a>
+        </li>
+      }
+    </ol>
+  }
+</section>

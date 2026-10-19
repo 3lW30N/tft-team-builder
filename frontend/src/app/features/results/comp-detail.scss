@@ -1,0 +1,70 @@
+.detail {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.back { font-size: 0.85rem; color: var(--text-dim); align-self: flex-start; }
+.back:hover { color: var(--gold); }
+
+.detail-head { padding: 1.5rem; }
+.detail-head h1 { font-size: clamp(1.5rem, 4vw, 2.2rem); margin-bottom: 1rem; }
+
+.stat-row { display: flex; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+.stat { display: flex; flex-direction: column; }
+.stat-val { font-family: var(--font-display); font-size: 1.5rem; color: var(--gold); line-height: 1; }
+.stat-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); margin-top: 0.25rem; }
+
+.traits { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.trait-chip {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.3rem 0.6rem 0.3rem 0.35rem; border-radius: 999px;
+  background: var(--surface-2); border: 1px solid var(--border-soft);
+  font-size: 0.8rem; color: var(--text);
+}
+.trait-chip img { width: 22px; height: 22px; }
+.trait-count {
+  font-family: var(--font-display); font-size: 0.75rem; color: var(--gold);
+  background: var(--bg-2); border-radius: 999px; padding: 0.05rem 0.45rem;
+}
+
+.builds-title { font-size: 1.15rem; margin: 0.5rem 0 0; }
+.builds {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.9rem;
+}
+.build {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; gap: 0.45rem;
+  padding: 1rem 0.6rem 0.8rem;
+}
+.build.owned { border-color: var(--good); box-shadow: 0 0 0 1px var(--good), 0 0 16px rgba(39,208,127,.15); }
+.owned-tag {
+  position: absolute; top: -9px; left: 50%; transform: translateX(-50%);
+  font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.06em;
+  color: #06240f; background: var(--good); padding: 0.1rem 0.5rem; border-radius: 999px; white-space: nowrap;
+}
+.build-name {
+  font-size: 0.82rem; color: var(--text); text-align: center;
+  max-width: 110px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.build-items { display: flex; gap: 3px; min-height: 30px; align-items: center; }
+.no-items { font-size: 0.7rem; color: var(--text-faint); }
+.build-avg { font-size: 0.7rem; color: var(--text-faint); }
+
+.loading { text-align: center; padding: 4rem 1rem; color: var(--text-dim); }
+.spinner {
+  width: 42px; height: 42px; margin: 0 auto 1rem;
+  border: 3px solid var(--border); border-top-color: var(--blue);
+  border-radius: 50%; animation: spin 0.9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.empty { text-align: center; padding: 2.5rem 1.5rem; }
+.empty p { color: var(--text-dim); margin: 0.5rem 0 1.25rem; }
+
+.detail-cta { display: flex; justify-content: center; margin-top: 0.5rem; }

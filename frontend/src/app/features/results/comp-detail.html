@@ -1,0 +1,88 @@
+<section class="detail">
+  <a routerLink="/results" class="back">← Back to matches</a>
+
+  @if (loading()) {
+    <div class="loading"><div class="spinner"></div><p>Loading comp…</p></div>
+  } @else if (!comp()) {
+    <div class="empty card">
+      <h3>Comp not found</h3>
+      <p>This comp isn't in the current data set.</p>
+      <a routerLink="/results" class="btn btn-ghost">Back to matches</a>
+    </div>
+  } @else {
+    <div class="detail-head card">
+      <h1>{{ comp()!.name }}</h1>
+      <div class="stat-row">
+        @if (comp()!.avgPlacement != null) {
+          <div class="stat">
+            <span class="stat-val">{{ comp()!.avgPlacement | number: '1.1-2' }}</span>
+            <span class="stat-label">Avg placement</span>
+          </div>
+        }
+        @if (comp()!.winRate != null) {
+          <div class="stat">
+            <span class="stat-val">{{ comp()!.winRate | number: '1.0-1' }}%</span>
+            <span class="stat-label">Win rate</span>
+          </div>
+        }
+        @if (comp()!.difficulty != null) {
+          <div class="stat">
+            <span class="stat-val">{{ comp()!.difficulty | number: '1.0-2' }}</span>
+            <span class="stat-label">Difficulty</span>
+          </div>
+        }
+        @if (comp()!.levelling) {
+          <div class="stat">
+            <span class="stat-val">{{ comp()!.levelling }}</span>
+            <span class="stat-label">Levelling</span>
+          </div>
+        }
+      </div>
+
+      <!-- traits -->
+      @if (compTraits().length) {
+        <div class="traits">
+          @for (t of compTraits(); track t.trait.id) {
+            <span class="trait-chip" [title]="t.trait.name">
+              <img [src]="traitSrc(t.trait)" [alt]="t.trait.name" />
+              <span class="trait-name">{{ t.trait.name }}</span>
+              <span class="trait-count">{{ t.count }}</span>
+            </span>
+          }
+        </div>
+      }
+    </div>
+
+    <!-- builds -->
+    <h2 class="builds-title">Composition &amp; items</h2>
+    <div class="builds">
+      @for (b of comp()!.builds; track b.unitId) {
+        <div class="build card" [class.owned]="owned(b.unitId)">
+          @if (owned(b.unitId)) { <span class="owned-tag">On your board</span> }
+          <tft-portrait [unit]="unitFor(b.unitId)" [stars]="b.stars" style="--size: 76px" />
+          <div class="build-name">{{ unitFor(b.unitId).name }}</div>
+          <div class="build-items">
+            @if (b.items.length) {
+              @for (it of b.items; track $index) {
+                @if (it) {
+                  <div class="bi" [title]="it.name">
+                    <tft-item-icon [item]="it" style="--size: 30px" />
+                  </div>
+                }
+              }
+            } @else {
+              <span class="no-items">No items</span>
+            }
+          </div>
+          @if (b.avgPlacement != null) {
+            <div class="build-avg">avg {{ b.avgPlacement | number: '1.1-2' }}</div>
+          }
+        </div>
+      }
+    </div>
+
+    <div class="detail-cta">
+      <a routerLink="/" class="btn btn-ghost">Build another board</a>
+    </div>
+  }
+</section>

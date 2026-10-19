@@ -1,0 +1,128 @@
+<section class="builder">
+  <!-- Intro / hero -->
+  <div class="hero">
+    <h1>What are you playing right now?</h1>
+    <p class="sub">
+      Add the champions on your board and the items you've got in hand. We'll rank the meta
+      comps closest to what you already have, so you know what to build toward.
+    </p>
+  </div>
+
+  <!-- ============ YOUR BOARD ============ -->
+  <div class="panel card" [class.empty]="!store.hasUnits()">
+    <div class="panel-head">
+      <h2><span class="step">1</span> Your champions <span class="count">{{ store.slots().length }}</span></h2>
+      @if (store.hasUnits()) {
+        <button class="btn btn-ghost sm" (click)="store.clear()">Clear all</button>
+      }
+    </div>
+
+    @if (!store.hasUnits()) {
+      <p class="panel-hint">Pick champions from the board below — tap a portrait to add it here.</p>
+    } @else {
+      <div class="slots">
+        @for (slot of store.slots(); track slot.unit.id) {
+          <div class="slot">
+            <button class="slot-remove" (click)="store.removeUnit(slot.unit.id)" title="Remove">×</button>
+            <button class="star-btn" (click)="cycleStars(slot.unit.id, slot.stars, $event)"
+                    title="Tap to change star level">
+              <tft-portrait [unit]="slot.unit" [stars]="slot.stars" style="--size: 72px" />
+            </button>
+            <div class="slot-name">{{ slot.unit.name }}</div>
+          </div>
+        }
+      </div>
+      <p class="tip">Tip: tap a champion to cycle its ★ star level.</p>
+    }
+  </div>
+
+  <!-- ============ YOUR ITEMS ============ -->
+  <div class="panel card" [class.empty]="store.items().length === 0">
+    <div class="panel-head">
+      <h2><span class="step">2</span> Your items <span class="count">{{ store.items().length }}</span>
+        <span class="optional">optional</span>
+      </h2>
+    </div>
+
+    @if (store.items().length === 0) {
+      <p class="panel-hint">
+        Add any completed items you're holding — they don't need to be on a champion.
+        More item overlap means a more confident match.
+      </p>
+    } @else {
+      <div class="bench">
+        @for (it of store.items(); track $index) {
+          <button class="bench-item" (click)="store.removeItemAt($index)" title="Remove {{ it.name }}">
+            <tft-item-icon [item]="it" style="--size: 40px" />
+            <span class="bench-x">×</span>
+          </button>
+        }
+      </div>
+    }
+  </div>
+
+  <!-- ============ STICKY ACTION BAR ============ -->
+  <div class="action-bar" [class.ready]="store.hasUnits()">
+    <div class="action-summary">
+      @if (store.hasUnits()) {
+        <strong>{{ store.slots().length }}</strong> champion{{ store.slots().length > 1 ? 's' : '' }}
+        @if (store.items().length) { · <strong>{{ store.items().length }}</strong> item{{ store.items().length > 1 ? 's' : '' }} }
+      } @else {
+        Add at least one champion to find comps
+      }
+    </div>
+    <button class="btn btn-primary cta-btn" [disabled]="!store.hasUnits()" (click)="findMatches()">
+      Find matching comps →
+    </button>
+  </div>
+
+  <!-- ============ PICKER (tabbed) ============ -->
+  <div class="picker card">
+    <div class="tabs">
+      <button class="tab" [class.active]="tab() === 'champions'" (click)="tab.set('champions')">
+        Champions
+      </button>
+      <button class="tab" [class.active]="tab() === 'items'" (click)="tab.set('items')">
+        Items
+      </button>
+      <input class="search" type="search"
+             [placeholder]="tab() === 'champions' ? 'Search champion…' : 'Search item…'"
+             [ngModel]="tab() === 'champions' ? unitQuery() : itemQuery()"
+             (ngModelChange)="tab() === 'champions' ? unitQuery.set($event) : itemQuery.set($event)" />
+    </div>
+
+    @if (loading()) {
+      <div class="grid skeleton-grid">
+        @for (s of [1,2,3,4,5,6,7,8,9,10,11,12]; track s) { <div class="skeleton"></div> }
+      </div>
+    } @else if (tab() === 'champions') {
+      @if (filteredUnits().length === 0) {
+        <p class="empty-note">No champion matches “{{ unitQuery() }}”.</p>
+      } @else {
+        <div class="grid">
+          @for (u of filteredUnits(); track u.id) {
+            <button class="unit-cell" [class.picked]="picked(u.id)"
+                    (click)="store.toggleUnit(u)" [title]="u.name">
+              <tft-portrait [unit]="u" style="--size: 60px" />
+              <span class="cell-name">{{ u.name }}</span>
+              @if (picked(u.id)) { <span class="picked-badge">✓</span> }
+            </button>
+          }
+        </div>
+      }
+    } @else {
+      @if (filteredItems().length === 0) {
+        <p class="empty-note">No item matches “{{ itemQuery() }}”.</p>
+      } @else {
+        <div class="grid item-grid">
+          @for (it of filteredItems(); track it.id) {
+            <button class="item-cell" (click)="store.addItem(it)" [title]="'Add ' + it.name">
+              <tft-item-icon [item]="it" style="--size: 44px" />
+              <span class="cell-name">{{ it.name }}</span>
+            </button>
+          }
+        </div>
+      }
+    }
+  </div>
+</section>
