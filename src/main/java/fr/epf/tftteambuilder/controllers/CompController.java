@@ -24,7 +24,7 @@ public class CompController {
     @GetMapping("/all")
     public List<CompDto> getAllComps() {
         List<Comp> comps = compRepository.findAll();
-        return comps.stream().map(mapper::compMapper).toList();
+        return mapper.compMapper(comps);
     }
 
 }

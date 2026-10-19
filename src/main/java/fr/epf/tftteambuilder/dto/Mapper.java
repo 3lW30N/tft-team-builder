@@ -17,6 +17,14 @@ public class Mapper {
         );
     }
 
+    public List<ItemDto> itemMapper(List<Item> items) {
+        List<ItemDto> itemDtos = new ArrayList<>();
+        for (Item item : items) {
+            itemDtos.add(itemMapper(item));
+        }
+        return itemDtos;
+    }
+
     public BuildDto buildMapper(Build build) {
         List<ItemDto> itemDtoList = new ArrayList<>();
         if (build.getItem1() != null) { itemDtoList.add(itemMapper(build.getItem1())); }
@@ -28,6 +36,14 @@ public class Mapper {
                 build.getAvgPlacement(),
                 itemDtoList
         );
+    }
+
+    public List<BuildDto> buildMapper(List<Build> builds) {
+        List<BuildDto> buildDtoList = new ArrayList<>();
+        for (Build build : builds) {
+            buildDtoList.add(buildMapper(build));
+        }
+        return buildDtoList;
     }
 
     public CompDto compMapper(Comp comp) {
@@ -42,5 +58,11 @@ public class Mapper {
                 comp.getLevelling(),
                 buildDtoList
         );
+    }
+
+    public List<CompDto> compMapper(List<Comp> comps) {
+        List<CompDto> compDtoList = new ArrayList<>();
+        comps.forEach(comp -> compDtoList.add(compMapper(comp)));
+        return compDtoList;
     }
 }
