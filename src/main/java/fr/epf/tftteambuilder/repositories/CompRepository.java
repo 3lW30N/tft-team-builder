@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface CompRepository extends JpaRepository<Comp, String> {
+public interface CompRepository extends JpaRepository<Comp, Integer> {
 }

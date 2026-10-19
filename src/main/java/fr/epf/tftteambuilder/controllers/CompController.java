@@ -5,6 +5,7 @@ import fr.epf.tftteambuilder.dto.Mapper;
 import fr.epf.tftteambuilder.models.Comp;
 import fr.epf.tftteambuilder.repositories.CompRepository;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,6 +26,12 @@ public class CompController {
     public List<CompDto> getAllComps() {
         List<Comp> comps = compRepository.findAll();
         return mapper.compMapper(comps);
+    }
+
+    @GetMapping("/{id}")
+    public CompDto getCompById(@PathVariable Integer id) {
+        Comp comp = compRepository.getById(id);
+        return mapper.compMapper(comp);
     }
 
 }
