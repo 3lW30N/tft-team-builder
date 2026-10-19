@@ -2,6 +2,8 @@ package fr.epf.tftteambuilder.models;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "comp", schema = "public")
 public class Comp {
@@ -25,9 +27,9 @@ public class Comp {
     @Column(name = "levelling")
     private String levelling;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "build_id")
-    private Build build;
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "comp_id")
+    private List<Build> builds;
 
     public Integer getId() {
         return id;
@@ -77,12 +79,12 @@ public class Comp {
         this.levelling = levelling;
     }
 
-    public Build getBuild() {
-        return build;
+    public List<Build> getBuilds() {
+        return builds;
     }
 
-    public void setBuild(Build build) {
-        this.build = build;
+    public void setBuilds(List<Build> builds) {
+        this.builds = builds;
     }
 
 }

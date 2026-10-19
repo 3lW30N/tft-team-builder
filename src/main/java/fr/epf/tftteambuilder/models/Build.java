@@ -84,4 +84,19 @@ public class Build {
         this.stars = stars;
     }
 
+    public Comp getComp() {
+        return comp;
+    }
+
+    public void setComp(Comp comp) {
+        this.comp = comp;
+    }
+
+    public Unit getUnit() {
+        return unit;
+    }
+
+    public void setUnit(Unit unit) {
+        this.unit = unit;
+    }
 }
