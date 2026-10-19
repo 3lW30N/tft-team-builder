@@ -159,7 +159,7 @@ public class CorsConfig implements WebMvcConfigurer {
 
 ## 7. Minor backend bugs noticed (not frontend-blocking)
 
-- `src/main/resources/database/Dockerfile` copies `data.sql`, but the files are
+- `src/main/resources/database/Dockerfile` copies `02-data.sql`, but the files are
   `01-schema.sql`, `02-data.sql`, `03-recipes.sql`. The DB container won't seed.
   Copy the whole `database/` dir (Postgres runs `*.sql` in `/docker-entrypoint-initdb.d`
   alphabetically — the numeric prefixes already order them correctly).
