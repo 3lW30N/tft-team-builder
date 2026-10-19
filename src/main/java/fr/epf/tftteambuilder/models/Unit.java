@@ -16,6 +16,9 @@ public class Unit {
     @Column(name = "image_link")
     private String imageLink;
 
+    @Column(name="tier")
+    private Integer cost;
+
     public String getId() {
         return id;
     }
@@ -40,4 +43,11 @@ public class Unit {
         this.imageLink = imageLink;
     }
 
+    public Integer getCost() {
+        return cost;
+    }
+
+    public void setCost(Integer cost) {
+        this.cost = cost;
+    }
 }

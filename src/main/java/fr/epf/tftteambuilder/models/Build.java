@@ -10,8 +10,16 @@ public class Build {
     @Column(name = "id", nullable = false)
     private Integer id;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "comp_id")
+    private Comp comp;
+
     @Column(name = "avg_placement")
     private Double avgPlacement;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "unit_id")
+    private Unit unit;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "item1_id")
