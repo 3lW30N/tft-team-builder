@@ -30,7 +30,7 @@ jobs:
             -Dsonar.projectKey=3lW30N_tft-team-builder \
             -Dsonar.organization=3lw30n \
             -Dsonar.host.url=https://sonarcloud.io \
-            -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
+            -Dsonar.token=${{ secrets.SONAR_TOKEN }} \
             --file ./pom.xml
 
   build-and-push-docker-image:
