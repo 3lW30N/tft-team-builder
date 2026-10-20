@@ -39,6 +39,6 @@ jobs:
       - name: Build image and push backend
         uses: docker/build-push-action@v6
         with:
-          context: ./tft-team-builder
+          context: .
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/tft-team-builder-backend:latest
