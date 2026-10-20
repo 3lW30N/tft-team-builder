@@ -26,7 +26,7 @@ jobs:
       - name: Run backend tests
         run: |
           mvn clean verify
-          mvn -B verify sonar:sonar \
+          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
             -Dsonar.projectKey=3lW30N_tft-team-builder \
             -Dsonar.organization=3lw30n \
             -Dsonar.host.url=https://sonarcloud.io \
