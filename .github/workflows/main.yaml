@@ -29,7 +29,7 @@ jobs:
             -Dsonar.organization=3lw30n \
             -Dsonar.host.url=https://sonarcloud.io \
             -Dsonar.login=${{ secrets.SONAR_TOKEN }} \
-            --file ./tft-team-builder/pom.xml
+            --file ./pom.xml
 
   build-and-push-docker-image:
     needs: test-backend
