@@ -34,9 +34,12 @@ public class CompMatchService {
 
     @Transactional(readOnly = true)
     public List<CompMatchDto> rank(MatchRequest request) {
-        Set<String> owned = request.units() == null ? Set.of() : request.units().stream()
+        Map<String, Integer> ownedStars = request.units() == null ? Map.of() : request.units().stream()
                 .filter(unit -> unit != null && unit.unitId() != null)
-                .map(MatchRequest.BoardUnit::unitId).collect(Collectors.toSet());
+                .collect(Collectors.toMap(MatchRequest.BoardUnit::unitId,
+                        unit -> unit.stars() == null ? 1 : Math.max(1, Math.min(3, unit.stars())),
+                        Math::max));
+        Set<String> owned = ownedStars.keySet();
         Map<String, Long> items = counts(request.itemIds() == null ? List.of() : request.itemIds());
         Map<String, List<String>> traitsByUnit = new HashMap<>();
         for (UnitTrait relation : unitTraits.findAll()) {
@@ -45,13 +48,13 @@ public class CompMatchService {
         }
         Map<String, Long> ownedTraits = traitCounts(owned, traitsByUnit);
         return comps.findAll().stream()
-                .map(comp -> score(comp, owned, items, ownedTraits, traitsByUnit))
+                .map(comp -> score(comp, ownedStars, items, ownedTraits, traitsByUnit))
                 .sorted(Comparator.comparingInt(CompMatchDto::score).reversed()
                         .thenComparing(match -> match.comp().id()))
                 .toList();
     }
 
-    private CompMatchDto score(Comp comp, Set<String> owned, Map<String, Long> items,
+    private CompMatchDto score(Comp comp, Map<String, Integer> ownedStars, Map<String, Long> items,
                                Map<String, Long> ownedTraits, Map<String, List<String>> traitsByUnit) {
         List<Build> builds = comp.getBuilds();
         List<String> units = builds.stream().map(build -> build.getUnit().getId()).toList();
@@ -64,7 +67,7 @@ public class CompMatchService {
         for (String unit : units) {
             int weight = carries.contains(unit) ? 2 : 1;
             totalWeight += weight;
-            if (owned.contains(unit)) {
+            if (ownedStars.containsKey(unit)) {
                 haveWeight += weight;
                 matched.add(unit);
             } else {
@@ -87,11 +90,14 @@ public class CompMatchService {
         double itemOverlap = itemTotal == 0 ? 0 : (double) itemHave / itemTotal;
 
         double raw = 100 * (0.60 * unitOverlap + 0.25 * traitOverlap + 0.15 * itemOverlap);
+        int starBonus = Math.min(5, matched.stream().mapToInt(unit -> ownedStars.get(unit) - 1).sum());
+        raw = Math.min(100, raw + starBonus);
         if (matched.isEmpty()) raw = Math.min(raw, 5);
         List<String> reasons = new ArrayList<>();
         if (!matched.isEmpty()) reasons.add("You have " + matched.size() + "/" + units.size() + " of the comp's units");
         long matchedCarries = matched.stream().filter(carries::contains).count();
         if (matchedCarries > 0) reasons.add("Shares " + matchedCarries + (matchedCarries > 1 ? " carry units" : " carry"));
+        if (starBonus > 0) reasons.add("Upgraded units add " + starBonus + (starBonus == 1 ? " point" : " points"));
         if (traitOverlap >= 0.5) reasons.add("Strong trait overlap");
         if (itemTotal > 0 && itemHave > 0) reasons.add("You hold " + itemHave + "/" + itemTotal + " of its items");
         return new CompMatchDto(mapper.compMapper(comp), Math.round((float) raw), matched, missing, reasons);

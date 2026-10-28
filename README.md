@@ -35,7 +35,7 @@ Le front est alors accessible sur `http://localhost:4200`. Son proxy redirige `/
 }
 ```
 
-La réponse contient, pour chaque composition, `comp`, `score`, `matchedUnits`, `missingUnits` et `reasons`, triés par score décroissant. Le score sur 100 combine les champions communs (60 %, champions porteurs d'items pondérés deux fois), les traits communs (25 %) et les items communs (15 %). Les doublons d'items sont comptés séparément. Une composition sans champion commun est plafonnée à 5 points. Les étoiles sont reçues mais ne modifient pas encore le score.
+La réponse contient, pour chaque composition, `comp`, `score`, `matchedUnits`, `missingUnits` et `reasons`, triés par score décroissant. Le score sur 100 combine les champions communs (60 %, champions porteurs d'items pondérés deux fois), les traits communs (25 %) et les items communs (15 %). Les doublons d'items sont comptés séparément. Chaque champion commun à 2 étoiles ajoute 1 point, et à 3 étoiles ajoute 2 points, avec un bonus total limité à 5 points et un score final plafonné à 100. Une composition sans champion commun est plafonnée à 5 points.
 
 Autres endpoints utilisés par le front : `GET /unit/all`, `GET /item/all`, `GET /trait/all`, `GET /traits/all`, `GET /traits/{unitId}`, `GET /comp/all` et `GET /comp/{id}`. Les compositions et leurs builds sont renvoyés sous forme de DTO.
 
