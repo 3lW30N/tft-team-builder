@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class TftTeamBuilderApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(TftTeamBuilderApplication.class, args);
-	}
-
+    public static void main(String[] args) {
+        SpringApplication.run(TftTeamBuilderApplication.class, args);
+    }
 }
+

@@ -27,4 +27,13 @@ public class UnitController {
     public Unit getUnitById(@PathVariable String id) {
         return unitRepository.findById(id).orElse(null);
     }
+
+    @GetMapping("/{id}/cost")
+    public Integer getUnitCost(@PathVariable String id) {
+        Unit unit = unitRepository.findById(id).orElse(null);
+        if (unit != null) {
+            return unit.getCost();
+        }
+        return null;
+    }
 }

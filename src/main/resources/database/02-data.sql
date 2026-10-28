@@ -1,2432 +1,924 @@
-insert into trait (id, name) values ('Adaptor', 'Adaptor') on conflict do nothing;
-insert into trait (id, name) values ('Caustic', 'Caustic') on conflict do nothing;
-insert into trait (id, name) values ('Inferno', 'Inferno') on conflict do nothing;
-insert into trait (id, name) values ('Invoker', 'Invoker') on conflict do nothing;
-insert into trait (id, name) values ('Lunar', 'Lunar') on conflict do nothing;
-insert into trait (id, name) values ('Rapidfire', 'Rapidfire') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Primal', 'Primal') on conflict do nothing;
-insert into item (id, name) values ('Deathblade', 'Deathblade') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Dragon''s Claw', 'Dragon''s Claw') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Adaptive Helm', 'Adaptive Helm') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Lunar Aphelios Nidalee18_AP', 4.3157, 58.58, 0.016, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Aphelios', 'Aphelios') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Lunar Aphelios Nidalee18_AP'), 3.9507, 'Aphelios', 'Deathblade', 'Guinsoo''s Rageblade', 'Kraken''s Fury') on conflict do nothing;
-insert into unit (id, name) values ('Nidalee18_AP', 'Nidalee18_AP') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Lunar Aphelios Nidalee18_AP'), 4.0545, 'Nidalee18_AP', 'Infinity Edge', 'Spear of Shojin', 'Sterak''s Gage') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Lunar Aphelios Nidalee18_AP'), 3.4872, 'Amumu18', 'Dragon''s Claw', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Lunar Aphelios Nidalee18_AP'), 3.641, 'Sentinel18', 'Adaptive Helm', 'Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into unit (id, name) values ('Diana', 'Diana') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Lunar Aphelios Nidalee18_AP'), 'Diana') on conflict do nothing;
-insert into unit (id, name) values ('Varus', 'Varus') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Lunar Aphelios Nidalee18_AP'), 'Varus') on conflict do nothing;
-insert into unit (id, name) values ('Kog Maw18_AD', 'Kog Maw18_AD') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Lunar Aphelios Nidalee18_AP'), 'Kog Maw18_AD') on conflict do nothing;
-insert into unit (id, name) values ('Vi18', 'Vi18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Lunar Aphelios Nidalee18_AP'), 'Vi18') on conflict do nothing;
-insert into trait (id, name) values ('Blackthorn', 'Blackthorn') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Executioner', 'Executioner') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Sprykin', 'Sprykin') on conflict do nothing;
-insert into trait (id, name) values ('Summoner', 'Summoner') on conflict do nothing;
-insert into trait (id, name) values ('Thornmaiden', 'Thornmaiden') on conflict do nothing;
-insert into trait (id, name) values ('Flora Fatalis', 'Flora Fatalis') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Executioner Emblem', 'Executioner Emblem') on conflict do nothing;
-insert into item (id, name) values ('Morellonomicon', 'Morellonomicon') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Ionic Spark', 'Ionic Spark') on conflict do nothing;
-insert into item (id, name) values ('Sunfire Cape', 'Sunfire Cape') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Flora Fatalis Azir', 4.2477, 58.09, -0.093, 'lvl 7') on conflict (name) do nothing;
-insert into unit (id, name) values ('Azir', 'Azir') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Flora Fatalis Azir'), 3.7783, 'Azir', 'Guinsoo''s Rageblade', 'Hextech Gunblade', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into unit (id, name) values ('Rammus', 'Rammus') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Flora Fatalis Azir'), 3.5985, 'Rammus', 'Crownguard', 'Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into unit (id, name) values ('Zyra', 'Zyra') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Flora Fatalis Azir'), 3.0013, 'Zyra', 'Executioner Emblem', 'Morellonomicon', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Fiddlesticks18', 'Fiddlesticks18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Flora Fatalis Azir'), 2.8204, 'Fiddlesticks18', 'Ionic Spark', 'Sunfire Cape', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Soraka', 'Soraka') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Flora Fatalis Azir'), 'Soraka') on conflict do nothing;
-insert into unit (id, name) values ('Teemo', 'Teemo') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Flora Fatalis Azir'), 'Teemo') on conflict do nothing;
-insert into unit (id, name) values ('Veigar', 'Veigar') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Flora Fatalis Azir'), 'Veigar') on conflict do nothing;
-insert into trait (id, name) values ('Blackthorn', 'Blackthorn') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Executioner', 'Executioner') on conflict do nothing;
-insert into trait (id, name) values ('Ravager', 'Ravager') on conflict do nothing;
-insert into trait (id, name) values ('Flora Fatalis', 'Flora Fatalis') on conflict do nothing;
-insert into item (id, name) values ('Blackthorn Emblem', 'Blackthorn Emblem') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Titan''s Resolve', 'Titan''s Resolve') on conflict do nothing;
-insert into item (id, name) values ('Deathblade', 'Deathblade') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Blackthorn Emblem', 'Blackthorn Emblem') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Executioner Yunara', 4.4566, 55.04, -0.019, 'lvl 6') on conflict (name) do nothing;
-insert into unit (id, name) values ('Yunara', 'Yunara') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Yunara'), 4.0606, 'Yunara', 'Blackthorn Emblem', 'Last Whisper', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Alistar', 'Alistar') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Yunara'), 3.8576, 'Alistar', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Warwick', 'Warwick') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Yunara'), 3.8063, 'Warwick', 'Spear of Shojin', 'Sterak''s Gage', 'Titan''s Resolve') on conflict do nothing;
-insert into unit (id, name) values ('Ezreal', 'Ezreal') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Yunara'), 2.8182, 'Ezreal', 'Deathblade', 'Last Whisper', 'Red Buff') on conflict do nothing;
-insert into unit (id, name) values ('Azir', 'Azir') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Yunara'), 'Azir') on conflict do nothing;
-insert into unit (id, name) values ('Rek Sai', 'Rek Sai') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Yunara'), 'Rek Sai') on conflict do nothing;
-insert into unit (id, name) values ('Soraka', 'Soraka') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Yunara'), 'Soraka') on conflict do nothing;
-insert into unit (id, name) values ('Murkwolf18', 'Murkwolf18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Yunara'), 'Murkwolf18') on conflict do nothing;
-insert into trait (id, name) values ('Blackthorn', 'Blackthorn') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Elderwood', 'Elderwood') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Flora Fatalis', 'Flora Fatalis') on conflict do nothing;
-insert into item (id, name) values ('Flora Fatalis Emblem', 'Flora Fatalis Emblem') on conflict do nothing;
-insert into item (id, name) values ('Blue Buff', 'Blue Buff') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Morellonomicon', 'Morellonomicon') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Blue Buff', 'Blue Buff') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Spellweaver Veigar', 4.1993, 54.66, 0.082, 'lvl 5') on conflict (name) do nothing;
-insert into unit (id, name) values ('Veigar', 'Veigar') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Spellweaver Veigar'), 4.4392, 'Veigar', 'Blue Buff', 'Flora Fatalis Emblem', 'Jeweled Gauntlet') on conflict do nothing;
-insert into unit (id, name) values ('Ornn', 'Ornn') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Spellweaver Veigar'), 3.6894, 'Ornn', 'Gargoyle Stoneplate', 'Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into unit (id, name) values ('Alistar', 'Alistar') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Spellweaver Veigar'), 3.2843, 'Alistar', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Le Blanc', 'Le Blanc') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Spellweaver Veigar'), 3.756, 'Le Blanc', 'Morellonomicon', 'Spear of Shojin', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Cassiopeia', 'Cassiopeia') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Spellweaver Veigar'), 'Cassiopeia') on conflict do nothing;
-insert into unit (id, name) values ('Rek Sai', 'Rek Sai') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Spellweaver Veigar'), 'Rek Sai') on conflict do nothing;
-insert into unit (id, name) values ('Fiddlesticks18', 'Fiddlesticks18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Spellweaver Veigar'), 'Fiddlesticks18') on conflict do nothing;
-insert into trait (id, name) values ('Blossom', 'Blossom') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Invoker', 'Invoker') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Emerald Aspect', 'Emerald Aspect') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Invoker Emblem', 'Invoker Emblem') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Morellonomicon', 'Morellonomicon') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Morellonomicon', 'Morellonomicon') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Invoker Ahri', 4.3699, 53.84, 0.069, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Ahri', 'Ahri') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Ahri'), 4.1247, 'Ahri', 'Invoker Emblem', 'Jeweled Gauntlet', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Morgana', 'Morgana') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Ahri'), 3.7382, 'Morgana', 'Morellonomicon', 'Rabadon''s Deathcap', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Sett', 'Sett') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Ahri'), 4.0115, 'Sett', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Ahri'), 3.4203, 'Sentinel18', 'Protector''s Vow', 'Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into unit (id, name) values ('Sentry', 'Sentry') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Ahri'), 'Sentry') on conflict do nothing;
-insert into unit (id, name) values ('Karma18', 'Karma18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Ahri'), 'Karma18') on conflict do nothing;
-insert into unit (id, name) values ('Krug18', 'Krug18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Ahri'), 'Krug18') on conflict do nothing;
-insert into unit (id, name) values ('Taric18', 'Taric18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Ahri'), 'Taric18') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Elderwood', 'Elderwood') on conflict do nothing;
-insert into trait (id, name) values ('Executioner', 'Executioner') on conflict do nothing;
-insert into trait (id, name) values ('Rival', 'Rival') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Flora Fatalis', 'Flora Fatalis') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Nashor''s Tooth', 'Nashor''s Tooth') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Bramble Vest', 'Bramble Vest') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Executioner Emblem', 'Executioner Emblem') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Ionic Spark', 'Ionic Spark') on conflict do nothing;
-insert into item (id, name) values ('Deathblade', 'Deathblade') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Executioner Kha Zix', 4.2063, 53.64, 0.024, 'lvl 7') on conflict (name) do nothing;
-insert into unit (id, name) values ('Kha Zix', 'Kha Zix') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Kha Zix'), 3.8828, 'Kha Zix', 'Hand Of Justice', 'Nashor''s Tooth', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into unit (id, name) values ('Hecarim', 'Hecarim') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Kha Zix'), 3.3896, 'Hecarim', 'Bramble Vest', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Diana', 'Diana') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Kha Zix'), 3.0115, 'Diana', 'Executioner Emblem', 'Hand Of Justice', 'Ionic Spark') on conflict do nothing;
-insert into unit (id, name) values ('Ezreal', 'Ezreal') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Kha Zix'), 3.1686, 'Ezreal', 'Deathblade', 'Red Buff', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Ornn', 'Ornn') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Kha Zix'), 'Ornn') on conflict do nothing;
-insert into unit (id, name) values ('Soraka', 'Soraka') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Kha Zix'), 'Soraka') on conflict do nothing;
-insert into unit (id, name) values ('Fiddlesticks18', 'Fiddlesticks18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Kha Zix'), 'Fiddlesticks18') on conflict do nothing;
-insert into trait (id, name) values ('Fae', 'Fae') on conflict do nothing;
-insert into trait (id, name) values ('Inferno', 'Inferno') on conflict do nothing;
-insert into trait (id, name) values ('Rapidfire', 'Rapidfire') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Rapidfire Emblem', 'Rapidfire Emblem') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Adaptive Helm', 'Adaptive Helm') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Vanguard Emblem', 'Vanguard Emblem') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Rapidfire Emblem', 'Rapidfire Emblem') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Rapidfire Aphelios', 4.4476, 53.44, -0.022, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Aphelios', 'Aphelios') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Rapidfire Aphelios'), 3.8187, 'Aphelios', 'Infinity Edge', 'Kraken''s Fury', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Brambleback18', 'Brambleback18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Rapidfire Aphelios'), 3.9481, 'Brambleback18', 'Edge of Night', 'Rapidfire Emblem', 'Sterak''s Gage') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Rapidfire Aphelios'), 3.6505, 'Sentinel18', 'Adaptive Helm', 'Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Rapidfire Aphelios'), 3.1358, 'Amumu18', 'Gargoyle Stoneplate', 'Vanguard Emblem', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Rakan', 'Rakan') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Rapidfire Aphelios'), 'Rakan') on conflict do nothing;
-insert into unit (id, name) values ('Varus', 'Varus') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Rapidfire Aphelios'), 'Varus') on conflict do nothing;
-insert into unit (id, name) values ('Xayah', 'Xayah') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Rapidfire Aphelios'), 'Xayah') on conflict do nothing;
-insert into unit (id, name) values ('Crimson Raptor18', 'Crimson Raptor18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Rapidfire Aphelios'), 'Crimson Raptor18') on conflict do nothing;
-insert into trait (id, name) values ('Caustic', 'Caustic') on conflict do nothing;
-insert into trait (id, name) values ('Invoker', 'Invoker') on conflict do nothing;
-insert into trait (id, name) values ('Lunar', 'Lunar') on conflict do nothing;
-insert into trait (id, name) values ('Ravager', 'Ravager') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Attuned', 'Attuned') on conflict do nothing;
-insert into trait (id, name) values ('Emerald Aspect', 'Emerald Aspect') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Morellonomicon', 'Morellonomicon') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Adaptive Helm', 'Adaptive Helm') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Quicksilver', 'Quicksilver') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Morellonomicon', 'Morellonomicon') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Invoker Morgana Sentinel18', 4.4027, 53.35, -0.064, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Morgana', 'Morgana') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Morgana Sentinel18'), 4.053, 'Morgana', 'Hextech Gunblade', 'Morellonomicon', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Morgana Sentinel18'), 3.709, 'Sentinel18', 'Adaptive Helm', 'Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into unit (id, name) values ('Alune', 'Alune') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Morgana Sentinel18'), 3.3984, 'Alune', 'Archangel''s Staff', 'Archangel''s Staff', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Brambleback18', 'Brambleback18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Morgana Sentinel18'), 3.9167, 'Brambleback18', 'Edge of Night', 'Hand Of Justice', 'Quicksilver') on conflict do nothing;
-insert into unit (id, name) values ('Diana', 'Diana') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Morgana Sentinel18'), 'Diana') on conflict do nothing;
-insert into unit (id, name) values ('Hecarim', 'Hecarim') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Morgana Sentinel18'), 'Hecarim') on conflict do nothing;
-insert into unit (id, name) values ('Sentry', 'Sentry') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Morgana Sentinel18'), 'Sentry') on conflict do nothing;
-insert into unit (id, name) values ('Kog Maw18_AD', 'Kog Maw18_AD') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Morgana Sentinel18'), 'Kog Maw18_AD') on conflict do nothing;
-insert into unit (id, name) values ('Taric18', 'Taric18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Morgana Sentinel18'), 'Taric18') on conflict do nothing;
-insert into trait (id, name) values ('Hunter', 'Hunter') on conflict do nothing;
-insert into trait (id, name) values ('Old Growth', 'Old Growth') on conflict do nothing;
-insert into trait (id, name) values ('Summoner', 'Summoner') on conflict do nothing;
-insert into trait (id, name) values ('Thornmaiden', 'Thornmaiden') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Primal', 'Primal') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Steadfast Heart', 'Steadfast Heart') on conflict do nothing;
-insert into item (id, name) values ('Giant Slayer', 'Giant Slayer') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Juggernaut Zyra Sivir', 4.3944, 53.13, 0.011, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Zyra', 'Zyra') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Zyra Sivir'), 3.9156, 'Zyra', 'Archangel''s Staff', 'Archangel''s Staff', 'Hextech Gunblade') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Zyra Sivir'), 3.7073, 'Amumu18', 'Crownguard', 'Gargoyle Stoneplate', 'Steadfast Heart') on conflict do nothing;
-insert into unit (id, name) values ('Sivir', 'Sivir') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Zyra Sivir'), 3.8931, 'Sivir', 'Giant Slayer', 'Infinity Edge', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Maokai', 'Maokai') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Zyra Sivir'), 2.8436, 'Maokai', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Ashe', 'Ashe') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Zyra Sivir'), 'Ashe') on conflict do nothing;
-insert into unit (id, name) values ('Sejuani', 'Sejuani') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Zyra Sivir'), 'Sejuani') on conflict do nothing;
-insert into unit (id, name) values ('Yorick', 'Yorick') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Zyra Sivir'), 'Yorick') on conflict do nothing;
-insert into unit (id, name) values ('Scuttlecrab18', 'Scuttlecrab18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Zyra Sivir'), 'Scuttlecrab18') on conflict do nothing;
-insert into unit (id, name) values ('Vi18', 'Vi18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Zyra Sivir'), 'Vi18') on conflict do nothing;
-insert into trait (id, name) values ('Monolith', 'Monolith') on conflict do nothing;
-insert into trait (id, name) values ('Blackthorn', 'Blackthorn') on conflict do nothing;
-insert into trait (id, name) values ('Executioner', 'Executioner') on conflict do nothing;
-insert into trait (id, name) values ('Inferno', 'Inferno') on conflict do nothing;
-insert into trait (id, name) values ('Summoner', 'Summoner') on conflict do nothing;
-insert into trait (id, name) values ('Thornmaiden', 'Thornmaiden') on conflict do nothing;
-insert into trait (id, name) values ('Flora Fatalis', 'Flora Fatalis') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Blackthorn Emblem', 'Blackthorn Emblem') on conflict do nothing;
-insert into item (id, name) values ('Executioner Emblem', 'Executioner Emblem') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Executioner Malphite', 4.5219, 52.46, 0.062, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Malphite', 'Malphite') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Malphite'), 4.0815, 'Malphite', 'Crownguard', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Zyra', 'Zyra') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Malphite'), 3.1014, 'Zyra', 'Blackthorn Emblem', 'Executioner Emblem', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Soraka', 'Soraka') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Malphite'), 4.0829, 'Soraka', 'Archangel''s Staff', 'Rabadon''s Deathcap', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Malphite'), 4.3423, 'Amumu18', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Azir', 'Azir') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Malphite'), 'Azir') on conflict do nothing;
-insert into unit (id, name) values ('Kennen', 'Kennen') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Malphite'), 'Kennen') on conflict do nothing;
-insert into unit (id, name) values ('Yorick', 'Yorick') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Malphite'), 'Yorick') on conflict do nothing;
-insert into unit (id, name) values ('Fiddlesticks18', 'Fiddlesticks18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Malphite'), 'Fiddlesticks18') on conflict do nothing;
-insert into trait (id, name) values ('Greenfather', 'Greenfather') on conflict do nothing;
-insert into trait (id, name) values ('Old Growth', 'Old Growth') on conflict do nothing;
-insert into trait (id, name) values ('Summoner', 'Summoner') on conflict do nothing;
-insert into trait (id, name) values ('Thornmaiden', 'Thornmaiden') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Primal', 'Primal') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Ionic Spark', 'Ionic Spark') on conflict do nothing;
-insert into item (id, name) values ('Sunfire Cape', 'Sunfire Cape') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Juggernaut Zyra', 4.3758, 52.3, 0.057, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Zyra', 'Zyra') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Zyra'), 3.8476, 'Zyra', 'Archangel''s Staff', 'Archangel''s Staff', 'Hextech Gunblade') on conflict do nothing;
-insert into unit (id, name) values ('Nidalee18_AP', 'Nidalee18_AP') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Zyra'), 3.6484, 'Nidalee18_AP', 'Archangel''s Staff', 'Guinsoo''s Rageblade', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Zyra'), 3.5179, 'Amumu18', 'Gargoyle Stoneplate', 'Ionic Spark', 'Sunfire Cape') on conflict do nothing;
-insert into unit (id, name) values ('Maokai', 'Maokai') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Zyra'), 3.0619, 'Maokai', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Ivern', 'Ivern') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Zyra'), 'Ivern') on conflict do nothing;
-insert into unit (id, name) values ('Sejuani', 'Sejuani') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Zyra'), 'Sejuani') on conflict do nothing;
-insert into unit (id, name) values ('Yorick', 'Yorick') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Zyra'), 'Yorick') on conflict do nothing;
-insert into unit (id, name) values ('Scuttlecrab18', 'Scuttlecrab18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Zyra'), 'Scuttlecrab18') on conflict do nothing;
-insert into unit (id, name) values ('Vi18', 'Vi18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Zyra'), 'Vi18') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Flora Fatalis', 'Flora Fatalis') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Ionic Spark', 'Ionic Spark') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Sunfire Cape', 'Sunfire Cape') on conflict do nothing;
-insert into item (id, name) values ('Dragon''s Claw', 'Dragon''s Claw') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Defender Cassiopeia', 4.4849, 52.29, -0.035, 'lvl 7') on conflict (name) do nothing;
-insert into unit (id, name) values ('Cassiopeia', 'Cassiopeia') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Defender Cassiopeia'), 4.1758, 'Cassiopeia', 'Archangel''s Staff', 'Hextech Gunblade', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Rammus', 'Rammus') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Defender Cassiopeia'), 3.9786, 'Rammus', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Fiddlesticks18', 'Fiddlesticks18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Defender Cassiopeia'), 3.4494, 'Fiddlesticks18', 'Ionic Spark', 'Spirit Visage', 'Sunfire Cape') on conflict do nothing;
-insert into unit (id, name) values ('Lillia', 'Lillia') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Defender Cassiopeia'), 4.1455, 'Lillia', 'Dragon''s Claw', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Leona', 'Leona') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Defender Cassiopeia'), 'Leona') on conflict do nothing;
-insert into unit (id, name) values ('Ornn', 'Ornn') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Defender Cassiopeia'), 'Ornn') on conflict do nothing;
-insert into unit (id, name) values ('Shen', 'Shen') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Defender Cassiopeia'), 'Shen') on conflict do nothing;
-insert into trait (id, name) values ('Adaptor', 'Adaptor') on conflict do nothing;
-insert into trait (id, name) values ('Blossom', 'Blossom') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Rival', 'Rival') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Primal', 'Primal') on conflict do nothing;
-insert into item (id, name) values ('Brawler Emblem', 'Brawler Emblem') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Quicksilver', 'Quicksilver') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Titan''s Resolve', 'Titan''s Resolve') on conflict do nothing;
-insert into item (id, name) values ('Evenshroud', 'Evenshroud') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Sunfire Cape', 'Sunfire Cape') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Brawler Emblem', 'Brawler Emblem') on conflict do nothing;
-insert into item (id, name) values ('Titan''s Resolve', 'Titan''s Resolve') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Adaptor Master Yi_AD Rengar', 4.48, 52.16, -0.022, 'lvl 7') on conflict (name) do nothing;
-insert into unit (id, name) values ('Master Yi_AD', 'Master Yi_AD') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Adaptor Master Yi_AD Rengar'), 4.0746, 'Master Yi_AD', 'Brawler Emblem', 'Edge of Night', 'Quicksilver') on conflict do nothing;
-insert into unit (id, name) values ('Rengar', 'Rengar') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Adaptor Master Yi_AD Rengar'), 4.0129, 'Rengar', 'Edge of Night', 'Guinsoo''s Rageblade', 'Titan''s Resolve') on conflict do nothing;
-insert into unit (id, name) values ('Vi18', 'Vi18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Adaptor Master Yi_AD Rengar'), 3.2879, 'Vi18', 'Evenshroud', 'Spirit Visage', 'Sunfire Cape') on conflict do nothing;
-insert into unit (id, name) values ('Nidalee18_AP', 'Nidalee18_AP') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Adaptor Master Yi_AD Rengar'), 3.027, 'Nidalee18_AP', 'Hand Of Justice', 'Infinity Edge', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Sett', 'Sett') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Adaptor Master Yi_AD Rengar'), 'Sett') on conflict do nothing;
-insert into unit (id, name) values ('Yorick', 'Yorick') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Adaptor Master Yi_AD Rengar'), 'Yorick') on conflict do nothing;
-insert into unit (id, name) values ('Krug18', 'Krug18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Adaptor Master Yi_AD Rengar'), 'Krug18') on conflict do nothing;
-insert into trait (id, name) values ('Blossom', 'Blossom') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Elderwood', 'Elderwood') on conflict do nothing;
-insert into trait (id, name) values ('Executioner', 'Executioner') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Flora Fatalis', 'Flora Fatalis') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Deathblade', 'Deathblade') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Executioner Emblem', 'Executioner Emblem') on conflict do nothing;
-insert into item (id, name) values ('Morellonomicon', 'Morellonomicon') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Executioner Sett', 4.5776, 51.66, -0.016, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Sett', 'Sett') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Sett'), 4.1762, 'Sett', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Ezreal', 'Ezreal') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Sett'), 4.3173, 'Ezreal', 'Deathblade', 'Last Whisper', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Ahri', 'Ahri') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Sett'), 3.9926, 'Ahri', 'Executioner Emblem', 'Morellonomicon', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Soraka', 'Soraka') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Sett'), 3.2623, 'Soraka', 'Hextech Gunblade', 'Rabadon''s Deathcap', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Alistar', 'Alistar') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Sett'), 'Alistar') on conflict do nothing;
-insert into unit (id, name) values ('Ornn', 'Ornn') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Sett'), 'Ornn') on conflict do nothing;
-insert into unit (id, name) values ('Yunara', 'Yunara') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Sett'), 'Yunara') on conflict do nothing;
-insert into unit (id, name) values ('Fiddlesticks18', 'Fiddlesticks18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Sett'), 'Fiddlesticks18') on conflict do nothing;
-insert into trait (id, name) values ('Monolith', 'Monolith') on conflict do nothing;
-insert into trait (id, name) values ('Blackthorn', 'Blackthorn') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Ravager', 'Ravager') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Titan''s Resolve', 'Titan''s Resolve') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Deathblade', 'Deathblade') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Quicksilver', 'Quicksilver') on conflict do nothing;
-insert into item (id, name) values ('Blackthorn Emblem', 'Blackthorn Emblem') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Titan''s Resolve', 'Titan''s Resolve') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Ravager Warwick', 4.5819, 51.58, -0.035, 'lvl 6') on conflict (name) do nothing;
-insert into unit (id, name) values ('Warwick', 'Warwick') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Ravager Warwick'), 4.3548, 'Warwick', 'Spear of Shojin', 'Sterak''s Gage', 'Titan''s Resolve') on conflict do nothing;
-insert into unit (id, name) values ('Malphite', 'Malphite') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Ravager Warwick'), 3.8641, 'Malphite', 'Crownguard', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Murkwolf18', 'Murkwolf18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Ravager Warwick'), 3.6786, 'Murkwolf18', 'Deathblade', 'Hand Of Justice', 'Quicksilver') on conflict do nothing;
-insert into unit (id, name) values ('Brambleback18', 'Brambleback18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Ravager Warwick'), 3, 'Brambleback18', 'Blackthorn Emblem', 'Edge of Night', 'Sterak''s Gage') on conflict do nothing;
-insert into unit (id, name) values ('Azir', 'Azir') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Ravager Warwick'), 'Azir') on conflict do nothing;
-insert into unit (id, name) values ('Diana', 'Diana') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Ravager Warwick'), 'Diana') on conflict do nothing;
-insert into unit (id, name) values ('Rek Sai', 'Rek Sai') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Ravager Warwick'), 'Rek Sai') on conflict do nothing;
-insert into unit (id, name) values ('Krug18', 'Krug18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Ravager Warwick'), 'Krug18') on conflict do nothing;
-insert into trait (id, name) values ('Adaptor', 'Adaptor') on conflict do nothing;
-insert into trait (id, name) values ('Blossom', 'Blossom') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Caustic', 'Caustic') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Primal', 'Primal') on conflict do nothing;
-insert into item (id, name) values ('Brawler Emblem', 'Brawler Emblem') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Steadfast Heart', 'Steadfast Heart') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Brawler Emblem', 'Brawler Emblem') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Adaptor Master Yi_AD', 4.494, 51.25, 0.009, 'lvl 7') on conflict (name) do nothing;
-insert into unit (id, name) values ('Master Yi_AD', 'Master Yi_AD') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Adaptor Master Yi_AD'), 4.3791, 'Master Yi_AD', 'Brawler Emblem', 'Edge of Night', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into unit (id, name) values ('Kog Maw18_AD', 'Kog Maw18_AD') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Adaptor Master Yi_AD'), 3.9512, 'Kog Maw18_AD', 'Infinity Edge', 'Red Buff', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Krug18', 'Krug18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Adaptor Master Yi_AD'), 3, 'Krug18', 'Crownguard', 'Gargoyle Stoneplate', 'Steadfast Heart') on conflict do nothing;
-insert into unit (id, name) values ('Nidalee18_AP', 'Nidalee18_AP') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Adaptor Master Yi_AD'), 2.8846, 'Nidalee18_AP', 'Guinsoo''s Rageblade', 'Hextech Gunblade', 'Jeweled Gauntlet') on conflict do nothing;
-insert into unit (id, name) values ('Sett', 'Sett') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Adaptor Master Yi_AD'), 'Sett') on conflict do nothing;
-insert into unit (id, name) values ('Yorick', 'Yorick') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Adaptor Master Yi_AD'), 'Yorick') on conflict do nothing;
-insert into unit (id, name) values ('Vi18', 'Vi18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Adaptor Master Yi_AD'), 'Vi18') on conflict do nothing;
-insert into trait (id, name) values ('Blackthorn', 'Blackthorn') on conflict do nothing;
-insert into trait (id, name) values ('Blossom', 'Blossom') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Executioner', 'Executioner') on conflict do nothing;
-insert into trait (id, name) values ('Rival', 'Rival') on conflict do nothing;
-insert into trait (id, name) values ('Summoner', 'Summoner') on conflict do nothing;
-insert into trait (id, name) values ('Thornmaiden', 'Thornmaiden') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Adaptive Helm', 'Adaptive Helm') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Executioner Azir', 4.6726, 50.81, -0.055, 'lvl 7') on conflict (name) do nothing;
-insert into unit (id, name) values ('Azir', 'Azir') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Azir'), 4.2429, 'Azir', 'Guinsoo''s Rageblade', 'Hextech Gunblade', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into unit (id, name) values ('Vi18', 'Vi18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Azir'), 4.2977, 'Vi18', 'Gargoyle Stoneplate', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Sett', 'Sett') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Azir'), 3.9275, 'Sett', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Zyra', 'Zyra') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Azir'), 2.7692, 'Zyra', 'Adaptive Helm', 'Red Buff', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Kha Zix', 'Kha Zix') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Azir'), 'Kha Zix') on conflict do nothing;
-insert into unit (id, name) values ('Rek Sai', 'Rek Sai') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Azir'), 'Rek Sai') on conflict do nothing;
-insert into unit (id, name) values ('Yorick', 'Yorick') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Azir'), 'Yorick') on conflict do nothing;
-insert into unit (id, name) values ('Yunara', 'Yunara') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Azir'), 'Yunara') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Elderwood', 'Elderwood') on conflict do nothing;
-insert into trait (id, name) values ('Fae', 'Fae') on conflict do nothing;
-insert into trait (id, name) values ('Lunar', 'Lunar') on conflict do nothing;
-insert into trait (id, name) values ('Rapidfire', 'Rapidfire') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into item (id, name) values ('Elderwood Emblem', 'Elderwood Emblem') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Deathblade', 'Deathblade') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Elderwood Emblem', 'Elderwood Emblem') on conflict do nothing;
-insert into item (id, name) values ('Adaptive Helm', 'Adaptive Helm') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Evenshroud', 'Evenshroud') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Sunfire Cape', 'Sunfire Cape') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Elderwood Emblem', 'Elderwood Emblem') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Elderwood Aphelios', 4.5197, 50.77, -0.044, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Aphelios', 'Aphelios') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Elderwood Aphelios'), 4.153, 'Aphelios', 'Elderwood Emblem', 'Guinsoo''s Rageblade', 'Infinity Edge') on conflict do nothing;
-insert into unit (id, name) values ('Ezreal', 'Ezreal') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Elderwood Aphelios'), 3.8729, 'Ezreal', 'Deathblade', 'Infinity Edge', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Lillia', 'Lillia') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Elderwood Aphelios'), 3.3368, 'Lillia', 'Adaptive Helm', 'Elderwood Emblem', 'Protector''s Vow') on conflict do nothing;
-insert into unit (id, name) values ('Hecarim', 'Hecarim') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Elderwood Aphelios'), 3.4535, 'Hecarim', 'Evenshroud', 'Protector''s Vow', 'Sunfire Cape') on conflict do nothing;
-insert into unit (id, name) values ('Alistar', 'Alistar') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Elderwood Aphelios'), 'Alistar') on conflict do nothing;
-insert into unit (id, name) values ('Diana', 'Diana') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Elderwood Aphelios'), 'Diana') on conflict do nothing;
-insert into unit (id, name) values ('Gnar Small', 'Gnar Small') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Elderwood Aphelios'), 'Gnar Small') on conflict do nothing;
-insert into unit (id, name) values ('Ornn', 'Ornn') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Elderwood Aphelios'), 'Ornn') on conflict do nothing;
-insert into unit (id, name) values ('Xayah', 'Xayah') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Elderwood Aphelios'), 'Xayah') on conflict do nothing;
-insert into trait (id, name) values ('Greenfather', 'Greenfather') on conflict do nothing;
-insert into trait (id, name) values ('Hunter', 'Hunter') on conflict do nothing;
-insert into trait (id, name) values ('Inferno', 'Inferno') on conflict do nothing;
-insert into trait (id, name) values ('Old Growth', 'Old Growth') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Emerald Aspect', 'Emerald Aspect') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Primal', 'Primal') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Giant Slayer', 'Giant Slayer') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Evenshroud', 'Evenshroud') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Juggernaut Ashe', 4.4394, 50.57, 0.001, 'Fast 9') on conflict (name) do nothing;
-insert into unit (id, name) values ('Ashe', 'Ashe') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Ashe'), 3.4502, 'Ashe', 'Last Whisper', 'Red Buff', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Sivir', 'Sivir') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Ashe'), 3.4589, 'Sivir', 'Giant Slayer', 'Infinity Edge', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Maokai', 'Maokai') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Ashe'), 3.3077, 'Maokai', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Ashe'), 3.9857, 'Amumu18', 'Evenshroud', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Ivern', 'Ivern') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Ashe'), 'Ivern') on conflict do nothing;
-insert into unit (id, name) values ('Kennen', 'Kennen') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Ashe'), 'Kennen') on conflict do nothing;
-insert into unit (id, name) values ('Rakan', 'Rakan') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Ashe'), 'Rakan') on conflict do nothing;
-insert into unit (id, name) values ('Taric18', 'Taric18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Ashe'), 'Taric18') on conflict do nothing;
-insert into unit (id, name) values ('Vi18', 'Vi18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Ashe'), 'Vi18') on conflict do nothing;
-insert into trait (id, name) values ('Blossom', 'Blossom') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Hunter', 'Hunter') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Summoner', 'Summoner') on conflict do nothing;
-insert into trait (id, name) values ('Thornmaiden', 'Thornmaiden') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Primal', 'Primal') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Blossom Ahri Sett', 4.5153, 50.53, -0.061, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Ahri', 'Ahri') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blossom Ahri Sett'), 4.2651, 'Ahri', 'Jeweled Gauntlet', 'Spear of Shojin', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Sett', 'Sett') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blossom Ahri Sett'), 4.1375, 'Sett', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Zyra', 'Zyra') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blossom Ahri Sett'), 3.5775, 'Zyra', 'Archangel''s Staff', 'Spear of Shojin', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Ashe', 'Ashe') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blossom Ahri Sett'), 3.273, 'Ashe', 'Last Whisper', 'Red Buff', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Gnar Small', 'Gnar Small') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blossom Ahri Sett'), 'Gnar Small') on conflict do nothing;
-insert into unit (id, name) values ('Sivir', 'Sivir') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blossom Ahri Sett'), 'Sivir') on conflict do nothing;
-insert into unit (id, name) values ('Yorick', 'Yorick') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blossom Ahri Sett'), 'Yorick') on conflict do nothing;
-insert into unit (id, name) values ('Karma18', 'Karma18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blossom Ahri Sett'), 'Karma18') on conflict do nothing;
-insert into unit (id, name) values ('Vi18', 'Vi18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blossom Ahri Sett'), 'Vi18') on conflict do nothing;
-insert into trait (id, name) values ('Coven', 'Coven') on conflict do nothing;
-insert into trait (id, name) values ('Invoker', 'Invoker') on conflict do nothing;
-insert into trait (id, name) values ('Lunar', 'Lunar') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Attuned', 'Attuned') on conflict do nothing;
-insert into trait (id, name) values ('Emerald Aspect', 'Emerald Aspect') on conflict do nothing;
-insert into trait (id, name) values ('Flora Fatalis', 'Flora Fatalis') on conflict do nothing;
-insert into item (id, name) values ('Giant Slayer', 'Giant Slayer') on conflict do nothing;
-insert into item (id, name) values ('Morellonomicon', 'Morellonomicon') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Blue Buff', 'Blue Buff') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Nashor''s Tooth', 'Nashor''s Tooth') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Morellonomicon', 'Morellonomicon') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Vanguard Morgana', 4.4774, 49.96, -0.037, 'Fast 9') on conflict (name) do nothing;
-insert into unit (id, name) values ('Morgana', 'Morgana') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Vanguard Morgana'), 3.5799, 'Morgana', 'Giant Slayer', 'Morellonomicon', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Vanguard Morgana'), 3.5765, 'Sentinel18', 'Crownguard', 'Protector''s Vow', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Alune', 'Alune') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Vanguard Morgana'), 3.0562, 'Alune', 'Archangel''s Staff', 'Archangel''s Staff', 'Blue Buff') on conflict do nothing;
-insert into unit (id, name) values ('Ahri', 'Ahri') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Vanguard Morgana'), 3.9713, 'Ahri', 'Jeweled Gauntlet', 'Nashor''s Tooth', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Cassiopeia', 'Cassiopeia') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Vanguard Morgana'), 'Cassiopeia') on conflict do nothing;
-insert into unit (id, name) values ('Diana', 'Diana') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Vanguard Morgana'), 'Diana') on conflict do nothing;
-insert into unit (id, name) values ('Elise', 'Elise') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Vanguard Morgana'), 'Elise') on conflict do nothing;
-insert into unit (id, name) values ('Fiddlesticks18', 'Fiddlesticks18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Vanguard Morgana'), 'Fiddlesticks18') on conflict do nothing;
-insert into unit (id, name) values ('Taric18', 'Taric18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Vanguard Morgana'), 'Taric18') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Elderwood', 'Elderwood') on conflict do nothing;
-insert into trait (id, name) values ('Invoker', 'Invoker') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Sprykin', 'Sprykin') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into item (id, name) values ('Blue Buff', 'Blue Buff') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Dragon''s Claw', 'Dragon''s Claw') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Steadfast Heart', 'Steadfast Heart') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Nashor''s Tooth', 'Nashor''s Tooth') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Morellonomicon', 'Morellonomicon') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Invoker Teemo', 4.9089, 49.75, -0.063, 'lvl 6') on conflict (name) do nothing;
-insert into unit (id, name) values ('Teemo', 'Teemo') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Teemo'), 4.0909, 'Teemo', 'Blue Buff', 'Jeweled Gauntlet', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into unit (id, name) values ('Alistar', 'Alistar') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Teemo'), 3.4545, 'Alistar', 'Dragon''s Claw', 'Gargoyle Stoneplate', 'Steadfast Heart') on conflict do nothing;
-insert into unit (id, name) values ('Le Blanc', 'Le Blanc') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Teemo'), 4.1667, 'Le Blanc', 'Jeweled Gauntlet', 'Nashor''s Tooth', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Hecarim', 'Hecarim') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Teemo'), 4.6111, 'Hecarim', 'Gargoyle Stoneplate', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Kobuko', 'Kobuko') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Teemo'), 'Kobuko') on conflict do nothing;
-insert into unit (id, name) values ('Morgana', 'Morgana') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Teemo'), 'Morgana') on conflict do nothing;
-insert into unit (id, name) values ('Veigar', 'Veigar') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Teemo'), 'Veigar') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Teemo'), 'Sentinel18') on conflict do nothing;
-insert into trait (id, name) values ('Adaptor', 'Adaptor') on conflict do nothing;
-insert into trait (id, name) values ('Monolith', 'Monolith') on conflict do nothing;
-insert into trait (id, name) values ('Blackthorn', 'Blackthorn') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Caustic', 'Caustic') on conflict do nothing;
-insert into trait (id, name) values ('Hunter', 'Hunter') on conflict do nothing;
-insert into trait (id, name) values ('Invoker', 'Invoker') on conflict do nothing;
-insert into trait (id, name) values ('Primal', 'Primal') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Adaptive Helm', 'Adaptive Helm') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Hunter Nidalee18_AP', 4.7386, 49.51, -0.037, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Nidalee18_AP', 'Nidalee18_AP') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Hunter Nidalee18_AP'), 4.3815, 'Nidalee18_AP', 'Infinity Edge', 'Spear of Shojin', 'Sterak''s Gage') on conflict do nothing;
-insert into unit (id, name) values ('Sivir', 'Sivir') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Hunter Nidalee18_AP'), 4.1794, 'Sivir', 'Infinity Edge', 'Red Buff', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Malphite', 'Malphite') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Hunter Nidalee18_AP'), 4.259, 'Malphite', 'Crownguard', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Hunter Nidalee18_AP'), 3.6897, 'Sentinel18', 'Adaptive Helm', 'Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into unit (id, name) values ('Rek Sai', 'Rek Sai') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Hunter Nidalee18_AP'), 'Rek Sai') on conflict do nothing;
-insert into unit (id, name) values ('Cinderling18', 'Cinderling18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Hunter Nidalee18_AP'), 'Cinderling18') on conflict do nothing;
-insert into unit (id, name) values ('Kog Maw18_AD', 'Kog Maw18_AD') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Hunter Nidalee18_AP'), 'Kog Maw18_AD') on conflict do nothing;
-insert into unit (id, name) values ('Krug18', 'Krug18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Hunter Nidalee18_AP'), 'Krug18') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Elderwood', 'Elderwood') on conflict do nothing;
-insert into trait (id, name) values ('Executioner', 'Executioner') on conflict do nothing;
-insert into trait (id, name) values ('Greenfather', 'Greenfather') on conflict do nothing;
-insert into trait (id, name) values ('Inferno', 'Inferno') on conflict do nothing;
-insert into trait (id, name) values ('Old Growth', 'Old Growth') on conflict do nothing;
-insert into trait (id, name) values ('Bounty Seeker', 'Bounty Seeker') on conflict do nothing;
-insert into trait (id, name) values ('Emerald Aspect', 'Emerald Aspect') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into item (id, name) values ('Deathblade', 'Deathblade') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Giant Slayer', 'Giant Slayer') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Executioner Draven18', 4.483, 48.88, -0.023, 'Fast 9') on conflict (name) do nothing;
-insert into unit (id, name) values ('Draven18', 'Draven18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Draven18'), 3.9299, 'Draven18', 'Deathblade', 'Guinsoo''s Rageblade', 'Kraken''s Fury') on conflict do nothing;
-insert into unit (id, name) values ('Maokai', 'Maokai') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Draven18'), 3.7254, 'Maokai', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Ezreal', 'Ezreal') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Draven18'), 3.761, 'Ezreal', 'Giant Slayer', 'Last Whisper', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Kennen', 'Kennen') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Executioner Draven18'), 3, 'Kennen', 'Edge of Night', 'Hand Of Justice', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Alistar', 'Alistar') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Draven18'), 'Alistar') on conflict do nothing;
-insert into unit (id, name) values ('Gnar Small', 'Gnar Small') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Draven18'), 'Gnar Small') on conflict do nothing;
-insert into unit (id, name) values ('Ivern', 'Ivern') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Draven18'), 'Ivern') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Draven18'), 'Amumu18') on conflict do nothing;
-insert into unit (id, name) values ('Taric18', 'Taric18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Executioner Draven18'), 'Taric18') on conflict do nothing;
-insert into trait (id, name) values ('Apex Predator', 'Apex Predator') on conflict do nothing;
-insert into trait (id, name) values ('Greenfather', 'Greenfather') on conflict do nothing;
-insert into trait (id, name) values ('Inferno', 'Inferno') on conflict do nothing;
-insert into trait (id, name) values ('Old Growth', 'Old Growth') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Bounty Seeker', 'Bounty Seeker') on conflict do nothing;
-insert into trait (id, name) values ('Emerald Aspect', 'Emerald Aspect') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Juggernaut Elder Dragon', 4.4743, 48.55, 0.107, 'Fast 9') on conflict (name) do nothing;
-insert into unit (id, name) values ('Elder Dragon', 'Elder Dragon') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Elder Dragon'), 3.3664, 'Elder Dragon', 'Infinity Edge', 'Last Whisper', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Draven18', 'Draven18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Elder Dragon'), 3.183, 'Draven18', 'Guinsoo''s Rageblade', 'Kraken''s Fury', 'Red Buff') on conflict do nothing;
-insert into unit (id, name) values ('Maokai', 'Maokai') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Elder Dragon'), 3.3532, 'Maokai', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Kennen', 'Kennen') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Elder Dragon'), 3.6485, 'Kennen', 'Edge of Night', 'Hand Of Justice', NULL) on conflict do nothing;
-insert into unit (id, name) values ('Ivern', 'Ivern') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Elder Dragon'), 'Ivern') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Elder Dragon'), 'Amumu18') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Elder Dragon'), 'Sentinel18') on conflict do nothing;
-insert into unit (id, name) values ('Taric18', 'Taric18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Elder Dragon'), 'Taric18') on conflict do nothing;
-insert into trait (id, name) values ('Apex Predator', 'Apex Predator') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Invoker', 'Invoker') on conflict do nothing;
-insert into trait (id, name) values ('Ravager', 'Ravager') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Emerald Aspect', 'Emerald Aspect') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Giant Slayer', 'Giant Slayer') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Riftbeast Sentry', 4.6457, 48.4, -0.171, 'lvl 5') on conflict (name) do nothing;
-insert into unit (id, name) values ('Sentry', 'Sentry') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Riftbeast Sentry'), 3.2963, 'Sentry', 'Hextech Gunblade', 'Jeweled Gauntlet', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Krug18', 'Krug18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Riftbeast Sentry'), 4.2362, 'Krug18', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Elder Dragon', 'Elder Dragon') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Riftbeast Sentry'), 3.5688, 'Elder Dragon', 'Infinity Edge', 'Last Whisper', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Cinderling18', 'Cinderling18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Riftbeast Sentry'), 3.9219, 'Cinderling18', 'Giant Slayer', 'Last Whisper', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Gnar Small', 'Gnar Small') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Riftbeast Sentry'), 'Gnar Small') on conflict do nothing;
-insert into unit (id, name) values ('Brambleback18', 'Brambleback18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Riftbeast Sentry'), 'Brambleback18') on conflict do nothing;
-insert into unit (id, name) values ('Murkwolf18', 'Murkwolf18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Riftbeast Sentry'), 'Murkwolf18') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Riftbeast Sentry'), 'Sentinel18') on conflict do nothing;
-insert into unit (id, name) values ('Taric18', 'Taric18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Riftbeast Sentry'), 'Taric18') on conflict do nothing;
-insert into trait (id, name) values ('Hunter', 'Hunter') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Primal', 'Primal') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Evenshroud', 'Evenshroud') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Sunfire Cape', 'Sunfire Cape') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Juggernaut Caitlyn', 4.7028, 48.36, -0.025, 'lvl 6') on conflict (name) do nothing;
-insert into unit (id, name) values ('Caitlyn', 'Caitlyn') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Caitlyn'), 4.4432, 'Caitlyn', 'Guinsoo''s Rageblade', 'Hextech Gunblade', 'Kraken''s Fury') on conflict do nothing;
-insert into unit (id, name) values ('Scuttlecrab18', 'Scuttlecrab18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Caitlyn'), 4.3366, 'Scuttlecrab18', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Sivir', 'Sivir') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Caitlyn'), 3.6338, 'Sivir', 'Infinity Edge', 'Last Whisper', 'Red Buff') on conflict do nothing;
-insert into unit (id, name) values ('Sejuani', 'Sejuani') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Caitlyn'), 3.6981, 'Sejuani', 'Evenshroud', 'Spirit Visage', 'Sunfire Cape') on conflict do nothing;
-insert into unit (id, name) values ('Rakan', 'Rakan') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Caitlyn'), 'Rakan') on conflict do nothing;
-insert into unit (id, name) values ('Yorick', 'Yorick') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Caitlyn'), 'Yorick') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Caitlyn'), 'Amumu18') on conflict do nothing;
-insert into unit (id, name) values ('Vi18', 'Vi18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Caitlyn'), 'Vi18') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Eclipse', 'Eclipse') on conflict do nothing;
-insert into trait (id, name) values ('Inferno', 'Inferno') on conflict do nothing;
-insert into trait (id, name) values ('Lunar', 'Lunar') on conflict do nothing;
-insert into trait (id, name) values ('Rapidfire', 'Rapidfire') on conflict do nothing;
-insert into trait (id, name) values ('Solar', 'Solar') on conflict do nothing;
-insert into trait (id, name) values ('Attuned', 'Attuned') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into item (id, name) values ('Giant Slayer', 'Giant Slayer') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Dragon''s Claw', 'Dragon''s Claw') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Lunar Kayle', 5.0469, 48.03, -0.186, 'lvl 6') on conflict (name) do nothing;
-insert into unit (id, name) values ('Kayle', 'Kayle') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Lunar Kayle'), 3.9444, 'Kayle', 'Giant Slayer', 'Guinsoo''s Rageblade', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into unit (id, name) values ('Aphelios', 'Aphelios') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Lunar Kayle'), 3.75, 'Aphelios', 'Guinsoo''s Rageblade', 'Infinity Edge', 'Last Whisper') on conflict do nothing;
-insert into unit (id, name) values ('Sejuani', 'Sejuani') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Lunar Kayle'), 3.1111, 'Sejuani', 'Crownguard', 'Gargoyle Stoneplate', 'Spirit Visage') on conflict do nothing;
-insert into unit (id, name) values ('Leona', 'Leona') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Lunar Kayle'), 4.6, 'Leona', 'Dragon''s Claw', 'Gargoyle Stoneplate', 'Spirit Visage') on conflict do nothing;
-insert into unit (id, name) values ('Alune', 'Alune') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Lunar Kayle'), 'Alune') on conflict do nothing;
-insert into unit (id, name) values ('Diana', 'Diana') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Lunar Kayle'), 'Diana') on conflict do nothing;
-insert into unit (id, name) values ('Shen', 'Shen') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Lunar Kayle'), 'Shen') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Lunar Kayle'), 'Amumu18') on conflict do nothing;
-insert into trait (id, name) values ('Elderwood', 'Elderwood') on conflict do nothing;
-insert into trait (id, name) values ('Lunar', 'Lunar') on conflict do nothing;
-insert into trait (id, name) values ('Rival', 'Rival') on conflict do nothing;
-insert into trait (id, name) values ('Ravager', 'Ravager') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Nashor''s Tooth', 'Nashor''s Tooth') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Titan''s Resolve', 'Titan''s Resolve') on conflict do nothing;
-insert into item (id, name) values ('Evenshroud', 'Evenshroud') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Ionic Spark', 'Ionic Spark') on conflict do nothing;
-insert into item (id, name) values ('Evenshroud', 'Evenshroud') on conflict do nothing;
-insert into item (id, name) values ('Sunfire Cape', 'Sunfire Cape') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Titan''s Resolve', 'Titan''s Resolve') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Rival Kha Zix', 4.9104, 47.62, -0.093, 'lvl 7') on conflict (name) do nothing;
-insert into unit (id, name) values ('Kha Zix', 'Kha Zix') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Rival Kha Zix'), 4.2996, 'Kha Zix', 'Hand Of Justice', 'Nashor''s Tooth', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into unit (id, name) values ('Rengar', 'Rengar') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Rival Kha Zix'), 4.419, 'Rengar', 'Edge of Night', 'Guinsoo''s Rageblade', 'Titan''s Resolve') on conflict do nothing;
-insert into unit (id, name) values ('Hecarim', 'Hecarim') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Rival Kha Zix'), 3.1481, 'Hecarim', 'Evenshroud', 'Gargoyle Stoneplate', 'Ionic Spark') on conflict do nothing;
-insert into unit (id, name) values ('Diana', 'Diana') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Rival Kha Zix'), 2.6842, 'Diana', 'Evenshroud', 'Sunfire Cape', NULL) on conflict do nothing;
-insert into unit (id, name) values ('Aphelios', 'Aphelios') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Rival Kha Zix'), 'Aphelios') on conflict do nothing;
-insert into unit (id, name) values ('Ezreal', 'Ezreal') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Rival Kha Zix'), 'Ezreal') on conflict do nothing;
-insert into unit (id, name) values ('Le Blanc', 'Le Blanc') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Rival Kha Zix'), 'Le Blanc') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Greenfather', 'Greenfather') on conflict do nothing;
-insert into trait (id, name) values ('Hunter', 'Hunter') on conflict do nothing;
-insert into trait (id, name) values ('Inferno', 'Inferno') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Primal', 'Primal') on conflict do nothing;
-insert into item (id, name) values ('Inferno Emblem', 'Inferno Emblem') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Giant Slayer', 'Giant Slayer') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Inferno Emblem', 'Inferno Emblem') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Inferno Ashe', 4.6654, 47.52, -0.032, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Ashe', 'Ashe') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Ashe'), 3.8814, 'Ashe', 'Inferno Emblem', 'Red Buff', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Sivir', 'Sivir') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Ashe'), 3.2771, 'Sivir', 'Giant Slayer', 'Infinity Edge', 'Last Whisper') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Ashe'), 3.9279, 'Amumu18', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Lillia', 'Lillia') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Ashe'), 3.8649, 'Lillia', 'Protector''s Vow', 'Protector''s Vow', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Akali_AD', 'Akali_AD') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Ashe'), 'Akali_AD') on conflict do nothing;
-insert into unit (id, name) values ('Ivern', 'Ivern') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Ashe'), 'Ivern') on conflict do nothing;
-insert into unit (id, name) values ('Kennen', 'Kennen') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Ashe'), 'Kennen') on conflict do nothing;
-insert into unit (id, name) values ('Shen', 'Shen') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Ashe'), 'Shen') on conflict do nothing;
-insert into unit (id, name) values ('Vi18', 'Vi18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Ashe'), 'Vi18') on conflict do nothing;
-insert into trait (id, name) values ('Lunar', 'Lunar') on conflict do nothing;
-insert into trait (id, name) values ('Rapidfire', 'Rapidfire') on conflict do nothing;
-insert into trait (id, name) values ('Ravager', 'Ravager') on conflict do nothing;
-insert into trait (id, name) values ('Summoner', 'Summoner') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Thornmaiden', 'Thornmaiden') on conflict do nothing;
-insert into trait (id, name) values ('Emerald Aspect', 'Emerald Aspect') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Giant Slayer', 'Giant Slayer') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Quicksilver', 'Quicksilver') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Sunfire Cape', 'Sunfire Cape') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Vanguard Aphelios', 4.9026, 47.06, -0.084, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Aphelios', 'Aphelios') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Vanguard Aphelios'), 4.4054, 'Aphelios', 'Giant Slayer', 'Guinsoo''s Rageblade', 'Kraken''s Fury') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Vanguard Aphelios'), 4.2595, 'Sentinel18', 'Protector''s Vow', 'Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into unit (id, name) values ('Brambleback18', 'Brambleback18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Vanguard Aphelios'), 4.178, 'Brambleback18', 'Edge of Night', 'Quicksilver', 'Sterak''s Gage') on conflict do nothing;
-insert into unit (id, name) values ('Diana', 'Diana') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Vanguard Aphelios'), 4.3973, 'Diana', 'Sunfire Cape', NULL, NULL) on conflict do nothing;
-insert into unit (id, name) values ('Hecarim', 'Hecarim') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Vanguard Aphelios'), 'Hecarim') on conflict do nothing;
-insert into unit (id, name) values ('Zyra', 'Zyra') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Vanguard Aphelios'), 'Zyra') on conflict do nothing;
-insert into unit (id, name) values ('Crimson Raptor18', 'Crimson Raptor18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Vanguard Aphelios'), 'Crimson Raptor18') on conflict do nothing;
-insert into unit (id, name) values ('Taric18', 'Taric18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Vanguard Aphelios'), 'Taric18') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Caustic', 'Caustic') on conflict do nothing;
-insert into trait (id, name) values ('Invoker', 'Invoker') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Adaptive Helm', 'Adaptive Helm') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Giant Slayer', 'Giant Slayer') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Adaptive Helm', 'Adaptive Helm') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Invoker Morgana', 5.0543, 46.6, -0.104, 'Standard') on conflict (name) do nothing;
-insert into unit (id, name) values ('Morgana', 'Morgana') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Morgana'), 3.4444, 'Morgana', 'Adaptive Helm', 'Red Buff', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Kog Maw18_AD', 'Kog Maw18_AD') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Morgana'), 4.3889, 'Kog Maw18_AD', 'Giant Slayer', 'Infinity Edge', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Morgana'), 3.0667, 'Sentinel18', 'Adaptive Helm', 'Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into unit (id, name) values ('Teemo', 'Teemo') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Morgana'), 3.2727, 'Teemo', 'Jeweled Gauntlet', 'Rabadon''s Deathcap', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Hecarim', 'Hecarim') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Morgana'), 'Hecarim') on conflict do nothing;
-insert into unit (id, name) values ('Sentry', 'Sentry') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Morgana'), 'Sentry') on conflict do nothing;
-insert into unit (id, name) values ('Sett', 'Sett') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Morgana'), 'Sett') on conflict do nothing;
-insert into unit (id, name) values ('Krug18', 'Krug18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Morgana'), 'Krug18') on conflict do nothing;
-insert into trait (id, name) values ('Blackthorn', 'Blackthorn') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Sprykin', 'Sprykin') on conflict do nothing;
-insert into trait (id, name) values ('Flora Fatalis', 'Flora Fatalis') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Blue Buff', 'Blue Buff') on conflict do nothing;
-insert into item (id, name) values ('Morellonomicon', 'Morellonomicon') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Blue Buff', 'Blue Buff') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Sprykin Veigar', 5.0178, 46.51, -0.109, 'lvl 5') on conflict (name) do nothing;
-insert into unit (id, name) values ('Veigar', 'Veigar') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Sprykin Veigar'), 3.7647, 'Veigar', 'Guinsoo''s Rageblade', 'Jeweled Gauntlet', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Rek Sai', 'Rek Sai') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Sprykin Veigar'), 3.2143, 'Rek Sai', 'Gargoyle Stoneplate', 'Gargoyle Stoneplate', 'Protector''s Vow') on conflict do nothing;
-insert into unit (id, name) values ('Teemo', 'Teemo') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Sprykin Veigar'), 3.8627, 'Teemo', 'Blue Buff', 'Morellonomicon', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Rammus', 'Rammus') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Sprykin Veigar'), 4.3214, 'Rammus', 'Gargoyle Stoneplate', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Gnar Small', 'Gnar Small') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Sprykin Veigar'), 'Gnar Small') on conflict do nothing;
-insert into unit (id, name) values ('Kobuko', 'Kobuko') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Sprykin Veigar'), 'Kobuko') on conflict do nothing;
-insert into unit (id, name) values ('Sett', 'Sett') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Sprykin Veigar'), 'Sett') on conflict do nothing;
-insert into unit (id, name) values ('Fiddlesticks18', 'Fiddlesticks18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Sprykin Veigar'), 'Fiddlesticks18') on conflict do nothing;
-insert into trait (id, name) values ('Lunar', 'Lunar') on conflict do nothing;
-insert into trait (id, name) values ('Rapidfire', 'Rapidfire') on conflict do nothing;
-insert into trait (id, name) values ('Rival', 'Rival') on conflict do nothing;
-insert into trait (id, name) values ('Ravager', 'Ravager') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Ravager Emblem', 'Ravager Emblem') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Evenshroud', 'Evenshroud') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Deathblade', 'Deathblade') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Ionic Spark', 'Ionic Spark') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Titan''s Resolve', 'Titan''s Resolve') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Vanguard Rengar', 4.8938, 46.16, -0.034, 'lvl 7') on conflict (name) do nothing;
-insert into unit (id, name) values ('Rengar', 'Rengar') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Vanguard Rengar'), 3.9577, 'Rengar', 'Edge of Night', 'Guinsoo''s Rageblade', 'Ravager Emblem') on conflict do nothing;
-insert into unit (id, name) values ('Hecarim', 'Hecarim') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Vanguard Rengar'), 3, 'Hecarim', 'Evenshroud', 'Protector''s Vow', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Crimson Raptor18', 'Crimson Raptor18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Vanguard Rengar'), 3.1333, 'Crimson Raptor18', 'Deathblade', 'Guinsoo''s Rageblade', 'Last Whisper') on conflict do nothing;
-insert into unit (id, name) values ('Diana', 'Diana') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Vanguard Rengar'), 2.5, 'Diana', 'Hand Of Justice', 'Ionic Spark', 'Jeweled Gauntlet') on conflict do nothing;
-insert into unit (id, name) values ('Aphelios', 'Aphelios') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Vanguard Rengar'), 'Aphelios') on conflict do nothing;
-insert into unit (id, name) values ('Brambleback18', 'Brambleback18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Vanguard Rengar'), 'Brambleback18') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Vanguard Rengar'), 'Sentinel18') on conflict do nothing;
-insert into trait (id, name) values ('Adaptor', 'Adaptor') on conflict do nothing;
-insert into trait (id, name) values ('Caustic', 'Caustic') on conflict do nothing;
-insert into trait (id, name) values ('Hunter', 'Hunter') on conflict do nothing;
-insert into trait (id, name) values ('Invoker', 'Invoker') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Emerald Aspect', 'Emerald Aspect') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Primal', 'Primal') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Ravager Emblem', 'Ravager Emblem') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Dragon''s Claw', 'Dragon''s Claw') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Primal Emblem', 'Primal Emblem') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Juggernaut Nidalee18_AP', 4.9023, 45.98, -0.066, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Nidalee18_AP', 'Nidalee18_AP') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Nidalee18_AP'), 3.4737, 'Nidalee18_AP', 'Hand Of Justice', 'Infinity Edge', 'Ravager Emblem') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Nidalee18_AP'), 4.3697, 'Amumu18', 'Dragon''s Claw', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Sivir', 'Sivir') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Nidalee18_AP'), 3.9398, 'Sivir', 'Infinity Edge', 'Spear of Shojin', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Ashe', 'Ashe') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Nidalee18_AP'), 3.3154, 'Ashe', 'Primal Emblem', 'Red Buff', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Cinderling18', 'Cinderling18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Nidalee18_AP'), 'Cinderling18') on conflict do nothing;
-insert into unit (id, name) values ('Kog Maw18_AD', 'Kog Maw18_AD') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Nidalee18_AP'), 'Kog Maw18_AD') on conflict do nothing;
-insert into unit (id, name) values ('Scuttlecrab18', 'Scuttlecrab18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Nidalee18_AP'), 'Scuttlecrab18') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Nidalee18_AP'), 'Sentinel18') on conflict do nothing;
-insert into unit (id, name) values ('Taric18', 'Taric18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Nidalee18_AP'), 'Taric18') on conflict do nothing;
-insert into trait (id, name) values ('Blossom', 'Blossom') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Greenfather', 'Greenfather') on conflict do nothing;
-insert into trait (id, name) values ('Hunter', 'Hunter') on conflict do nothing;
-insert into trait (id, name) values ('Old Growth', 'Old Growth') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Primal', 'Primal') on conflict do nothing;
-insert into item (id, name) values ('Juggernaut Emblem', 'Juggernaut Emblem') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Deathblade', 'Deathblade') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Hunter Sett', 4.6972, 45.85, -0.023, 'Fast 9') on conflict (name) do nothing;
-insert into unit (id, name) values ('Sett', 'Sett') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Hunter Sett'), 3.05, 'Sett', 'Gargoyle Stoneplate', 'Juggernaut Emblem', 'Spirit Visage') on conflict do nothing;
-insert into unit (id, name) values ('Ashe', 'Ashe') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Hunter Sett'), 3.716, 'Ashe', 'Last Whisper', 'Red Buff', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Sivir', 'Sivir') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Hunter Sett'), 3.1667, 'Sivir', 'Deathblade', 'Guinsoo''s Rageblade', 'Last Whisper') on conflict do nothing;
-insert into unit (id, name) values ('Gnar Small', 'Gnar Small') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Hunter Sett'), 4.0161, 'Gnar Small', 'Sterak''s Gage', NULL, NULL) on conflict do nothing;
-insert into unit (id, name) values ('Ivern', 'Ivern') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Hunter Sett'), 'Ivern') on conflict do nothing;
-insert into unit (id, name) values ('Maokai', 'Maokai') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Hunter Sett'), 'Maokai') on conflict do nothing;
-insert into unit (id, name) values ('Yorick', 'Yorick') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Hunter Sett'), 'Yorick') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Hunter Sett'), 'Amumu18') on conflict do nothing;
-insert into unit (id, name) values ('Vi18', 'Vi18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Hunter Sett'), 'Vi18') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Fae', 'Fae') on conflict do nothing;
-insert into trait (id, name) values ('Hunter', 'Hunter') on conflict do nothing;
-insert into trait (id, name) values ('Rival', 'Rival') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Primal', 'Primal') on conflict do nothing;
-insert into item (id, name) values ('Deathblade', 'Deathblade') on conflict do nothing;
-insert into item (id, name) values ('Giant Slayer', 'Giant Slayer') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Fae Emblem', 'Fae Emblem') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Quicksilver', 'Quicksilver') on conflict do nothing;
-insert into item (id, name) values ('Fae Emblem', 'Fae Emblem') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Fae Emblem', 'Fae Emblem') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Fae Tristana', 4.8741, 45.74, -0.101, 'lvl 7') on conflict (name) do nothing;
-insert into unit (id, name) values ('Tristana', 'Tristana') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Fae Tristana'), 3.9608, 'Tristana', 'Deathblade', 'Giant Slayer', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into unit (id, name) values ('Rammus', 'Rammus') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Fae Tristana'), 3.7477, 'Rammus', 'Crownguard', 'Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into unit (id, name) values ('Rengar', 'Rengar') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Fae Tristana'), 3.7778, 'Rengar', 'Edge of Night', 'Fae Emblem', 'Quicksilver') on conflict do nothing;
-insert into unit (id, name) values ('Sivir', 'Sivir') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Fae Tristana'), 3.566, 'Sivir', 'Fae Emblem', 'Last Whisper', 'Red Buff') on conflict do nothing;
-insert into unit (id, name) values ('Lillia', 'Lillia') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Fae Tristana'), 'Lillia') on conflict do nothing;
-insert into unit (id, name) values ('Rakan', 'Rakan') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Fae Tristana'), 'Rakan') on conflict do nothing;
-insert into unit (id, name) values ('Vi18', 'Vi18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Fae Tristana'), 'Vi18') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Elderwood', 'Elderwood') on conflict do nothing;
-insert into trait (id, name) values ('Executioner', 'Executioner') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Flora Fatalis', 'Flora Fatalis') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Dragon''s Claw', 'Dragon''s Claw') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Sunfire Cape', 'Sunfire Cape') on conflict do nothing;
-insert into item (id, name) values ('Elderwood Emblem', 'Elderwood Emblem') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Bloodthirster', 'Bloodthirster') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Elderwood Emblem', 'Elderwood Emblem') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Elderwood Ezreal', 4.6554, 45.33, -0.117, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Ezreal', 'Ezreal') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Elderwood Ezreal'), 3.6154, 'Ezreal', 'Infinity Edge', 'Last Whisper', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Hecarim', 'Hecarim') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Elderwood Ezreal'), 3.8833, 'Hecarim', 'Dragon''s Claw', 'Gargoyle Stoneplate', 'Sunfire Cape') on conflict do nothing;
-insert into unit (id, name) values ('Soraka', 'Soraka') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Elderwood Ezreal'), 3.35, 'Soraka', 'Elderwood Emblem', 'Spear of Shojin', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Gnar Small', 'Gnar Small') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Elderwood Ezreal'), 2.9583, 'Gnar Small', 'Bloodthirster', 'Edge of Night', 'Sterak''s Gage') on conflict do nothing;
-insert into unit (id, name) values ('Alistar', 'Alistar') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Elderwood Ezreal'), 'Alistar') on conflict do nothing;
-insert into unit (id, name) values ('Le Blanc', 'Le Blanc') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Elderwood Ezreal'), 'Le Blanc') on conflict do nothing;
-insert into unit (id, name) values ('Ornn', 'Ornn') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Elderwood Ezreal'), 'Ornn') on conflict do nothing;
-insert into unit (id, name) values ('Xayah', 'Xayah') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Elderwood Ezreal'), 'Xayah') on conflict do nothing;
-insert into unit (id, name) values ('Fiddlesticks18', 'Fiddlesticks18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Elderwood Ezreal'), 'Fiddlesticks18') on conflict do nothing;
-insert into trait (id, name) values ('Greenfather', 'Greenfather') on conflict do nothing;
-insert into trait (id, name) values ('Summoner', 'Summoner') on conflict do nothing;
-insert into trait (id, name) values ('Thornmaiden', 'Thornmaiden') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Steadfast Heart', 'Steadfast Heart') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Dragon''s Claw', 'Dragon''s Claw') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Juggernaut Zyra Amumu18', 4.7903, 45.04, 0.052, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Zyra', 'Zyra') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Zyra Amumu18'), 4.2565, 'Zyra', 'Archangel''s Staff', 'Archangel''s Staff', 'Hextech Gunblade') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Zyra Amumu18'), 3.9206, 'Amumu18', 'Crownguard', 'Steadfast Heart', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Maokai', 'Maokai') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Zyra Amumu18'), 3.1758, 'Maokai', 'Dragon''s Claw', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Ivern', 'Ivern') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Zyra Amumu18'), 3.0134, 'Ivern', 'Archangel''s Staff', 'Guinsoo''s Rageblade', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Rakan', 'Rakan') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Zyra Amumu18'), 'Rakan') on conflict do nothing;
-insert into unit (id, name) values ('Sejuani', 'Sejuani') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Zyra Amumu18'), 'Sejuani') on conflict do nothing;
-insert into unit (id, name) values ('Yorick', 'Yorick') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Zyra Amumu18'), 'Yorick') on conflict do nothing;
-insert into unit (id, name) values ('Scuttlecrab18', 'Scuttlecrab18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Zyra Amumu18'), 'Scuttlecrab18') on conflict do nothing;
-insert into unit (id, name) values ('Vi18', 'Vi18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Zyra Amumu18'), 'Vi18') on conflict do nothing;
-insert into trait (id, name) values ('Adaptor', 'Adaptor') on conflict do nothing;
-insert into trait (id, name) values ('Caustic', 'Caustic') on conflict do nothing;
-insert into trait (id, name) values ('Invoker', 'Invoker') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Emerald Aspect', 'Emerald Aspect') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Primal', 'Primal') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Hunter Emblem', 'Hunter Emblem') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Hunter Emblem', 'Hunter Emblem') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Invoker Nidalee18_AP', 4.8959, 44.91, -0.057, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Nidalee18_AP', 'Nidalee18_AP') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Nidalee18_AP'), 3.7436, 'Nidalee18_AP', 'Hand Of Justice', 'Hunter Emblem', 'Sterak''s Gage') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Nidalee18_AP'), 3.75, 'Sentinel18', 'Protector''s Vow', 'Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Sivir', 'Sivir') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Nidalee18_AP'), 3.3, 'Sivir', 'Infinity Edge', 'Last Whisper', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Kog Maw18_AD', 'Kog Maw18_AD') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Nidalee18_AP'), 4.2157, 'Kog Maw18_AD', 'Hunter Emblem', NULL, NULL) on conflict do nothing;
-insert into unit (id, name) values ('Morgana', 'Morgana') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Nidalee18_AP'), 'Morgana') on conflict do nothing;
-insert into unit (id, name) values ('Sentry', 'Sentry') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Nidalee18_AP'), 'Sentry') on conflict do nothing;
-insert into unit (id, name) values ('Scuttlecrab18', 'Scuttlecrab18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Nidalee18_AP'), 'Scuttlecrab18') on conflict do nothing;
-insert into unit (id, name) values ('Taric18', 'Taric18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Nidalee18_AP'), 'Taric18') on conflict do nothing;
-insert into unit (id, name) values ('Vi18', 'Vi18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Nidalee18_AP'), 'Vi18') on conflict do nothing;
-insert into trait (id, name) values ('Monolith', 'Monolith') on conflict do nothing;
-insert into trait (id, name) values ('Blackthorn', 'Blackthorn') on conflict do nothing;
-insert into trait (id, name) values ('Executioner', 'Executioner') on conflict do nothing;
-insert into trait (id, name) values ('Rival', 'Rival') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Flora Fatalis', 'Flora Fatalis') on conflict do nothing;
-insert into item (id, name) values ('Blackthorn Emblem', 'Blackthorn Emblem') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Steadfast Heart', 'Steadfast Heart') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Titan''s Resolve', 'Titan''s Resolve') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Blackthorn Emblem', 'Blackthorn Emblem') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Blackthorn Kha Zix', 4.7798, 44.68, 0.034, 'lvl 7') on conflict (name) do nothing;
-insert into unit (id, name) values ('Kha Zix', 'Kha Zix') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blackthorn Kha Zix'), 4.034, 'Kha Zix', 'Blackthorn Emblem', 'Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into unit (id, name) values ('Azir', 'Azir') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blackthorn Kha Zix'), 3.3125, 'Azir', 'Archangel''s Staff', 'Hextech Gunblade', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into unit (id, name) values ('Malphite', 'Malphite') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blackthorn Kha Zix'), 3, 'Malphite', 'Crownguard', 'Gargoyle Stoneplate', 'Steadfast Heart') on conflict do nothing;
-insert into unit (id, name) values ('Warwick', 'Warwick') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blackthorn Kha Zix'), 4.5, 'Warwick', 'Spear of Shojin', 'Sterak''s Gage', 'Titan''s Resolve') on conflict do nothing;
-insert into unit (id, name) values ('Rek Sai', 'Rek Sai') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blackthorn Kha Zix'), 'Rek Sai') on conflict do nothing;
-insert into unit (id, name) values ('Soraka', 'Soraka') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blackthorn Kha Zix'), 'Soraka') on conflict do nothing;
-insert into unit (id, name) values ('Veigar', 'Veigar') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blackthorn Kha Zix'), 'Veigar') on conflict do nothing;
-insert into unit (id, name) values ('Fiddlesticks18', 'Fiddlesticks18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blackthorn Kha Zix'), 'Fiddlesticks18') on conflict do nothing;
-insert into trait (id, name) values ('Apex Predator', 'Apex Predator') on conflict do nothing;
-insert into trait (id, name) values ('Blossom', 'Blossom') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Hunter', 'Hunter') on conflict do nothing;
-insert into trait (id, name) values ('Inferno', 'Inferno') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Dragon''s Claw', 'Dragon''s Claw') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Steadfast Heart', 'Steadfast Heart') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Deathblade', 'Deathblade') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Adaptive Helm', 'Adaptive Helm') on conflict do nothing;
-insert into item (id, name) values ('Morellonomicon', 'Morellonomicon') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Brawler Sett', 4.7764, 44.49, 0.017, 'Fast 9') on conflict (name) do nothing;
-insert into unit (id, name) values ('Sett', 'Sett') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Brawler Sett'), 3.3571, 'Sett', 'Dragon''s Claw', 'Spirit Visage', 'Steadfast Heart') on conflict do nothing;
-insert into unit (id, name) values ('Ashe', 'Ashe') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Brawler Sett'), 3.3587, 'Ashe', 'Last Whisper', 'Red Buff', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Elder Dragon', 'Elder Dragon') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Brawler Sett'), 2.8958, 'Elder Dragon', 'Deathblade', 'Infinity Edge', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Alune', 'Alune') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Brawler Sett'), 3.1538, 'Alune', 'Adaptive Helm', 'Morellonomicon', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Gnar Small', 'Gnar Small') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Brawler Sett'), 'Gnar Small') on conflict do nothing;
-insert into unit (id, name) values ('Kennen', 'Kennen') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Brawler Sett'), 'Kennen') on conflict do nothing;
-insert into unit (id, name) values ('Yorick', 'Yorick') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Brawler Sett'), 'Yorick') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Brawler Sett'), 'Amumu18') on conflict do nothing;
-insert into unit (id, name) values ('Cinderling18', 'Cinderling18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Brawler Sett'), 'Cinderling18') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Fae', 'Fae') on conflict do nothing;
-insert into trait (id, name) values ('Invoker', 'Invoker') on conflict do nothing;
-insert into trait (id, name) values ('Sprykin', 'Sprykin') on conflict do nothing;
-insert into item (id, name) values ('Blue Buff', 'Blue Buff') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Adaptive Helm', 'Adaptive Helm') on conflict do nothing;
-insert into item (id, name) values ('Morellonomicon', 'Morellonomicon') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Sprykin Teemo', 5.2786, 43.8, -0.163, 'lvl 6') on conflict (name) do nothing;
-insert into unit (id, name) values ('Teemo', 'Teemo') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Sprykin Teemo'), 4.2, 'Teemo', 'Blue Buff', 'Jeweled Gauntlet', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Rammus', 'Rammus') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Sprykin Teemo'), 4.4348, 'Rammus', 'Gargoyle Stoneplate', 'Gargoyle Stoneplate', 'Spirit Visage') on conflict do nothing;
-insert into unit (id, name) values ('Tristana', 'Tristana') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Sprykin Teemo'), 5.1951, 'Tristana', 'Guinsoo''s Rageblade', 'Infinity Edge', 'Kraken''s Fury') on conflict do nothing;
-insert into unit (id, name) values ('Morgana', 'Morgana') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Sprykin Teemo'), 2.7778, 'Morgana', 'Adaptive Helm', 'Morellonomicon', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Kobuko', 'Kobuko') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Sprykin Teemo'), 'Kobuko') on conflict do nothing;
-insert into unit (id, name) values ('Lillia', 'Lillia') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Sprykin Teemo'), 'Lillia') on conflict do nothing;
-insert into unit (id, name) values ('Veigar', 'Veigar') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Sprykin Teemo'), 'Veigar') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Sprykin Teemo'), 'Sentinel18') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Inferno', 'Inferno') on conflict do nothing;
-insert into trait (id, name) values ('Rapidfire', 'Rapidfire') on conflict do nothing;
-insert into trait (id, name) values ('Ravager', 'Ravager') on conflict do nothing;
-insert into trait (id, name) values ('Solar', 'Solar') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Dragon''s Claw', 'Dragon''s Claw') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Inferno Akali_AD', 4.8393, 43.14, 0.016, 'lvl 5') on conflict (name) do nothing;
-insert into unit (id, name) values ('Akali_AD', 'Akali_AD') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Akali_AD'), 3.8261, 'Akali_AD', 'Hand Of Justice', 'Hand Of Justice', 'Infinity Edge') on conflict do nothing;
-insert into unit (id, name) values ('Camille', 'Camille') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Akali_AD'), 3.5238, 'Camille', 'Hand Of Justice', 'Hand Of Justice', 'Sterak''s Gage') on conflict do nothing;
-insert into unit (id, name) values ('Ornn', 'Ornn') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Akali_AD'), 3.175, 'Ornn', 'Crownguard', 'Dragon''s Claw', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into unit (id, name) values ('Varus', 'Varus') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Akali_AD'), 2.9355, 'Varus', 'Infinity Edge', 'Spear of Shojin', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Kayle', 'Kayle') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Akali_AD'), 'Kayle') on conflict do nothing;
-insert into unit (id, name) values ('Leona', 'Leona') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Akali_AD'), 'Leona') on conflict do nothing;
-insert into unit (id, name) values ('Sejuani', 'Sejuani') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Akali_AD'), 'Sejuani') on conflict do nothing;
-insert into trait (id, name) values ('Greenfather', 'Greenfather') on conflict do nothing;
-insert into trait (id, name) values ('Inferno', 'Inferno') on conflict do nothing;
-insert into trait (id, name) values ('Lunar', 'Lunar') on conflict do nothing;
-insert into trait (id, name) values ('Old Growth', 'Old Growth') on conflict do nothing;
-insert into trait (id, name) values ('Rapidfire', 'Rapidfire') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Attuned', 'Attuned') on conflict do nothing;
-insert into trait (id, name) values ('Emerald Aspect', 'Emerald Aspect') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into item (id, name) values ('Hunter Emblem', 'Hunter Emblem') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Dragon''s Claw', 'Dragon''s Claw') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Lunar Aphelios', 5.1045, 42.77, -0.11, 'Fast 9') on conflict (name) do nothing;
-insert into unit (id, name) values ('Aphelios', 'Aphelios') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Lunar Aphelios'), 3.25, 'Aphelios', 'Guinsoo''s Rageblade', 'Hunter Emblem', 'Infinity Edge') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Lunar Aphelios'), 4.16, 'Amumu18', 'Dragon''s Claw', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Alune', 'Alune') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Lunar Aphelios'), 2.6923, 'Alune', 'Archangel''s Staff', 'Red Buff', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Maokai', 'Maokai') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Lunar Aphelios'), 3.2308, 'Maokai', 'Gargoyle Stoneplate', 'Gargoyle Stoneplate', 'Spirit Visage') on conflict do nothing;
-insert into unit (id, name) values ('Diana', 'Diana') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Lunar Aphelios'), 'Diana') on conflict do nothing;
-insert into unit (id, name) values ('Ivern', 'Ivern') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Lunar Aphelios'), 'Ivern') on conflict do nothing;
-insert into unit (id, name) values ('Kennen', 'Kennen') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Lunar Aphelios'), 'Kennen') on conflict do nothing;
-insert into unit (id, name) values ('Varus', 'Varus') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Lunar Aphelios'), 'Varus') on conflict do nothing;
-insert into unit (id, name) values ('Taric18', 'Taric18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Lunar Aphelios'), 'Taric18') on conflict do nothing;
-insert into trait (id, name) values ('Blackthorn', 'Blackthorn') on conflict do nothing;
-insert into trait (id, name) values ('Blossom', 'Blossom') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Flora Fatalis', 'Flora Fatalis') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Nashor''s Tooth', 'Nashor''s Tooth') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Morellonomicon', 'Morellonomicon') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Spellweaver Emblem', 'Spellweaver Emblem') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Spellweaver Ahri', 5.2194, 42.12, -0.06, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Ahri', 'Ahri') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Spellweaver Ahri'), 4.4433, 'Ahri', 'Jeweled Gauntlet', 'Nashor''s Tooth', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Alune', 'Alune') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Spellweaver Ahri'), 2.6923, 'Alune', 'Red Buff', 'Spear of Shojin', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Lillia', 'Lillia') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Spellweaver Ahri'), 4.3529, 'Lillia', 'Gargoyle Stoneplate', 'Protector''s Vow', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Cassiopeia', 'Cassiopeia') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Spellweaver Ahri'), 3.5385, 'Cassiopeia', 'Jeweled Gauntlet', 'Morellonomicon', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Rek Sai', 'Rek Sai') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Spellweaver Ahri'), 'Rek Sai') on conflict do nothing;
-insert into unit (id, name) values ('Sett', 'Sett') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Spellweaver Ahri'), 'Sett') on conflict do nothing;
-insert into unit (id, name) values ('Veigar', 'Veigar') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Spellweaver Ahri'), 'Veigar') on conflict do nothing;
-insert into unit (id, name) values ('Fiddlesticks18', 'Fiddlesticks18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Spellweaver Ahri'), 'Fiddlesticks18') on conflict do nothing;
-insert into unit (id, name) values ('Karma18', 'Karma18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Spellweaver Ahri'), 'Karma18') on conflict do nothing;
-insert into trait (id, name) values ('Blossom', 'Blossom') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Old Growth', 'Old Growth') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into item (id, name) values ('Adaptive Helm', 'Adaptive Helm') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Dragon''s Claw', 'Dragon''s Claw') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Steadfast Heart', 'Steadfast Heart') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Blossom Emblem', 'Blossom Emblem') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Blossom Ahri', 4.9206, 41.72, -0.126, 'Fast 9') on conflict (name) do nothing;
-insert into unit (id, name) values ('Ahri', 'Ahri') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blossom Ahri'), 3.3214, 'Ahri', 'Adaptive Helm', 'Jeweled Gauntlet', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into unit (id, name) values ('Sett', 'Sett') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blossom Ahri'), 3.697, 'Sett', 'Dragon''s Claw', 'Gargoyle Stoneplate', 'Steadfast Heart') on conflict do nothing;
-insert into unit (id, name) values ('Ashe', 'Ashe') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blossom Ahri'), 3.3133, 'Ashe', 'Last Whisper', 'Red Buff', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Lux18_Base', 'Lux18_Base') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blossom Ahri'), 3.3725, 'Lux18_Base', 'Jeweled Gauntlet', 'Rabadon''s Deathcap', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Gnar Small', 'Gnar Small') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blossom Ahri'), 'Gnar Small') on conflict do nothing;
-insert into unit (id, name) values ('Maokai', 'Maokai') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blossom Ahri'), 'Maokai') on conflict do nothing;
-insert into unit (id, name) values ('Master Yi_AD', 'Master Yi_AD') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blossom Ahri'), 'Master Yi_AD') on conflict do nothing;
-insert into unit (id, name) values ('Yorick', 'Yorick') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blossom Ahri'), 'Yorick') on conflict do nothing;
-insert into unit (id, name) values ('Yunara', 'Yunara') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blossom Ahri'), 'Yunara') on conflict do nothing;
-insert into unit (id, name) values ('Karma18', 'Karma18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blossom Ahri'), 'Karma18') on conflict do nothing;
-insert into trait (id, name) values ('Monolith', 'Monolith') on conflict do nothing;
-insert into trait (id, name) values ('Blackthorn', 'Blackthorn') on conflict do nothing;
-insert into trait (id, name) values ('Brawler', 'Brawler') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Executioner', 'Executioner') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Sprykin', 'Sprykin') on conflict do nothing;
-insert into trait (id, name) values ('Flora Fatalis', 'Flora Fatalis') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Steadfast Heart', 'Steadfast Heart') on conflict do nothing;
-insert into item (id, name) values ('Blue Buff', 'Blue Buff') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Blue Buff', 'Blue Buff') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Blackthorn Malphite Veigar', 4.6728, 41.7, 0.017, 'Standard') on conflict (name) do nothing;
-insert into unit (id, name) values ('Malphite', 'Malphite') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blackthorn Malphite Veigar'), 2.7647, 'Malphite', 'Crownguard', 'Gargoyle Stoneplate', 'Steadfast Heart') on conflict do nothing;
-insert into unit (id, name) values ('Veigar', 'Veigar') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blackthorn Malphite Veigar'), 3.1429, 'Veigar', 'Blue Buff', 'Hextech Gunblade', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into unit (id, name) values ('Azir', 'Azir') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blackthorn Malphite Veigar'), 3.3333, 'Azir', 'Guinsoo''s Rageblade', 'Red Buff', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Rek Sai', 'Rek Sai') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blackthorn Malphite Veigar'), 3.04, 'Rek Sai', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Kobuko', 'Kobuko') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blackthorn Malphite Veigar'), 'Kobuko') on conflict do nothing;
-insert into unit (id, name) values ('Rammus', 'Rammus') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blackthorn Malphite Veigar'), 'Rammus') on conflict do nothing;
-insert into unit (id, name) values ('Soraka', 'Soraka') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blackthorn Malphite Veigar'), 'Soraka') on conflict do nothing;
-insert into unit (id, name) values ('Fiddlesticks18', 'Fiddlesticks18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blackthorn Malphite Veigar'), 'Fiddlesticks18') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Fae', 'Fae') on conflict do nothing;
-insert into trait (id, name) values ('Inferno', 'Inferno') on conflict do nothing;
-insert into trait (id, name) values ('Rapidfire', 'Rapidfire') on conflict do nothing;
-insert into trait (id, name) values ('Solar', 'Solar') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Giant Slayer', 'Giant Slayer') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Inferno Kayle', 5.4677, 41.68, -0.186, 'lvl 6') on conflict (name) do nothing;
-insert into unit (id, name) values ('Kayle', 'Kayle') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Kayle'), 4.0526, 'Kayle', 'Guinsoo''s Rageblade', 'Guinsoo''s Rageblade', 'Hextech Gunblade') on conflict do nothing;
-insert into unit (id, name) values ('Sejuani', 'Sejuani') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Kayle'), 4.4328, 'Sejuani', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Varus', 'Varus') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Kayle'), 4.0769, 'Varus', 'Giant Slayer', 'Last Whisper', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Leona', 'Leona') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Kayle'), 4.6279, 'Leona', 'Gargoyle Stoneplate', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Rakan', 'Rakan') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Kayle'), 'Rakan') on conflict do nothing;
-insert into unit (id, name) values ('Shen', 'Shen') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Kayle'), 'Shen') on conflict do nothing;
-insert into unit (id, name) values ('Xayah', 'Xayah') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Kayle'), 'Xayah') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Elderwood', 'Elderwood') on conflict do nothing;
-insert into trait (id, name) values ('Fae', 'Fae') on conflict do nothing;
-insert into trait (id, name) values ('Hunter', 'Hunter') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Primal', 'Primal') on conflict do nothing;
-insert into item (id, name) values ('Rapidfire Emblem', 'Rapidfire Emblem') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Vanguard Emblem', 'Vanguard Emblem') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Sunfire Cape', 'Sunfire Cape') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Fae Emblem', 'Fae Emblem') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Fae Tristana Sivir', 5.1752, 40.68, -0.087, 'lvl 7') on conflict (name) do nothing;
-insert into unit (id, name) values ('Tristana', 'Tristana') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Fae Tristana Sivir'), 3.2632, 'Tristana', 'Guinsoo''s Rageblade', 'Kraken''s Fury', 'Rapidfire Emblem') on conflict do nothing;
-insert into unit (id, name) values ('Sivir', 'Sivir') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Fae Tristana Sivir'), 3.4211, 'Sivir', 'Infinity Edge', 'Last Whisper', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Vi18', 'Vi18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Fae Tristana Sivir'), 3.5385, 'Vi18', 'Gargoyle Stoneplate', 'Vanguard Emblem', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Lillia', 'Lillia') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Fae Tristana Sivir'), 3.1, 'Lillia', 'Protector''s Vow', 'Spirit Visage', 'Sunfire Cape') on conflict do nothing;
-insert into unit (id, name) values ('Hecarim', 'Hecarim') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Fae Tristana Sivir'), 'Hecarim') on conflict do nothing;
-insert into unit (id, name) values ('Ornn', 'Ornn') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Fae Tristana Sivir'), 'Ornn') on conflict do nothing;
-insert into unit (id, name) values ('Rakan', 'Rakan') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Fae Tristana Sivir'), 'Rakan') on conflict do nothing;
-insert into unit (id, name) values ('Xayah', 'Xayah') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Fae Tristana Sivir'), 'Xayah') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Elderwood', 'Elderwood') on conflict do nothing;
-insert into trait (id, name) values ('Fae', 'Fae') on conflict do nothing;
-insert into trait (id, name) values ('Rapidfire', 'Rapidfire') on conflict do nothing;
-insert into trait (id, name) values ('Solar', 'Solar') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Deathblade', 'Deathblade') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Rapidfire Kayle', 5.217, 40.67, -0.098, 'lvl 6') on conflict (name) do nothing;
-insert into unit (id, name) values ('Kayle', 'Kayle') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Rapidfire Kayle'), 4.5517, 'Kayle', 'Jeweled Gauntlet', 'Rabadon''s Deathcap', 'Red Buff') on conflict do nothing;
-insert into unit (id, name) values ('Ornn', 'Ornn') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Rapidfire Kayle'), 4.7297, 'Ornn', 'Crownguard', 'Gargoyle Stoneplate', 'Spirit Visage') on conflict do nothing;
-insert into unit (id, name) values ('Xayah', 'Xayah') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Rapidfire Kayle'), 4.412, 'Xayah', 'Deathblade', 'Guinsoo''s Rageblade', 'Kraken''s Fury') on conflict do nothing;
-insert into unit (id, name) values ('Sejuani', 'Sejuani') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Rapidfire Kayle'), 3.75, 'Sejuani', 'Crownguard', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Hecarim', 'Hecarim') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Rapidfire Kayle'), 'Hecarim') on conflict do nothing;
-insert into unit (id, name) values ('Leona', 'Leona') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Rapidfire Kayle'), 'Leona') on conflict do nothing;
-insert into unit (id, name) values ('Rakan', 'Rakan') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Rapidfire Kayle'), 'Rakan') on conflict do nothing;
-insert into trait (id, name) values ('Apex Predator', 'Apex Predator') on conflict do nothing;
-insert into trait (id, name) values ('Greenfather', 'Greenfather') on conflict do nothing;
-insert into trait (id, name) values ('Inferno', 'Inferno') on conflict do nothing;
-insert into trait (id, name) values ('Old Growth', 'Old Growth') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Emerald Aspect', 'Emerald Aspect') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Steadfast Heart', 'Steadfast Heart') on conflict do nothing;
-insert into item (id, name) values ('Inferno Emblem', 'Inferno Emblem') on conflict do nothing;
-insert into item (id, name) values ('Red Buff', 'Red Buff') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Deathblade', 'Deathblade') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into item (id, name) values ('Sterak''s Gage', 'Sterak''s Gage') on conflict do nothing;
-insert into item (id, name) values ('Inferno Emblem', 'Inferno Emblem') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Inferno Amumu18', 5.0475, 40.53, -0.049, 'Fast 9') on conflict (name) do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Amumu18'), 3.9138, 'Amumu18', 'Gargoyle Stoneplate', 'Gargoyle Stoneplate', 'Steadfast Heart') on conflict do nothing;
-insert into unit (id, name) values ('Ashe', 'Ashe') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Amumu18'), 3.6679, 'Ashe', 'Inferno Emblem', 'Red Buff', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Elder Dragon', 'Elder Dragon') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Amumu18'), 4.1831, 'Elder Dragon', 'Deathblade', 'Infinity Edge', 'Sterak''s Gage') on conflict do nothing;
-insert into unit (id, name) values ('Draven18', 'Draven18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Inferno Amumu18'), 4.2174, 'Draven18', 'Guinsoo''s Rageblade', 'Inferno Emblem', 'Kraken''s Fury') on conflict do nothing;
-insert into unit (id, name) values ('Ivern', 'Ivern') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Amumu18'), 'Ivern') on conflict do nothing;
-insert into unit (id, name) values ('Kennen', 'Kennen') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Amumu18'), 'Kennen') on conflict do nothing;
-insert into unit (id, name) values ('Maokai', 'Maokai') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Amumu18'), 'Maokai') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Amumu18'), 'Sentinel18') on conflict do nothing;
-insert into unit (id, name) values ('Taric18', 'Taric18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Inferno Amumu18'), 'Taric18') on conflict do nothing;
-insert into trait (id, name) values ('Blossom', 'Blossom') on conflict do nothing;
-insert into trait (id, name) values ('Solar', 'Solar') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into item (id, name) values ('Deathblade', 'Deathblade') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Dragon''s Claw', 'Dragon''s Claw') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Executioner Emblem', 'Executioner Emblem') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Blue Buff', 'Blue Buff') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Last Whisper', 'Last Whisper') on conflict do nothing;
-insert into item (id, name) values ('Deathblade', 'Deathblade') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Juggernaut Yunara', 4.999, 40.01, 0.036, 'lvl 6') on conflict (name) do nothing;
-insert into unit (id, name) values ('Yunara', 'Yunara') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Yunara'), 4.6984, 'Yunara', 'Deathblade', 'Last Whisper', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Sejuani', 'Sejuani') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Yunara'), 4.108, 'Sejuani', 'Dragon''s Claw', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Le Blanc', 'Le Blanc') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Yunara'), 2.7917, 'Le Blanc', 'Executioner Emblem', 'Spear of Shojin', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Karma18', 'Karma18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Juggernaut Yunara'), 3.9388, 'Karma18', 'Blue Buff', 'Jeweled Gauntlet', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into unit (id, name) values ('Kayle', 'Kayle') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Yunara'), 'Kayle') on conflict do nothing;
-insert into unit (id, name) values ('Leona', 'Leona') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Yunara'), 'Leona') on conflict do nothing;
-insert into unit (id, name) values ('Yorick', 'Yorick') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Juggernaut Yunara'), 'Yorick') on conflict do nothing;
-insert into trait (id, name) values ('Monolith', 'Monolith') on conflict do nothing;
-insert into trait (id, name) values ('Blackthorn', 'Blackthorn') on conflict do nothing;
-insert into trait (id, name) values ('Blossom', 'Blossom') on conflict do nothing;
-insert into trait (id, name) values ('Executioner', 'Executioner') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Summoner', 'Summoner') on conflict do nothing;
-insert into trait (id, name) values ('Thornmaiden', 'Thornmaiden') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into item (id, name) values ('Crownguard', 'Crownguard') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Blackthorn Emblem', 'Blackthorn Emblem') on conflict do nothing;
-insert into item (id, name) values ('Executioner Emblem', 'Executioner Emblem') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Blackthorn Emblem', 'Blackthorn Emblem') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Blackthorn Malphite', 4.9949, 39.94, -0.001, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Malphite', 'Malphite') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blackthorn Malphite'), 4.2139, 'Malphite', 'Crownguard', 'Gargoyle Stoneplate', 'Spirit Visage') on conflict do nothing;
-insert into unit (id, name) values ('Azir', 'Azir') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blackthorn Malphite'), 4.3, 'Azir', 'Guinsoo''s Rageblade', 'Hextech Gunblade', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into unit (id, name) values ('Zyra', 'Zyra') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blackthorn Malphite'), 3.4503, 'Zyra', 'Blackthorn Emblem', 'Executioner Emblem', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Lux18_Base', 'Lux18_Base') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Blackthorn Malphite'), 3.4603, 'Lux18_Base', 'Jeweled Gauntlet', 'Rabadon''s Deathcap', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Ahri', 'Ahri') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blackthorn Malphite'), 'Ahri') on conflict do nothing;
-insert into unit (id, name) values ('Veigar', 'Veigar') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blackthorn Malphite'), 'Veigar') on conflict do nothing;
-insert into unit (id, name) values ('Yorick', 'Yorick') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blackthorn Malphite'), 'Yorick') on conflict do nothing;
-insert into unit (id, name) values ('Yunara', 'Yunara') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blackthorn Malphite'), 'Yunara') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Blackthorn Malphite'), 'Amumu18') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Executioner', 'Executioner') on conflict do nothing;
-insert into trait (id, name) values ('Inferno', 'Inferno') on conflict do nothing;
-insert into trait (id, name) values ('Lunar', 'Lunar') on conflict do nothing;
-insert into trait (id, name) values ('Old Growth', 'Old Growth') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Attuned', 'Attuned') on conflict do nothing;
-insert into trait (id, name) values ('Emerald Aspect', 'Emerald Aspect') on conflict do nothing;
-insert into trait (id, name) values ('Flora Fatalis', 'Flora Fatalis') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into item (id, name) values ('Archangel''s Staff', 'Archangel''s Staff') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Ionic Spark', 'Ionic Spark') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Defender Emblem', 'Defender Emblem') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Flora Fatalis Soraka', 5.3665, 37.15, -0.091, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Soraka', 'Soraka') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Flora Fatalis Soraka'), 3.8182, 'Soraka', 'Archangel''s Staff', 'Rabadon''s Deathcap', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Lillia', 'Lillia') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Flora Fatalis Soraka'), 3.5, 'Lillia', 'Gargoyle Stoneplate', 'Ionic Spark', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Kennen', 'Kennen') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Flora Fatalis Soraka'), 4, 'Kennen', 'Defender Emblem', 'Hand Of Justice', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into unit (id, name) values ('Alune', 'Alune') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Flora Fatalis Soraka'), 3.6, 'Alune', 'Jeweled Gauntlet', 'Spear of Shojin', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Diana', 'Diana') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Flora Fatalis Soraka'), 'Diana') on conflict do nothing;
-insert into unit (id, name) values ('Maokai', 'Maokai') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Flora Fatalis Soraka'), 'Maokai') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Flora Fatalis Soraka'), 'Amumu18') on conflict do nothing;
-insert into unit (id, name) values ('Fiddlesticks18', 'Fiddlesticks18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Flora Fatalis Soraka'), 'Fiddlesticks18') on conflict do nothing;
-insert into unit (id, name) values ('Taric18', 'Taric18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Flora Fatalis Soraka'), 'Taric18') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Elderwood', 'Elderwood') on conflict do nothing;
-insert into trait (id, name) values ('Fae', 'Fae') on conflict do nothing;
-insert into trait (id, name) values ('Lunar', 'Lunar') on conflict do nothing;
-insert into trait (id, name) values ('Rapidfire', 'Rapidfire') on conflict do nothing;
-insert into trait (id, name) values ('Rival', 'Rival') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Flora Fatalis', 'Flora Fatalis') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Bramble Vest', 'Bramble Vest') on conflict do nothing;
-insert into item (id, name) values ('Dragon''s Claw', 'Dragon''s Claw') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Giant Slayer', 'Giant Slayer') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Sunfire Cape', 'Sunfire Cape') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Hand Of Justice', 'Hand Of Justice') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Edge of Night', 'Edge of Night') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Flora Fatalis Kha Zix', 5.514, 35.86, -0.128, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Kha Zix', 'Kha Zix') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Flora Fatalis Kha Zix'), 4.9861, 'Kha Zix', 'Edge of Night', 'Hand Of Justice', 'Jeweled Gauntlet') on conflict do nothing;
-insert into unit (id, name) values ('Fiddlesticks18', 'Fiddlesticks18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Flora Fatalis Kha Zix'), 4.5, 'Fiddlesticks18', 'Bramble Vest', 'Dragon''s Claw', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Aphelios', 'Aphelios') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Flora Fatalis Kha Zix'), 4.8462, 'Aphelios', 'Giant Slayer', 'Guinsoo''s Rageblade', 'Kraken''s Fury') on conflict do nothing;
-insert into unit (id, name) values ('Diana', 'Diana') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Flora Fatalis Kha Zix'), 3.7143, 'Diana', 'Sunfire Cape', NULL, NULL) on conflict do nothing;
-insert into unit (id, name) values ('Le Blanc', 'Le Blanc') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Flora Fatalis Kha Zix'), 'Le Blanc') on conflict do nothing;
-insert into unit (id, name) values ('Ornn', 'Ornn') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Flora Fatalis Kha Zix'), 'Ornn') on conflict do nothing;
-insert into unit (id, name) values ('Rakan', 'Rakan') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Flora Fatalis Kha Zix'), 'Rakan') on conflict do nothing;
-insert into unit (id, name) values ('Xayah', 'Xayah') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Flora Fatalis Kha Zix'), 'Xayah') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Flora Fatalis Kha Zix'), 'Amumu18') on conflict do nothing;
-insert into trait (id, name) values ('Apex Predator', 'Apex Predator') on conflict do nothing;
-insert into trait (id, name) values ('Coven', 'Coven') on conflict do nothing;
-insert into trait (id, name) values ('Invoker', 'Invoker') on conflict do nothing;
-insert into trait (id, name) values ('Lunar', 'Lunar') on conflict do nothing;
-insert into trait (id, name) values ('Spellweaver', 'Spellweaver') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Attuned', 'Attuned') on conflict do nothing;
-insert into trait (id, name) values ('Emerald Aspect', 'Emerald Aspect') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Morellonomicon', 'Morellonomicon') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Nashor''s Tooth', 'Nashor''s Tooth') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Titan''s Resolve', 'Titan''s Resolve') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Void Staff', 'Void Staff') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Coven Morgana', 5.3269, 33.67, -0.123, 'Fast 8') on conflict (name) do nothing;
-insert into unit (id, name) values ('Morgana', 'Morgana') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Coven Morgana'), 4.2222, 'Morgana', 'Morellonomicon', 'Rabadon''s Deathcap', 'Void Staff') on conflict do nothing;
-insert into unit (id, name) values ('Sentinel18', 'Sentinel18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Coven Morgana'), 4.0549, 'Sentinel18', 'Gargoyle Stoneplate', 'Protector''s Vow', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Alune', 'Alune') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Coven Morgana'), 3.7301, 'Alune', 'Jeweled Gauntlet', 'Nashor''s Tooth', 'Spear of Shojin') on conflict do nothing;
-insert into unit (id, name) values ('Elise', 'Elise') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Coven Morgana'), 4.9825, 'Elise', 'Gargoyle Stoneplate', 'Guinsoo''s Rageblade', 'Titan''s Resolve') on conflict do nothing;
-insert into unit (id, name) values ('Cassiopeia', 'Cassiopeia') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Coven Morgana'), 'Cassiopeia') on conflict do nothing;
-insert into unit (id, name) values ('Diana', 'Diana') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Coven Morgana'), 'Diana') on conflict do nothing;
-insert into unit (id, name) values ('Elder Dragon', 'Elder Dragon') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Coven Morgana'), 'Elder Dragon') on conflict do nothing;
-insert into unit (id, name) values ('Taric18', 'Taric18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Coven Morgana'), 'Taric18') on conflict do nothing;
-insert into trait (id, name) values ('Invoker', 'Invoker') on conflict do nothing;
-insert into trait (id, name) values ('Solar', 'Solar') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into trait (id, name) values ('Riftbeast', 'Riftbeast') on conflict do nothing;
-insert into item (id, name) values ('Invoker Emblem', 'Invoker Emblem') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Striker''s Flail', 'Striker''s Flail') on conflict do nothing;
-insert into item (id, name) values ('Bramble Vest', 'Bramble Vest') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Nashor''s Tooth', 'Nashor''s Tooth') on conflict do nothing;
-insert into item (id, name) values ('Rabadon''s Deathcap', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Jeweled Gauntlet', 'Jeweled Gauntlet') on conflict do nothing;
-insert into item (id, name) values ('Spear of Shojin', 'Spear of Shojin') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Invoker Gromp18_AP', 5.589, 31.14, -0.021, 'lvl 6') on conflict (name) do nothing;
-insert into unit (id, name) values ('Gromp18_AP', 'Gromp18_AP') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Gromp18_AP'), 4.4545, 'Gromp18_AP', 'Invoker Emblem', 'Jeweled Gauntlet', 'Striker''s Flail') on conflict do nothing;
-insert into unit (id, name) values ('Scuttlecrab18', 'Scuttlecrab18') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Gromp18_AP'), 4.8966, 'Scuttlecrab18', 'Bramble Vest', 'Gargoyle Stoneplate', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Teemo', 'Teemo') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Gromp18_AP'), 3.9091, 'Teemo', 'Jeweled Gauntlet', 'Nashor''s Tooth', 'Rabadon''s Deathcap') on conflict do nothing;
-insert into unit (id, name) values ('Sejuani', 'Sejuani') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Invoker Gromp18_AP'), 3.6471, 'Sejuani', 'Gargoyle Stoneplate', 'Protector''s Vow', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Kayle', 'Kayle') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Gromp18_AP'), 'Kayle') on conflict do nothing;
-insert into unit (id, name) values ('Leona', 'Leona') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Gromp18_AP'), 'Leona') on conflict do nothing;
-insert into unit (id, name) values ('Sentry', 'Sentry') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Invoker Gromp18_AP'), 'Sentry') on conflict do nothing;
-insert into trait (id, name) values ('Defender', 'Defender') on conflict do nothing;
-insert into trait (id, name) values ('Elderwood', 'Elderwood') on conflict do nothing;
-insert into trait (id, name) values ('Fae', 'Fae') on conflict do nothing;
-insert into trait (id, name) values ('Inferno', 'Inferno') on conflict do nothing;
-insert into trait (id, name) values ('Rapidfire', 'Rapidfire') on conflict do nothing;
-insert into trait (id, name) values ('Vanguard', 'Vanguard') on conflict do nothing;
-insert into trait (id, name) values ('Juggernaut', 'Juggernaut') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Protector''s Vow', 'Protector''s Vow') on conflict do nothing;
-insert into item (id, name) values ('Spirit Visage', 'Spirit Visage') on conflict do nothing;
-insert into item (id, name) values ('Warmogs Armor', 'Warmogs Armor') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Hextech Gunblade', 'Hextech Gunblade') on conflict do nothing;
-insert into item (id, name) values ('Kraken''s Fury', 'Kraken''s Fury') on conflict do nothing;
-insert into item (id, name) values ('Fae Emblem', 'Fae Emblem') on conflict do nothing;
-insert into item (id, name) values ('Ravager Emblem', 'Ravager Emblem') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Guinsoo''s Rageblade', 'Guinsoo''s Rageblade') on conflict do nothing;
-insert into item (id, name) values ('Gargoyle Stoneplate', 'Gargoyle Stoneplate') on conflict do nothing;
-insert into item (id, name) values ('Infinity Edge', 'Infinity Edge') on conflict do nothing;
-insert into comp (name, avg_placement, win_rate, difficulty, levelling) values ('Fae Tristana Lillia', 5.8957, 30.57, -0.128, 'lvl 7') on conflict (name) do nothing;
-insert into unit (id, name) values ('Tristana', 'Tristana') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Fae Tristana Lillia'), 5.3684, 'Tristana', 'Guinsoo''s Rageblade', 'Hextech Gunblade', 'Kraken''s Fury') on conflict do nothing;
-insert into unit (id, name) values ('Lillia', 'Lillia') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Fae Tristana Lillia'), 4.3333, 'Lillia', 'Protector''s Vow', 'Spirit Visage', 'Warmogs Armor') on conflict do nothing;
-insert into unit (id, name) values ('Xayah', 'Xayah') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Fae Tristana Lillia'), 4.4737, 'Xayah', 'Guinsoo''s Rageblade', 'Hextech Gunblade', 'Kraken''s Fury') on conflict do nothing;
-insert into unit (id, name) values ('Elise', 'Elise') on conflict do nothing;
-insert into build (comp_id, avg_placement, unit_id, item1_id, item2_id, item3_id) values ((select id from comp where name = 'Fae Tristana Lillia'), 4.8333, 'Elise', 'Fae Emblem', 'Guinsoo''s Rageblade', 'Ravager Emblem') on conflict do nothing;
-insert into unit (id, name) values ('Hecarim', 'Hecarim') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Fae Tristana Lillia'), 'Hecarim') on conflict do nothing;
-insert into unit (id, name) values ('Ornn', 'Ornn') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Fae Tristana Lillia'), 'Ornn') on conflict do nothing;
-insert into unit (id, name) values ('Rakan', 'Rakan') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Fae Tristana Lillia'), 'Rakan') on conflict do nothing;
-insert into unit (id, name) values ('Varus', 'Varus') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Fae Tristana Lillia'), 'Varus') on conflict do nothing;
-insert into unit (id, name) values ('Amumu18', 'Amumu18') on conflict do nothing;
-insert into build (comp_id, unit_id) values ((select id from comp where name = 'Fae Tristana Lillia'), 'Amumu18') on conflict do nothing;
+CREATE TABLE "public"."build" (
+                                  "id" serial NOT NULL,
+                                  "comp_id" integer NOT NULL,
+                                  "avg_placement" double precision,
+                                  "unit_id" character varying(255) NOT NULL,
+                                  "item1_id" character varying(255),
+                                  "item2_id" character varying(255),
+                                  "item3_id" character varying(255),
+                                  "stars" integer,
+                                  CONSTRAINT "build_pkey" PRIMARY KEY ("id"),
+                                  CONSTRAINT "chk_item_item_order" CHECK ((((item1_id IS NULL) OR (item2_id IS NULL) OR ((item1_id)::text <= (item2_id)::text)) AND ((item2_id IS NULL) OR (item3_id IS NULL) OR ((item2_id)::text <= (item3_id)::text)) AND ((item1_id IS NULL) OR (item3_id IS NULL) OR ((item1_id)::text <= (item3_id)::text))))
+);
+
+CREATE UNIQUE INDEX uq_build_comp_unit_items ON "public"."build" USING btree (comp_id, unit_id, item1_id, item2_id, item3_id);
+
+INSERT INTO "public"."build" ("id", "comp_id", "avg_placement", "unit_id", "item1_id", "item2_id", "item3_id", "stars") VALUES
+                                                                                                                            (1,	1,	3.9507,	'Aphelios',	'Deathblade',	'GuinsoosRageblade',	'KrakensFury',	NULL),
+                                                                                                                            (2,	1,	4.0545,	'Nidalee',	'InfinityEdge',	'SpearOfShojin',	'SteraksGage',	NULL),
+                                                                                                                            (3,	1,	3.4872,	'Amumu',	'DragonsClaw',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (4,	1,	3.641,	'Sentinel',	'AdaptiveHelm',	'ProtectorsVow',	'ProtectorsVow',	NULL),
+                                                                                                                            (5,	1,	NULL,	'Diana',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (6,	1,	NULL,	'Varus',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (7,	1,	NULL,	'KogMaw',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (8,	1,	NULL,	'Vi',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (9,	2,	3.7783,	'Azir',	'GuinsoosRageblade',	'HextechGunblade',	'RabadonsDeathcap',	NULL),
+                                                                                                                            (10,	2,	3.5985,	'Rammus',	'Crownguard',	'GargoyleStoneplate',	'GargoyleStoneplate',	NULL),
+                                                                                                                            (11,	2,	3.0013,	'Zyra',	'ExecutionerEmblem',	'Morellonomicon',	'VoidStaff',	NULL),
+                                                                                                                            (12,	2,	2.8204,	'Fiddlesticks',	'IonicSpark',	'SunfireCape',	'WarmogsArmor',	NULL),
+                                                                                                                            (13,	2,	NULL,	'Soraka',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (14,	2,	NULL,	'Teemo',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (15,	2,	NULL,	'Veigar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (16,	3,	4.0606,	'Yunara',	'BlackthornEmblem',	'LastWhisper',	'SpearOfShojin',	NULL),
+                                                                                                                            (17,	3,	3.8576,	'Alistar',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (18,	3,	3.8063,	'Warwick',	'SpearOfShojin',	'SteraksGage',	'TitansResolve',	NULL),
+                                                                                                                            (19,	3,	2.8182,	'Ezreal',	'Deathblade',	'LastWhisper',	'RedBuff',	NULL),
+                                                                                                                            (20,	3,	NULL,	'Azir',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (21,	3,	NULL,	'RekSai',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (22,	3,	NULL,	'Soraka',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (23,	3,	NULL,	'Murkwolf',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (24,	4,	4.4392,	'Veigar',	'BlueBuff',	'FloraFatalisEmblem',	'JeweledGauntlet',	NULL),
+                                                                                                                            (25,	4,	3.6894,	'Ornn',	'GargoyleStoneplate',	'SpiritVisage',	'SpiritVisage',	NULL),
+                                                                                                                            (26,	4,	3.2843,	'Alistar',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (27,	4,	3.756,	'LeBlanc',	'Morellonomicon',	'SpearOfShojin',	'VoidStaff',	NULL),
+                                                                                                                            (28,	4,	NULL,	'Cassiopeia',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (29,	4,	NULL,	'RekSai',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (30,	4,	NULL,	'Fiddlesticks',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (31,	5,	4.1247,	'Ahri',	'InvokerEmblem',	'JeweledGauntlet',	'StrikersFlail',	NULL),
+                                                                                                                            (32,	5,	3.7382,	'Morgana',	'Morellonomicon',	'RabadonsDeathcap',	'VoidStaff',	NULL),
+                                                                                                                            (33,	5,	4.0115,	'Sett',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (34,	5,	3.4203,	'Sentinel',	'ProtectorsVow',	'ProtectorsVow',	'ProtectorsVow',	NULL),
+                                                                                                                            (35,	5,	NULL,	'Pebbles',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (36,	5,	NULL,	'Karma',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (37,	5,	NULL,	'Krug',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (38,	5,	NULL,	'Taric',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (39,	6,	3.8828,	'KhaZix',	'HandOfJustice',	'NashorsTooth',	'RabadonsDeathcap',	NULL),
+                                                                                                                            (40,	6,	3.3896,	'Hecarim',	'BrambleVest',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (41,	6,	3.0115,	'Diana',	'ExecutionerEmblem',	'HandOfJustice',	'IonicSpark',	NULL),
+                                                                                                                            (42,	6,	3.1686,	'Ezreal',	'Deathblade',	'RedBuff',	'SpearOfShojin',	NULL),
+                                                                                                                            (43,	6,	NULL,	'Ornn',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (44,	6,	NULL,	'Soraka',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (45,	6,	NULL,	'Fiddlesticks',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (46,	7,	3.8187,	'Aphelios',	'InfinityEdge',	'KrakensFury',	'StrikersFlail',	NULL),
+                                                                                                                            (47,	7,	3.9481,	'Brambleback',	'EdgeOfNight',	'RapidfireEmblem',	'SteraksGage',	NULL),
+                                                                                                                            (48,	7,	3.6505,	'Sentinel',	'AdaptiveHelm',	'ProtectorsVow',	'ProtectorsVow',	NULL),
+                                                                                                                            (49,	7,	3.1358,	'Amumu',	'GargoyleStoneplate',	'VanguardEmblem',	'WarmogsArmor',	NULL),
+                                                                                                                            (50,	7,	NULL,	'Rakan',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (51,	7,	NULL,	'Varus',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (52,	7,	NULL,	'Xayah',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (53,	7,	NULL,	'MamaBeak',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (54,	8,	4.053,	'Morgana',	'HextechGunblade',	'Morellonomicon',	'VoidStaff',	NULL),
+                                                                                                                            (55,	8,	3.709,	'Sentinel',	'AdaptiveHelm',	'ProtectorsVow',	'ProtectorsVow',	NULL),
+                                                                                                                            (56,	8,	3.3984,	'Alune',	'ArchangelsStaff',	'ArchangelsStaff',	'SpearOfShojin',	NULL),
+                                                                                                                            (57,	8,	3.9167,	'Brambleback',	'EdgeOfNight',	'HandOfJustice',	'Quicksilver',	NULL),
+                                                                                                                            (58,	8,	NULL,	'Diana',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (59,	8,	NULL,	'Hecarim',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (60,	8,	NULL,	'Pebbles',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (61,	8,	NULL,	'KogMaw',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (62,	8,	NULL,	'Taric',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (63,	9,	3.9156,	'Zyra',	'ArchangelsStaff',	'ArchangelsStaff',	'HextechGunblade',	NULL),
+                                                                                                                            (64,	9,	3.7073,	'Amumu',	'Crownguard',	'GargoyleStoneplate',	'SteadfastHeart',	NULL),
+                                                                                                                            (65,	9,	3.8931,	'Sivir',	'GiantSlayer',	'InfinityEdge',	'StrikersFlail',	NULL),
+                                                                                                                            (66,	9,	2.8436,	'Maokai',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (67,	9,	NULL,	'Ashe',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (68,	9,	NULL,	'Sejuani',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (69,	9,	NULL,	'Yorick',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (70,	9,	NULL,	'Scuttlecrab',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (71,	9,	NULL,	'Vi',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (72,	10,	4.0815,	'Malphite',	'Crownguard',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (73,	10,	3.1014,	'Zyra',	'BlackthornEmblem',	'ExecutionerEmblem',	'VoidStaff',	NULL),
+                                                                                                                            (74,	10,	4.0829,	'Soraka',	'ArchangelsStaff',	'RabadonsDeathcap',	'SpearOfShojin',	NULL),
+                                                                                                                            (75,	10,	4.3423,	'Amumu',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (76,	10,	NULL,	'Azir',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (77,	10,	NULL,	'Kennen',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (78,	10,	NULL,	'Yorick',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (79,	10,	NULL,	'Fiddlesticks',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (80,	11,	3.8476,	'Zyra',	'ArchangelsStaff',	'ArchangelsStaff',	'HextechGunblade',	NULL),
+                                                                                                                            (81,	11,	3.6484,	'Nidalee',	'ArchangelsStaff',	'GuinsoosRageblade',	'RabadonsDeathcap',	NULL),
+                                                                                                                            (82,	11,	3.5179,	'Amumu',	'GargoyleStoneplate',	'IonicSpark',	'SunfireCape',	NULL),
+                                                                                                                            (83,	11,	3.0619,	'Maokai',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (84,	11,	NULL,	'Ivern',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (85,	11,	NULL,	'Sejuani',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (86,	11,	NULL,	'Yorick',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (87,	11,	NULL,	'Scuttlecrab',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (88,	11,	NULL,	'Vi',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (89,	12,	4.1758,	'Cassiopeia',	'ArchangelsStaff',	'HextechGunblade',	'SpearOfShojin',	NULL),
+                                                                                                                            (90,	12,	3.9786,	'Rammus',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (91,	12,	3.4494,	'Fiddlesticks',	'IonicSpark',	'SpiritVisage',	'SunfireCape',	NULL),
+                                                                                                                            (92,	12,	4.1455,	'Lillia',	'DragonsClaw',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (93,	12,	NULL,	'Leona',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (94,	12,	NULL,	'Ornn',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (95,	12,	NULL,	'Shen',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (96,	13,	4.0746,	'MasterYi',	'BrawlerEmblem',	'EdgeOfNight',	'Quicksilver',	NULL),
+                                                                                                                            (97,	13,	4.0129,	'Rengar',	'EdgeOfNight',	'GuinsoosRageblade',	'TitansResolve',	NULL),
+                                                                                                                            (98,	13,	3.2879,	'Vi',	'Evenshroud',	'SpiritVisage',	'SunfireCape',	NULL),
+                                                                                                                            (99,	13,	3.027,	'Nidalee',	'HandOfJustice',	'InfinityEdge',	'SpearOfShojin',	NULL),
+                                                                                                                            (100,	13,	NULL,	'Sett',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (101,	13,	NULL,	'Yorick',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (102,	13,	NULL,	'Krug',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (103,	14,	4.1762,	'Sett',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (104,	14,	4.3173,	'Ezreal',	'Deathblade',	'LastWhisper',	'SpearOfShojin',	NULL),
+                                                                                                                            (105,	14,	3.9926,	'Ahri',	'ExecutionerEmblem',	'Morellonomicon',	'SpearOfShojin',	NULL),
+                                                                                                                            (106,	14,	3.2623,	'Soraka',	'HextechGunblade',	'RabadonsDeathcap',	'SpearOfShojin',	NULL),
+                                                                                                                            (107,	14,	NULL,	'Alistar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (108,	14,	NULL,	'Ornn',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (109,	14,	NULL,	'Yunara',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (110,	14,	NULL,	'Fiddlesticks',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (111,	15,	4.3548,	'Warwick',	'SpearOfShojin',	'SteraksGage',	'TitansResolve',	NULL),
+                                                                                                                            (112,	15,	3.8641,	'Malphite',	'Crownguard',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (113,	15,	3.6786,	'Murkwolf',	'Deathblade',	'HandOfJustice',	'Quicksilver',	NULL),
+                                                                                                                            (114,	15,	3,	'Brambleback',	'BlackthornEmblem',	'EdgeOfNight',	'SteraksGage',	NULL),
+                                                                                                                            (115,	15,	NULL,	'Azir',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (116,	15,	NULL,	'Diana',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (117,	15,	NULL,	'RekSai',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (118,	15,	NULL,	'Krug',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (119,	16,	4.3791,	'MasterYi',	'BrawlerEmblem',	'EdgeOfNight',	'GuinsoosRageblade',	NULL),
+                                                                                                                            (120,	16,	3.9512,	'KogMaw',	'InfinityEdge',	'RedBuff',	'SpearOfShojin',	NULL),
+                                                                                                                            (121,	16,	3,	'Krug',	'Crownguard',	'GargoyleStoneplate',	'SteadfastHeart',	NULL),
+                                                                                                                            (122,	16,	2.8846,	'Nidalee',	'GuinsoosRageblade',	'HextechGunblade',	'JeweledGauntlet',	NULL),
+                                                                                                                            (123,	16,	NULL,	'Sett',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (124,	16,	NULL,	'Yorick',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (125,	16,	NULL,	'Vi',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (126,	17,	4.2429,	'Azir',	'GuinsoosRageblade',	'HextechGunblade',	'RabadonsDeathcap',	NULL),
+                                                                                                                            (127,	17,	4.2977,	'Vi',	'GargoyleStoneplate',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (128,	17,	3.9275,	'Sett',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (129,	17,	2.7692,	'Zyra',	'AdaptiveHelm',	'RedBuff',	'VoidStaff',	NULL),
+                                                                                                                            (130,	17,	NULL,	'KhaZix',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (131,	17,	NULL,	'RekSai',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (132,	17,	NULL,	'Yorick',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (133,	17,	NULL,	'Yunara',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (134,	18,	4.153,	'Aphelios',	'ElderwoodEmblem',	'GuinsoosRageblade',	'InfinityEdge',	NULL),
+                                                                                                                            (135,	18,	3.8729,	'Ezreal',	'Deathblade',	'InfinityEdge',	'SpearOfShojin',	NULL),
+                                                                                                                            (136,	18,	3.3368,	'Lillia',	'AdaptiveHelm',	'ElderwoodEmblem',	'ProtectorsVow',	NULL),
+                                                                                                                            (137,	18,	3.4535,	'Hecarim',	'Evenshroud',	'ProtectorsVow',	'SunfireCape',	NULL),
+                                                                                                                            (138,	18,	NULL,	'Alistar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (139,	18,	NULL,	'Diana',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (140,	18,	NULL,	'Gnar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (141,	18,	NULL,	'Ornn',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (142,	18,	NULL,	'Xayah',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (143,	19,	3.4502,	'Ashe',	'LastWhisper',	'RedBuff',	'SpearOfShojin',	NULL),
+                                                                                                                            (144,	19,	3.4589,	'Sivir',	'GiantSlayer',	'InfinityEdge',	'StrikersFlail',	NULL),
+                                                                                                                            (145,	19,	3.3077,	'Maokai',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (146,	19,	3.9857,	'Amumu',	'Evenshroud',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (147,	19,	NULL,	'Ivern',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (148,	19,	NULL,	'Kennen',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (149,	19,	NULL,	'Rakan',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (150,	19,	NULL,	'Taric',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (151,	19,	NULL,	'Vi',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (152,	20,	4.2651,	'Ahri',	'JeweledGauntlet',	'SpearOfShojin',	'StrikersFlail',	NULL),
+                                                                                                                            (153,	20,	4.1375,	'Sett',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (154,	20,	3.5775,	'Zyra',	'ArchangelsStaff',	'SpearOfShojin',	'VoidStaff',	NULL),
+                                                                                                                            (155,	20,	3.273,	'Ashe',	'LastWhisper',	'RedBuff',	'SpearOfShojin',	NULL),
+                                                                                                                            (156,	20,	NULL,	'Gnar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (157,	20,	NULL,	'Sivir',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (158,	20,	NULL,	'Yorick',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (159,	20,	NULL,	'Karma',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (160,	20,	NULL,	'Vi',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (161,	21,	3.5799,	'Morgana',	'GiantSlayer',	'Morellonomicon',	'VoidStaff',	NULL),
+                                                                                                                            (162,	21,	3.5765,	'Sentinel',	'Crownguard',	'ProtectorsVow',	'WarmogsArmor',	NULL),
+                                                                                                                            (163,	21,	3.0562,	'Alune',	'ArchangelsStaff',	'ArchangelsStaff',	'BlueBuff',	NULL),
+                                                                                                                            (164,	21,	3.9713,	'Ahri',	'JeweledGauntlet',	'NashorsTooth',	'StrikersFlail',	NULL),
+                                                                                                                            (165,	21,	NULL,	'Cassiopeia',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (166,	21,	NULL,	'Diana',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (167,	21,	NULL,	'Elise',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (168,	21,	NULL,	'Fiddlesticks',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (169,	21,	NULL,	'Taric',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (170,	22,	4.0909,	'Teemo',	'BlueBuff',	'JeweledGauntlet',	'RabadonsDeathcap',	NULL),
+                                                                                                                            (171,	22,	3.4545,	'Alistar',	'DragonsClaw',	'GargoyleStoneplate',	'SteadfastHeart',	NULL),
+                                                                                                                            (172,	22,	4.1667,	'LeBlanc',	'JeweledGauntlet',	'NashorsTooth',	'SpearOfShojin',	NULL),
+                                                                                                                            (173,	22,	4.6111,	'Hecarim',	'GargoyleStoneplate',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (174,	22,	NULL,	'Kobuko',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (175,	22,	NULL,	'Morgana',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (176,	22,	NULL,	'Veigar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (177,	22,	NULL,	'Sentinel',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (178,	23,	4.3815,	'Nidalee',	'InfinityEdge',	'SpearOfShojin',	'SteraksGage',	NULL),
+                                                                                                                            (179,	23,	4.1794,	'Sivir',	'InfinityEdge',	'RedBuff',	'StrikersFlail',	NULL),
+                                                                                                                            (180,	23,	4.259,	'Malphite',	'Crownguard',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (181,	23,	3.6897,	'Sentinel',	'AdaptiveHelm',	'ProtectorsVow',	'ProtectorsVow',	NULL),
+                                                                                                                            (182,	23,	NULL,	'RekSai',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (183,	23,	NULL,	'Cinderling',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (184,	23,	NULL,	'KogMaw',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (185,	23,	NULL,	'Krug',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (186,	24,	3.9299,	'Draven',	'Deathblade',	'GuinsoosRageblade',	'KrakensFury',	NULL),
+                                                                                                                            (187,	24,	3.7254,	'Maokai',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (188,	24,	3.761,	'Ezreal',	'GiantSlayer',	'LastWhisper',	'SpearOfShojin',	NULL),
+                                                                                                                            (189,	24,	3,	'Kennen',	'EdgeOfNight',	'HandOfJustice',	'StrikersFlail',	NULL),
+                                                                                                                            (190,	24,	NULL,	'Alistar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (191,	24,	NULL,	'Gnar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (192,	24,	NULL,	'Ivern',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (193,	24,	NULL,	'Amumu',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (194,	24,	NULL,	'Taric',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (195,	25,	3.3664,	'ElderDragon',	'InfinityEdge',	'LastWhisper',	'StrikersFlail',	NULL),
+                                                                                                                            (196,	25,	3.183,	'Draven',	'GuinsoosRageblade',	'KrakensFury',	'RedBuff',	NULL),
+                                                                                                                            (197,	25,	3.3532,	'Maokai',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (198,	25,	3.6485,	'Kennen',	'EdgeOfNight',	'HandOfJustice',	NULL,	NULL),
+                                                                                                                            (199,	25,	NULL,	'Ivern',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (200,	25,	NULL,	'Amumu',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (201,	25,	NULL,	'Sentinel',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (202,	25,	NULL,	'Taric',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (203,	26,	3.2963,	'Pebbles',	'HextechGunblade',	'JeweledGauntlet',	'VoidStaff',	NULL),
+                                                                                                                            (204,	26,	4.2362,	'Krug',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (205,	26,	3.5688,	'ElderDragon',	'InfinityEdge',	'LastWhisper',	'StrikersFlail',	NULL),
+                                                                                                                            (206,	26,	3.9219,	'Cinderling',	'GiantSlayer',	'LastWhisper',	'SpearOfShojin',	NULL),
+                                                                                                                            (207,	26,	NULL,	'Gnar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (208,	26,	NULL,	'Brambleback',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (209,	26,	NULL,	'Murkwolf',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (210,	26,	NULL,	'Sentinel',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (211,	26,	NULL,	'Taric',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (212,	27,	4.4432,	'Caitlyn',	'GuinsoosRageblade',	'HextechGunblade',	'KrakensFury',	NULL),
+                                                                                                                            (213,	27,	4.3366,	'Scuttlecrab',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (214,	27,	3.6338,	'Sivir',	'InfinityEdge',	'LastWhisper',	'RedBuff',	NULL),
+                                                                                                                            (215,	27,	3.6981,	'Sejuani',	'Evenshroud',	'SpiritVisage',	'SunfireCape',	NULL),
+                                                                                                                            (216,	27,	NULL,	'Rakan',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (217,	27,	NULL,	'Yorick',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (218,	27,	NULL,	'Amumu',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (219,	27,	NULL,	'Vi',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (220,	28,	3.9444,	'Kayle',	'GiantSlayer',	'GuinsoosRageblade',	'RabadonsDeathcap',	NULL),
+                                                                                                                            (221,	28,	3.75,	'Aphelios',	'GuinsoosRageblade',	'InfinityEdge',	'LastWhisper',	NULL),
+                                                                                                                            (222,	28,	3.1111,	'Sejuani',	'Crownguard',	'GargoyleStoneplate',	'SpiritVisage',	NULL),
+                                                                                                                            (223,	28,	4.6,	'Leona',	'DragonsClaw',	'GargoyleStoneplate',	'SpiritVisage',	NULL),
+                                                                                                                            (224,	28,	NULL,	'Alune',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (225,	28,	NULL,	'Diana',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (226,	28,	NULL,	'Shen',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (227,	28,	NULL,	'Amumu',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (228,	29,	4.2996,	'KhaZix',	'HandOfJustice',	'NashorsTooth',	'RabadonsDeathcap',	NULL),
+                                                                                                                            (229,	29,	4.419,	'Rengar',	'EdgeOfNight',	'GuinsoosRageblade',	'TitansResolve',	NULL),
+                                                                                                                            (230,	29,	3.1481,	'Hecarim',	'Evenshroud',	'GargoyleStoneplate',	'IonicSpark',	NULL),
+                                                                                                                            (231,	29,	2.6842,	'Diana',	'Evenshroud',	'SunfireCape',	NULL,	NULL),
+                                                                                                                            (232,	29,	NULL,	'Aphelios',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (233,	29,	NULL,	'Ezreal',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (234,	29,	NULL,	'LeBlanc',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (235,	30,	3.8814,	'Ashe',	'InfernoEmblem',	'RedBuff',	'SpearOfShojin',	NULL),
+                                                                                                                            (236,	30,	3.2771,	'Sivir',	'GiantSlayer',	'InfinityEdge',	'LastWhisper',	NULL),
+                                                                                                                            (237,	30,	3.9279,	'Amumu',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (238,	30,	3.8649,	'Lillia',	'ProtectorsVow',	'ProtectorsVow',	'WarmogsArmor',	NULL),
+                                                                                                                            (239,	30,	NULL,	'Akali',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (240,	30,	NULL,	'Ivern',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (241,	30,	NULL,	'Kennen',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (242,	30,	NULL,	'Shen',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (243,	30,	NULL,	'Vi',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (244,	31,	4.4054,	'Aphelios',	'GiantSlayer',	'GuinsoosRageblade',	'KrakensFury',	NULL),
+                                                                                                                            (245,	31,	4.2595,	'Sentinel',	'ProtectorsVow',	'ProtectorsVow',	'ProtectorsVow',	NULL),
+                                                                                                                            (246,	31,	4.178,	'Brambleback',	'EdgeOfNight',	'Quicksilver',	'SteraksGage',	NULL),
+                                                                                                                            (247,	31,	4.3973,	'Diana',	'SunfireCape',	NULL,	NULL,	NULL),
+                                                                                                                            (248,	31,	NULL,	'Hecarim',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (249,	31,	NULL,	'Zyra',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (250,	31,	NULL,	'MamaBeak',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (251,	31,	NULL,	'Taric',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (252,	32,	3.4444,	'Morgana',	'AdaptiveHelm',	'RedBuff',	'VoidStaff',	NULL),
+                                                                                                                            (253,	32,	4.3889,	'KogMaw',	'GiantSlayer',	'InfinityEdge',	'StrikersFlail',	NULL),
+                                                                                                                            (254,	32,	3.0667,	'Sentinel',	'AdaptiveHelm',	'ProtectorsVow',	'ProtectorsVow',	NULL),
+                                                                                                                            (255,	32,	3.2727,	'Teemo',	'JeweledGauntlet',	'RabadonsDeathcap',	'SpearOfShojin',	NULL),
+                                                                                                                            (256,	32,	NULL,	'Hecarim',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (257,	32,	NULL,	'Pebbles',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (258,	32,	NULL,	'Sett',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (259,	32,	NULL,	'Krug',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (260,	33,	3.7647,	'Veigar',	'GuinsoosRageblade',	'JeweledGauntlet',	'SpearOfShojin',	NULL),
+                                                                                                                            (261,	33,	3.2143,	'RekSai',	'GargoyleStoneplate',	'GargoyleStoneplate',	'ProtectorsVow',	NULL),
+                                                                                                                            (262,	33,	3.8627,	'Teemo',	'BlueBuff',	'Morellonomicon',	'VoidStaff',	NULL),
+                                                                                                                            (263,	33,	4.3214,	'Rammus',	'GargoyleStoneplate',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (264,	33,	NULL,	'Gnar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (265,	33,	NULL,	'Kobuko',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (266,	33,	NULL,	'Sett',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (267,	33,	NULL,	'Fiddlesticks',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (268,	34,	3.9577,	'Rengar',	'EdgeOfNight',	'GuinsoosRageblade',	'RavagerEmblem',	NULL),
+                                                                                                                            (269,	34,	3,	'Hecarim',	'Evenshroud',	'ProtectorsVow',	'WarmogsArmor',	NULL),
+                                                                                                                            (270,	34,	3.1333,	'MamaBeak',	'Deathblade',	'GuinsoosRageblade',	'LastWhisper',	NULL),
+                                                                                                                            (271,	34,	2.5,	'Diana',	'HandOfJustice',	'IonicSpark',	'JeweledGauntlet',	NULL),
+                                                                                                                            (272,	34,	NULL,	'Aphelios',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (273,	34,	NULL,	'Brambleback',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (274,	34,	NULL,	'Sentinel',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (275,	35,	3.4737,	'Nidalee',	'HandOfJustice',	'InfinityEdge',	'RavagerEmblem',	NULL),
+                                                                                                                            (276,	35,	4.3697,	'Amumu',	'DragonsClaw',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (277,	35,	3.9398,	'Sivir',	'InfinityEdge',	'SpearOfShojin',	'StrikersFlail',	NULL),
+                                                                                                                            (278,	35,	3.3154,	'Ashe',	'PrimalEmblem',	'RedBuff',	'SpearOfShojin',	NULL),
+                                                                                                                            (279,	35,	NULL,	'Cinderling',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (280,	35,	NULL,	'KogMaw',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (281,	35,	NULL,	'Scuttlecrab',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (282,	35,	NULL,	'Sentinel',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (283,	35,	NULL,	'Taric',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (284,	36,	3.05,	'Sett',	'GargoyleStoneplate',	'JuggernautEmblem',	'SpiritVisage',	NULL),
+                                                                                                                            (285,	36,	3.716,	'Ashe',	'LastWhisper',	'RedBuff',	'SpearOfShojin',	NULL),
+                                                                                                                            (286,	36,	3.1667,	'Sivir',	'Deathblade',	'GuinsoosRageblade',	'LastWhisper',	NULL),
+                                                                                                                            (287,	36,	4.0161,	'Gnar',	'SteraksGage',	NULL,	NULL,	NULL),
+                                                                                                                            (288,	36,	NULL,	'Ivern',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (289,	36,	NULL,	'Maokai',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (290,	36,	NULL,	'Yorick',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (291,	36,	NULL,	'Amumu',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (292,	36,	NULL,	'Vi',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (293,	37,	3.9608,	'Tristana',	'Deathblade',	'GiantSlayer',	'GuinsoosRageblade',	NULL),
+                                                                                                                            (294,	37,	3.7477,	'Rammus',	'Crownguard',	'GargoyleStoneplate',	'GargoyleStoneplate',	NULL),
+                                                                                                                            (295,	37,	3.7778,	'Rengar',	'EdgeOfNight',	'FaeEmblem',	'Quicksilver',	NULL),
+                                                                                                                            (296,	37,	3.566,	'Sivir',	'FaeEmblem',	'LastWhisper',	'RedBuff',	NULL),
+                                                                                                                            (297,	37,	NULL,	'Lillia',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (298,	37,	NULL,	'Rakan',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (299,	37,	NULL,	'Vi',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (300,	38,	3.6154,	'Ezreal',	'InfinityEdge',	'LastWhisper',	'StrikersFlail',	NULL),
+                                                                                                                            (301,	38,	3.8833,	'Hecarim',	'DragonsClaw',	'GargoyleStoneplate',	'SunfireCape',	NULL),
+                                                                                                                            (302,	38,	3.35,	'Soraka',	'ElderwoodEmblem',	'SpearOfShojin',	'StrikersFlail',	NULL),
+                                                                                                                            (303,	38,	2.9583,	'Gnar',	'Bloodthirster',	'EdgeOfNight',	'SteraksGage',	NULL),
+                                                                                                                            (304,	38,	NULL,	'Alistar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (305,	38,	NULL,	'LeBlanc',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (306,	38,	NULL,	'Ornn',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (307,	38,	NULL,	'Xayah',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (308,	38,	NULL,	'Fiddlesticks',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (309,	39,	4.2565,	'Zyra',	'ArchangelsStaff',	'ArchangelsStaff',	'HextechGunblade',	NULL),
+                                                                                                                            (310,	39,	3.9206,	'Amumu',	'Crownguard',	'SteadfastHeart',	'WarmogsArmor',	NULL),
+                                                                                                                            (311,	39,	3.1758,	'Maokai',	'DragonsClaw',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (312,	39,	3.0134,	'Ivern',	'ArchangelsStaff',	'GuinsoosRageblade',	'SpearOfShojin',	NULL),
+                                                                                                                            (313,	39,	NULL,	'Rakan',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (314,	39,	NULL,	'Sejuani',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (315,	39,	NULL,	'Yorick',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (316,	39,	NULL,	'Scuttlecrab',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (317,	39,	NULL,	'Vi',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (318,	40,	3.7436,	'Nidalee',	'HandOfJustice',	'HunterEmblem',	'SteraksGage',	NULL),
+                                                                                                                            (319,	40,	3.75,	'Sentinel',	'ProtectorsVow',	'WarmogsArmor',	'WarmogsArmor',	NULL),
+                                                                                                                            (320,	40,	3.3,	'Sivir',	'InfinityEdge',	'LastWhisper',	'StrikersFlail',	NULL),
+                                                                                                                            (321,	40,	4.2157,	'KogMaw',	'HunterEmblem',	NULL,	NULL,	NULL),
+                                                                                                                            (322,	40,	NULL,	'Morgana',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (323,	40,	NULL,	'Pebbles',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (324,	40,	NULL,	'Scuttlecrab',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (325,	40,	NULL,	'Taric',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (326,	40,	NULL,	'Vi',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (327,	41,	4.034,	'KhaZix',	'BlackthornEmblem',	'HandOfJustice',	'HandOfJustice',	NULL),
+                                                                                                                            (328,	41,	3.3125,	'Azir',	'ArchangelsStaff',	'HextechGunblade',	'RabadonsDeathcap',	NULL),
+                                                                                                                            (329,	41,	3,	'Malphite',	'Crownguard',	'GargoyleStoneplate',	'SteadfastHeart',	NULL),
+                                                                                                                            (330,	41,	4.5,	'Warwick',	'SpearOfShojin',	'SteraksGage',	'TitansResolve',	NULL),
+                                                                                                                            (331,	41,	NULL,	'RekSai',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (332,	41,	NULL,	'Soraka',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (333,	41,	NULL,	'Veigar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (334,	41,	NULL,	'Fiddlesticks',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (335,	42,	3.3571,	'Sett',	'DragonsClaw',	'SpiritVisage',	'SteadfastHeart',	NULL),
+                                                                                                                            (336,	42,	3.3587,	'Ashe',	'LastWhisper',	'RedBuff',	'SpearOfShojin',	NULL),
+                                                                                                                            (337,	42,	2.8958,	'ElderDragon',	'Deathblade',	'InfinityEdge',	'StrikersFlail',	NULL),
+                                                                                                                            (338,	42,	3.1538,	'Alune',	'AdaptiveHelm',	'Morellonomicon',	'VoidStaff',	NULL),
+                                                                                                                            (339,	42,	NULL,	'Gnar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (340,	42,	NULL,	'Kennen',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (341,	42,	NULL,	'Yorick',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (342,	42,	NULL,	'Amumu',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (343,	42,	NULL,	'Cinderling',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (344,	43,	4.2,	'Teemo',	'BlueBuff',	'JeweledGauntlet',	'StrikersFlail',	NULL),
+                                                                                                                            (345,	43,	4.4348,	'Rammus',	'GargoyleStoneplate',	'GargoyleStoneplate',	'SpiritVisage',	NULL),
+                                                                                                                            (346,	43,	5.1951,	'Tristana',	'GuinsoosRageblade',	'InfinityEdge',	'KrakensFury',	NULL),
+                                                                                                                            (347,	43,	2.7778,	'Morgana',	'AdaptiveHelm',	'Morellonomicon',	'VoidStaff',	NULL),
+                                                                                                                            (348,	43,	NULL,	'Kobuko',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (349,	43,	NULL,	'Lillia',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (350,	43,	NULL,	'Veigar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (351,	43,	NULL,	'Sentinel',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (352,	44,	3.8261,	'Akali',	'HandOfJustice',	'HandOfJustice',	'InfinityEdge',	NULL),
+                                                                                                                            (353,	44,	3.5238,	'Camille',	'HandOfJustice',	'HandOfJustice',	'SteraksGage',	NULL),
+                                                                                                                            (354,	44,	3.175,	'Ornn',	'Crownguard',	'DragonsClaw',	'GargoyleStoneplate',	NULL),
+                                                                                                                            (355,	44,	2.9355,	'Varus',	'InfinityEdge',	'SpearOfShojin',	'StrikersFlail',	NULL),
+                                                                                                                            (356,	44,	NULL,	'Kayle',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (357,	44,	NULL,	'Leona',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (358,	44,	NULL,	'Sejuani',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (359,	45,	3.25,	'Aphelios',	'GuinsoosRageblade',	'HunterEmblem',	'InfinityEdge',	NULL),
+                                                                                                                            (360,	45,	4.16,	'Amumu',	'DragonsClaw',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (361,	45,	2.6923,	'Alune',	'ArchangelsStaff',	'RedBuff',	'SpearOfShojin',	NULL),
+                                                                                                                            (362,	45,	3.2308,	'Maokai',	'GargoyleStoneplate',	'GargoyleStoneplate',	'SpiritVisage',	NULL),
+                                                                                                                            (363,	45,	NULL,	'Diana',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (364,	45,	NULL,	'Ivern',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (365,	45,	NULL,	'Kennen',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (366,	45,	NULL,	'Varus',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (367,	45,	NULL,	'Taric',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (368,	46,	4.4433,	'Ahri',	'JeweledGauntlet',	'NashorsTooth',	'SpearOfShojin',	NULL),
+                                                                                                                            (369,	46,	2.6923,	'Alune',	'RedBuff',	'SpearOfShojin',	'VoidStaff',	NULL),
+                                                                                                                            (370,	46,	4.3529,	'Lillia',	'GargoyleStoneplate',	'ProtectorsVow',	'WarmogsArmor',	NULL),
+                                                                                                                            (371,	46,	3.5385,	'Cassiopeia',	'JeweledGauntlet',	'Morellonomicon',	'VoidStaff',	NULL),
+                                                                                                                            (372,	46,	NULL,	'RekSai',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (373,	46,	NULL,	'Sett',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (374,	46,	NULL,	'Veigar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (375,	46,	NULL,	'Fiddlesticks',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (376,	46,	NULL,	'Karma',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (377,	47,	3.3214,	'Ahri',	'AdaptiveHelm',	'JeweledGauntlet',	'RabadonsDeathcap',	NULL),
+                                                                                                                            (378,	47,	3.697,	'Sett',	'DragonsClaw',	'GargoyleStoneplate',	'SteadfastHeart',	NULL),
+                                                                                                                            (379,	47,	3.3133,	'Ashe',	'LastWhisper',	'RedBuff',	'SpearOfShojin',	NULL),
+                                                                                                                            (380,	47,	3.3725,	'Lux',	'JeweledGauntlet',	'RabadonsDeathcap',	'SpearOfShojin',	NULL),
+                                                                                                                            (381,	47,	NULL,	'Gnar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (382,	47,	NULL,	'Maokai',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (383,	47,	NULL,	'MasterYi',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (384,	47,	NULL,	'Yorick',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (385,	47,	NULL,	'Yunara',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (386,	47,	NULL,	'Karma',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (387,	48,	2.7647,	'Malphite',	'Crownguard',	'GargoyleStoneplate',	'SteadfastHeart',	NULL),
+                                                                                                                            (388,	48,	3.1429,	'Veigar',	'BlueBuff',	'HextechGunblade',	'RabadonsDeathcap',	NULL),
+                                                                                                                            (389,	48,	3.3333,	'Azir',	'GuinsoosRageblade',	'RedBuff',	'VoidStaff',	NULL),
+                                                                                                                            (390,	48,	3.04,	'RekSai',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (391,	48,	NULL,	'Kobuko',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (392,	48,	NULL,	'Rammus',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (393,	48,	NULL,	'Soraka',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (394,	48,	NULL,	'Fiddlesticks',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (395,	49,	4.0526,	'Kayle',	'GuinsoosRageblade',	'GuinsoosRageblade',	'HextechGunblade',	NULL),
+                                                                                                                            (396,	49,	4.4328,	'Sejuani',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (397,	49,	4.0769,	'Varus',	'GiantSlayer',	'LastWhisper',	'SpearOfShojin',	NULL),
+                                                                                                                            (398,	49,	4.6279,	'Leona',	'GargoyleStoneplate',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (399,	49,	NULL,	'Rakan',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (400,	49,	NULL,	'Shen',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (401,	49,	NULL,	'Xayah',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (402,	50,	3.2632,	'Tristana',	'GuinsoosRageblade',	'KrakensFury',	'RapidfireEmblem',	NULL),
+                                                                                                                            (403,	50,	3.4211,	'Sivir',	'InfinityEdge',	'LastWhisper',	'StrikersFlail',	NULL),
+                                                                                                                            (404,	50,	3.5385,	'Vi',	'GargoyleStoneplate',	'VanguardEmblem',	'WarmogsArmor',	NULL),
+                                                                                                                            (405,	50,	3.1,	'Lillia',	'ProtectorsVow',	'SpiritVisage',	'SunfireCape',	NULL),
+                                                                                                                            (406,	50,	NULL,	'Hecarim',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (407,	50,	NULL,	'Ornn',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (408,	50,	NULL,	'Rakan',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (409,	50,	NULL,	'Xayah',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (410,	51,	4.5517,	'Kayle',	'JeweledGauntlet',	'RabadonsDeathcap',	'RedBuff',	NULL),
+                                                                                                                            (411,	51,	4.7297,	'Ornn',	'Crownguard',	'GargoyleStoneplate',	'SpiritVisage',	NULL),
+                                                                                                                            (412,	51,	4.412,	'Xayah',	'Deathblade',	'GuinsoosRageblade',	'KrakensFury',	NULL),
+                                                                                                                            (413,	51,	3.75,	'Sejuani',	'Crownguard',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (414,	51,	NULL,	'Hecarim',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (415,	51,	NULL,	'Leona',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (416,	51,	NULL,	'Rakan',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (417,	52,	3.9138,	'Amumu',	'GargoyleStoneplate',	'GargoyleStoneplate',	'SteadfastHeart',	NULL),
+                                                                                                                            (418,	52,	3.6679,	'Ashe',	'InfernoEmblem',	'RedBuff',	'SpearOfShojin',	NULL),
+                                                                                                                            (419,	52,	4.1831,	'ElderDragon',	'Deathblade',	'InfinityEdge',	'SteraksGage',	NULL),
+                                                                                                                            (420,	52,	4.2174,	'Draven',	'GuinsoosRageblade',	'InfernoEmblem',	'KrakensFury',	NULL),
+                                                                                                                            (421,	52,	NULL,	'Ivern',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (422,	52,	NULL,	'Kennen',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (423,	52,	NULL,	'Maokai',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (424,	52,	NULL,	'Sentinel',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (425,	52,	NULL,	'Taric',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (426,	53,	4.6984,	'Yunara',	'Deathblade',	'LastWhisper',	'SpearOfShojin',	NULL),
+                                                                                                                            (427,	53,	4.108,	'Sejuani',	'DragonsClaw',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (428,	53,	2.7917,	'LeBlanc',	'ExecutionerEmblem',	'SpearOfShojin',	'VoidStaff',	NULL),
+                                                                                                                            (429,	53,	3.9388,	'Karma',	'BlueBuff',	'JeweledGauntlet',	'RabadonsDeathcap',	NULL),
+                                                                                                                            (430,	53,	NULL,	'Kayle',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (431,	53,	NULL,	'Leona',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (432,	53,	NULL,	'Yorick',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (433,	54,	4.2139,	'Malphite',	'Crownguard',	'GargoyleStoneplate',	'SpiritVisage',	NULL),
+                                                                                                                            (434,	54,	4.3,	'Azir',	'GuinsoosRageblade',	'HextechGunblade',	'RabadonsDeathcap',	NULL),
+                                                                                                                            (435,	54,	3.4503,	'Zyra',	'BlackthornEmblem',	'ExecutionerEmblem',	'VoidStaff',	NULL),
+                                                                                                                            (436,	54,	3.4603,	'Lux',	'JeweledGauntlet',	'RabadonsDeathcap',	'SpearOfShojin',	NULL),
+                                                                                                                            (437,	54,	NULL,	'Ahri',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (438,	54,	NULL,	'Veigar',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (439,	54,	NULL,	'Yorick',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (440,	54,	NULL,	'Yunara',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (441,	54,	NULL,	'Amumu',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (442,	55,	3.8182,	'Soraka',	'ArchangelsStaff',	'RabadonsDeathcap',	'SpearOfShojin',	NULL),
+                                                                                                                            (443,	55,	3.5,	'Lillia',	'GargoyleStoneplate',	'IonicSpark',	'WarmogsArmor',	NULL),
+                                                                                                                            (444,	55,	4,	'Kennen',	'DefenderEmblem',	'HandOfJustice',	'RabadonsDeathcap',	NULL),
+                                                                                                                            (445,	55,	3.6,	'Alune',	'JeweledGauntlet',	'SpearOfShojin',	'VoidStaff',	NULL),
+                                                                                                                            (446,	55,	NULL,	'Diana',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (447,	55,	NULL,	'Maokai',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (448,	55,	NULL,	'Amumu',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (449,	55,	NULL,	'Fiddlesticks',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (450,	55,	NULL,	'Taric',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (451,	56,	4.9861,	'KhaZix',	'EdgeOfNight',	'HandOfJustice',	'JeweledGauntlet',	NULL),
+                                                                                                                            (452,	56,	4.5,	'Fiddlesticks',	'BrambleVest',	'DragonsClaw',	'WarmogsArmor',	NULL),
+                                                                                                                            (453,	56,	4.8462,	'Aphelios',	'GiantSlayer',	'GuinsoosRageblade',	'KrakensFury',	NULL),
+                                                                                                                            (454,	56,	3.7143,	'Diana',	'SunfireCape',	NULL,	NULL,	NULL),
+                                                                                                                            (455,	56,	NULL,	'LeBlanc',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (456,	56,	NULL,	'Ornn',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (457,	56,	NULL,	'Rakan',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (458,	56,	NULL,	'Xayah',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (459,	56,	NULL,	'Amumu',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (460,	57,	4.2222,	'Morgana',	'Morellonomicon',	'RabadonsDeathcap',	'VoidStaff',	NULL),
+                                                                                                                            (461,	57,	4.0549,	'Sentinel',	'GargoyleStoneplate',	'ProtectorsVow',	'WarmogsArmor',	NULL),
+                                                                                                                            (462,	57,	3.7301,	'Alune',	'JeweledGauntlet',	'NashorsTooth',	'SpearOfShojin',	NULL),
+                                                                                                                            (463,	57,	4.9825,	'Elise',	'GargoyleStoneplate',	'GuinsoosRageblade',	'TitansResolve',	NULL),
+                                                                                                                            (464,	57,	NULL,	'Cassiopeia',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (465,	57,	NULL,	'Diana',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (466,	57,	NULL,	'ElderDragon',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (467,	57,	NULL,	'Taric',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (468,	58,	4.4545,	'Gromp',	'InvokerEmblem',	'JeweledGauntlet',	'StrikersFlail',	NULL),
+                                                                                                                            (469,	58,	4.8966,	'Scuttlecrab',	'BrambleVest',	'GargoyleStoneplate',	'WarmogsArmor',	NULL),
+                                                                                                                            (470,	58,	3.9091,	'Teemo',	'JeweledGauntlet',	'NashorsTooth',	'RabadonsDeathcap',	NULL),
+                                                                                                                            (471,	58,	3.6471,	'Sejuani',	'GargoyleStoneplate',	'ProtectorsVow',	'WarmogsArmor',	NULL),
+                                                                                                                            (472,	58,	NULL,	'Kayle',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (473,	58,	NULL,	'Leona',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (474,	58,	NULL,	'Pebbles',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (475,	59,	5.3684,	'Tristana',	'GuinsoosRageblade',	'HextechGunblade',	'KrakensFury',	NULL),
+                                                                                                                            (476,	59,	4.3333,	'Lillia',	'ProtectorsVow',	'SpiritVisage',	'WarmogsArmor',	NULL),
+                                                                                                                            (477,	59,	4.4737,	'Xayah',	'GuinsoosRageblade',	'HextechGunblade',	'KrakensFury',	NULL),
+                                                                                                                            (478,	59,	4.8333,	'Elise',	'FaeEmblem',	'GuinsoosRageblade',	'RavagerEmblem',	NULL),
+                                                                                                                            (479,	59,	NULL,	'Hecarim',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (480,	59,	NULL,	'Ornn',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (481,	59,	NULL,	'Rakan',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (482,	59,	NULL,	'Varus',	NULL,	NULL,	NULL,	NULL),
+                                                                                                                            (483,	59,	NULL,	'Amumu',	NULL,	NULL,	NULL,	NULL);
+
+CREATE TABLE "public"."comp" (
+                                 "id" serial NOT NULL,
+                                 "name" character varying(255) NOT NULL,
+                                 "avg_placement" double precision,
+                                 "win_rate" double precision,
+                                 "difficulty" double precision,
+                                 "levelling" character varying(255),
+                                 CONSTRAINT "comp_pkey" PRIMARY KEY ("id")
+);
+
+CREATE UNIQUE INDEX comp_name_key ON "public"."comp" USING btree (name);
+
+INSERT INTO "public"."comp" ("id", "name", "avg_placement", "win_rate", "difficulty", "levelling") VALUES
+                                                                                                       (1,	'Lunar Aphelios Nidalee',	4.3157,	58.58,	0.016,	'Fast 8'),
+                                                                                                       (2,	'Flora Fatalis Azir',	4.2477,	58.09,	-0.093,	'lvl 7'),
+                                                                                                       (3,	'Executioner Yunara',	4.4566,	55.04,	-0.019,	'lvl 6'),
+                                                                                                       (4,	'Spellweaver Veigar',	4.1993,	54.66,	0.082,	'lvl 5'),
+                                                                                                       (5,	'Invoker Ahri',	4.3699,	53.84,	0.069,	'Fast 8'),
+                                                                                                       (6,	'Executioner Kha Zix',	4.2063,	53.64,	0.024,	'lvl 7'),
+                                                                                                       (7,	'Rapidfire Aphelios',	4.4476,	53.44,	-0.022,	'Fast 8'),
+                                                                                                       (8,	'Invoker Morgana Sentinel',	4.4027,	53.35,	-0.064,	'Fast 8'),
+                                                                                                       (9,	'Juggernaut Zyra Sivir',	4.3944,	53.13,	0.011,	'Fast 8'),
+                                                                                                       (10,	'Executioner Malphite',	4.5219,	52.46,	0.062,	'Fast 8'),
+                                                                                                       (11,	'Juggernaut Zyra',	4.3758,	52.3,	0.057,	'Fast 8'),
+                                                                                                       (12,	'Defender Cassiopeia',	4.4849,	52.29,	-0.035,	'lvl 7'),
+                                                                                                       (13,	'Adaptor Master Yi Rengar',	4.48,	52.16,	-0.022,	'lvl 7'),
+                                                                                                       (14,	'Executioner Sett',	4.5776,	51.66,	-0.016,	'Fast 8'),
+                                                                                                       (15,	'Ravager Warwick',	4.5819,	51.58,	-0.035,	'lvl 6'),
+                                                                                                       (16,	'Adaptor Master Yi',	4.494,	51.25,	0.009,	'lvl 7'),
+                                                                                                       (17,	'Executioner Azir',	4.6726,	50.81,	-0.055,	'lvl 7'),
+                                                                                                       (18,	'Elderwood Aphelios',	4.5197,	50.77,	-0.044,	'Fast 8'),
+                                                                                                       (19,	'Juggernaut Ashe',	4.4394,	50.57,	0.001,	'Fast 9'),
+                                                                                                       (20,	'Blossom Ahri Sett',	4.5153,	50.53,	-0.061,	'Fast 8'),
+                                                                                                       (21,	'Vanguard Morgana',	4.4774,	49.96,	-0.037,	'Fast 9'),
+                                                                                                       (22,	'Invoker Teemo',	4.9089,	49.75,	-0.063,	'lvl 6'),
+                                                                                                       (23,	'Hunter Nidalee',	4.7386,	49.51,	-0.037,	'Fast 8'),
+                                                                                                       (24,	'Executioner Draven',	4.483,	48.88,	-0.023,	'Fast 9'),
+                                                                                                       (25,	'Juggernaut Elder Dragon',	4.4743,	48.55,	0.107,	'Fast 9'),
+                                                                                                       (26,	'Riftbeast Pebbles',	4.6457,	48.4,	-0.171,	'lvl 5'),
+                                                                                                       (27,	'Juggernaut Caitlyn',	4.7028,	48.36,	-0.025,	'lvl 6'),
+                                                                                                       (28,	'Lunar Kayle',	5.0469,	48.03,	-0.186,	'lvl 6'),
+                                                                                                       (29,	'Rival Kha Zix',	4.9104,	47.62,	-0.093,	'lvl 7'),
+                                                                                                       (30,	'Inferno Ashe',	4.6654,	47.52,	-0.032,	'Fast 8'),
+                                                                                                       (31,	'Vanguard Aphelios',	4.9026,	47.06,	-0.084,	'Fast 8'),
+                                                                                                       (32,	'Invoker Morgana',	5.0543,	46.6,	-0.104,	'Standard'),
+                                                                                                       (33,	'Sprykin Veigar',	5.0178,	46.51,	-0.109,	'lvl 5'),
+                                                                                                       (34,	'Vanguard Rengar',	4.8938,	46.16,	-0.034,	'lvl 7'),
+                                                                                                       (35,	'Juggernaut Nidalee',	4.9023,	45.98,	-0.066,	'Fast 8'),
+                                                                                                       (36,	'Hunter Sett',	4.6972,	45.85,	-0.023,	'Fast 9'),
+                                                                                                       (37,	'Fae Tristana',	4.8741,	45.74,	-0.101,	'lvl 7'),
+                                                                                                       (38,	'Elderwood Ezreal',	4.6554,	45.33,	-0.117,	'Fast 8'),
+                                                                                                       (39,	'Juggernaut Zyra Amumu',	4.7903,	45.04,	0.052,	'Fast 8'),
+                                                                                                       (40,	'Invoker Nidalee',	4.8959,	44.91,	-0.057,	'Fast 8'),
+                                                                                                       (41,	'Blackthorn Kha Zix',	4.7798,	44.68,	0.034,	'lvl 7'),
+                                                                                                       (42,	'Brawler Sett',	4.7764,	44.49,	0.017,	'Fast 9'),
+                                                                                                       (43,	'Sprykin Teemo',	5.2786,	43.8,	-0.163,	'lvl 6'),
+                                                                                                       (44,	'Inferno Akali',	4.8393,	43.14,	0.016,	'lvl 5'),
+                                                                                                       (45,	'Lunar Aphelios',	5.1045,	42.77,	-0.11,	'Fast 9'),
+                                                                                                       (46,	'Spellweaver Ahri',	5.2194,	42.12,	-0.06,	'Fast 8'),
+                                                                                                       (47,	'Blossom Ahri',	4.9206,	41.72,	-0.126,	'Fast 9'),
+                                                                                                       (48,	'Blackthorn Malphite Veigar',	4.6728,	41.7,	0.017,	'Standard'),
+                                                                                                       (49,	'Inferno Kayle',	5.4677,	41.68,	-0.186,	'lvl 6'),
+                                                                                                       (50,	'Fae Tristana Sivir',	5.1752,	40.68,	-0.087,	'lvl 7'),
+                                                                                                       (51,	'Rapidfire Kayle',	5.217,	40.67,	-0.098,	'lvl 6'),
+                                                                                                       (52,	'Inferno Amumu',	5.0475,	40.53,	-0.049,	'Fast 9'),
+                                                                                                       (53,	'Juggernaut Yunara',	4.999,	40.01,	0.036,	'lvl 6'),
+                                                                                                       (54,	'Blackthorn Malphite',	4.9949,	39.94,	-0.001,	'Fast 8'),
+                                                                                                       (55,	'Flora Fatalis Soraka',	5.3665,	37.15,	-0.091,	'Fast 8'),
+                                                                                                       (56,	'Flora Fatalis Kha Zix',	5.514,	35.86,	-0.128,	'Fast 8'),
+                                                                                                       (57,	'Coven Morgana',	5.3269,	33.67,	-0.123,	'Fast 8'),
+                                                                                                       (58,	'Invoker Gromp',	5.589,	31.14,	-0.021,	'lvl 6'),
+                                                                                                       (59,	'Fae Tristana Lillia',	5.8957,	30.57,	-0.128,	'lvl 7');
+
+CREATE TABLE "public"."item" (
+                                 "id" character varying(255) NOT NULL,
+                                 "name" character varying(255) NOT NULL,
+                                 "image_link" character varying(255),
+                                 "component1_id" character varying(255),
+                                 "component2_id" character varying(255),
+                                 CONSTRAINT "item_pkey" PRIMARY KEY ("id"),
+                                 CONSTRAINT "chk_item_component_order" CHECK (((component1_id IS NULL) OR (component2_id IS NULL) OR ((component1_id)::text <= (component2_id)::text)))
+);
+
+CREATE UNIQUE INDEX item_name_key ON "public"."item" USING btree (name);
+
+INSERT INTO "public"."item" ("id", "name", "image_link", "component1_id", "component2_id") VALUES
+                                                                                               ('AdaptiveHelm',	'Adaptive Helm',	'img/item/item/DA_AdaptiveHelm.png',	'NegatronCloak',	'TearOfTheGoddess'),
+                                                                                               ('ArchangelsStaff',	'Archangel''s Staff',	'img/item/item/DA_ArchangelsStaff.png',	'NeedlesslyLargeRod',	'TearOfTheGoddess'),
+                                                                                               ('Bloodthirster',	'Bloodthirster',	'img/item/item/DA_Bloodthirster.png',	'BFSword',	'NegatronCloak'),
+                                                                                               ('BrambleVest',	'Bramble Vest',	'img/item/item/DA_BrambleVest.png',	'ChainVest',	'ChainVest'),
+                                                                                               ('Crownguard',	'Crownguard',	'img/item/item/DA_Crownguard.png',	'ChainVest',	'NeedlesslyLargeRod'),
+                                                                                               ('Deathblade',	'Deathblade',	'img/item/item/DA_Deathblade.png',	'BFSword',	'BFSword'),
+                                                                                               ('DragonsClaw',	'Dragon''s Claw',	'img/item/item/DA_DragonsClaw.png',	'NegatronCloak',	'NegatronCloak'),
+                                                                                               ('EdgeOfNight',	'Edge of Night',	'img/item/item/DA_EdgeOfNight.png',	'BFSword',	'ChainVest'),
+                                                                                               ('Evenshroud',	'Evenshroud',	'img/item/item/DA_Evenshroud.png',	'GiantsBelt',	'NegatronCloak'),
+                                                                                               ('GargoyleStoneplate',	'Gargoyle Stoneplate',	'img/item/item/DA_GargoyleStoneplate.png',	'ChainVest',	'NegatronCloak'),
+                                                                                               ('GiantSlayer',	'Giant Slayer',	'img/item/item/DA_GiantSlayer.png',	'BFSword',	'RecurveBow'),
+                                                                                               ('GuinsoosRageblade',	'Guinsoo''s Rageblade',	'img/item/item/DA_GuinsoosRageblade.png',	'NeedlesslyLargeRod',	'RecurveBow'),
+                                                                                               ('HandOfJustice',	'Hand Of Justice',	'img/item/item/DA_HandOfJustice.png',	'SparringGloves',	'TearOfTheGoddess'),
+                                                                                               ('HextechGunblade',	'Hextech Gunblade',	'img/item/item/DA_HextechGunblade.png',	'BFSword',	'NeedlesslyLargeRod'),
+                                                                                               ('InfinityEdge',	'Infinity Edge',	'img/item/item/DA_InfinityEdge.png',	'BFSword',	'SparringGloves'),
+                                                                                               ('IonicSpark',	'Ionic Spark',	'img/item/item/DA_IonicSpark.png',	'NeedlesslyLargeRod',	'NegatronCloak'),
+                                                                                               ('JeweledGauntlet',	'Jeweled Gauntlet',	'img/item/item/DA_JeweledGauntlet.png',	'NeedlesslyLargeRod',	'SparringGloves'),
+                                                                                               ('KrakensFury',	'Kraken''s Fury',	'img/item/item/DA_KrakensFury.png',	'NegatronCloak',	'RecurveBow'),
+                                                                                               ('LastWhisper',	'Last Whisper',	'img/item/item/DA_LastWhisper.png',	'RecurveBow',	'SparringGloves'),
+                                                                                               ('Morellonomicon',	'Morellonomicon',	'img/item/item/DA_Morellonomicon.png',	'GiantsBelt',	'NeedlesslyLargeRod'),
+                                                                                               ('NashorsTooth',	'Nashor''s Tooth',	'img/item/item/DA_NashorsTooth.png',	'GiantsBelt',	'RecurveBow'),
+                                                                                               ('ProtectorsVow',	'Protector''s Vow',	'img/item/item/DA_ProtectorsVow.png',	'ChainVest',	'TearOfTheGoddess'),
+                                                                                               ('Quicksilver',	'Quicksilver',	'img/item/item/DA_Quicksilver.png',	'NegatronCloak',	'SparringGloves'),
+                                                                                               ('TacticiansCape',	'Tactician''s Cape',	'img/item/item/DA_TacticiansCape.png',	'FryingPan',	'Spatula'),
+                                                                                               ('TacticiansShield',	'Tactician''s Shield',	'img/item/item/DA_TacticiansShield.png',	'FryingPan',	'FryingPan'),
+                                                                                               ('RavagerEmblem',	'Ravager Emblem',	'img/item/emblem/DA_18_EmblemRavager.png',	'FryingPan',	'NegatronCloak'),
+                                                                                               ('BlueBuff',	'Blue Buff',	'img/item/item/DA_BlueBuff.png',	'TearOfTheGoddess',	'TearOfTheGoddess'),
+                                                                                               ('RabadonsDeathcap',	'Rabadon''s Deathcap',	'img/item/item/DA_RabadonsDeathcap.png',	'NeedlesslyLargeRod',	'NeedlesslyLargeRod'),
+                                                                                               ('RedBuff',	'Red Buff',	'img/item/item/DA_RedBuff.png',	'RecurveBow',	'RecurveBow'),
+                                                                                               ('SpearOfShojin',	'Spear of Shojin',	'img/item/item/DA_SpearOfShojin.png',	'BFSword',	'TearOfTheGoddess'),
+                                                                                               ('SpiritVisage',	'Spirit Visage',	'img/item/item/DA_SpiritVisage.png',	'GiantsBelt',	'TearOfTheGoddess'),
+                                                                                               ('SteadfastHeart',	'Steadfast Heart',	'img/item/item/DA_SteadfastHeart.png',	'ChainVest',	'SparringGloves'),
+                                                                                               ('SteraksGage',	'Sterak''s Gage',	'img/item/item/DA_SteraksGage.png',	'BFSword',	'GiantsBelt'),
+                                                                                               ('StrikersFlail',	'Striker''s Flail',	'img/item/item/DA_StrikersFlail.png',	'GiantsBelt',	'SparringGloves'),
+                                                                                               ('SunfireCape',	'Sunfire Cape',	'img/item/item/DA_SunfireCape.png',	'ChainVest',	'GiantsBelt'),
+                                                                                               ('TacticiansCrown',	'Tactician''s Crown',	'img/item/item/DA_TacticiansCrown.png',	'Spatula',	'Spatula'),
+                                                                                               ('ThiefsGloves',	'Thief''s Gloves',	'img/item/item/DA_ThiefsGloves.png',	'SparringGloves',	'SparringGloves'),
+                                                                                               ('TitansResolve',	'Titan''s Resolve',	'img/item/item/DA_TitansResolve.png',	'ChainVest',	'RecurveBow'),
+                                                                                               ('VoidStaff',	'Void Staff',	'img/item/item/DA_VoidStaff.png',	'RecurveBow',	'TearOfTheGoddess'),
+                                                                                               ('WarmogsArmor',	'Warmogs Armor',	'img/item/item/DA_WarmogsArmor.png',	'GiantsBelt',	'GiantsBelt'),
+                                                                                               ('BFSword',	'B.F. Sword',	'img/item/component/DA_Component_BFSword.png',	NULL,	NULL),
+                                                                                               ('ChainVest',	'Chain Vest',	'img/item/component/DA_Component_ChainVest.png',	NULL,	NULL),
+                                                                                               ('FryingPan',	'Frying Pan',	'img/item/component/DA_Component_FryingPan.png',	NULL,	NULL),
+                                                                                               ('GiantsBelt',	'Giant''s Belt',	'img/item/component/DA_Component_GiantsBelt.png',	NULL,	NULL),
+                                                                                               ('NeedlesslyLargeRod',	'Needlessly Large Rod',	'img/item/component/DA_Component_NeedlesslyLargeRod.png',	NULL,	NULL),
+                                                                                               ('NegatronCloak',	'Negatron Cloak',	'img/item/component/DA_Component_NegatronCloak.png',	NULL,	NULL),
+                                                                                               ('RecurveBow',	'Recurve Bow',	'img/item/component/DA_Component_RecurveBow.png',	NULL,	NULL),
+                                                                                               ('SparringGloves',	'Sparring Gloves',	'img/item/component/DA_Component_SparringGloves.png',	NULL,	NULL),
+                                                                                               ('Spatula',	'Spatula',	'img/item/component/DA_Component_Spatula.png',	NULL,	NULL),
+                                                                                               ('TearOfTheGoddess',	'Tear of the Goddess',	'img/item/component/DA_Component_TearOfTheGoddess.png',	NULL,	NULL),
+                                                                                               ('BlackthornEmblem',	'Blackthorn Emblem',	'img/item/emblem/DA_18_EmblemBlackthorn.png',	'GiantsBelt',	'Spatula'),
+                                                                                               ('BlossomEmblem',	'Blossom Emblem',	'img/item/emblem/DA_18_EmblemBlossom.png',	'NeedlesslyLargeRod',	'Spatula'),
+                                                                                               ('BrawlerEmblem',	'Brawler Emblem',	'img/item/emblem/DA_18_EmblemBrawler.png',	'FryingPan',	'GiantsBelt'),
+                                                                                               ('SlayerEmblem',	'Slayer Emblem',	'img/item/emblem/DA_18_EmblemSlayer.png',	NULL,	NULL),
+                                                                                               ('CovenEmblem',	'Coven Emblem',	'img/item/emblem/DA_18_EmblemCoven.png',	NULL,	NULL),
+                                                                                               ('DefenderEmblem',	'Defender Emblem',	'img/item/emblem/DA_18_EmblemDefender.png',	NULL,	NULL),
+                                                                                               ('ElderwoodEmblem',	'Elderwood Emblem',	'img/item/emblem/DA_18_EmblemElderwood.png',	'ChainVest',	'Spatula'),
+                                                                                               ('ExecutionerEmblem',	'Executioner Emblem',	'img/item/emblem/DA_18_EmblemExecutioner.png',	'FryingPan',	'SparringGloves'),
+                                                                                               ('FaeEmblem',	'Fae Emblem',	'img/item/emblem/DA_18_EmblemFae.png',	'BFSword',	'Spatula'),
+                                                                                               ('FloraFatalisEmblem',	'Flora Fatalis Emblem',	'img/item/emblem/DA_18_EmblemFloraFatalis.png',	NULL,	NULL),
+                                                                                               ('HunterEmblem',	'Hunter Emblem',	'img/item/emblem/DA_18_EmblemHunter.png',	'BFSword',	'FryingPan'),
+                                                                                               ('InfernoEmblem',	'Inferno Emblem',	'img/item/emblem/DA_18_EmblemInferno.png',	'RecurveBow',	'Spatula'),
+                                                                                               ('InvokerEmblem',	'Invoker Emblem',	'img/item/emblem/DA_18_EmblemInvoker.png',	'FryingPan',	'TearOfTheGoddess'),
+                                                                                               ('JuggernautEmblem',	'Juggernaut Emblem',	'img/item/emblem/DA_18_EmblemJuggernaut.png',	NULL,	NULL),
+                                                                                               ('LunarEmblem',	'Lunar Emblem',	'img/item/emblem/DA_18_EmblemLunar.png',	'Spatula',	'TearOfTheGoddess'),
+                                                                                               ('PrimalEmblem',	'Primal Emblem',	'img/item/emblem/DA_18_EmblemPrimal.png',	'SparringGloves',	'Spatula'),
+                                                                                               ('RapidfireEmblem',	'Rapidfire Emblem',	'img/item/emblem/DA_18_EmblemRapidfire.png',	'FryingPan',	'RecurveBow'),
+                                                                                               ('SpellweaverEmblem',	'Spellweaver Emblem',	'img/item/emblem/DA_18_EmblemSpellweaver.png',	'FryingPan',	'NeedlesslyLargeRod'),
+                                                                                               ('SprykinEmblem',	'Sprykin Emblem',	'img/item/emblem/DA_18_EmblemSprykin.png',	'NegatronCloak',	'Spatula'),
+                                                                                               ('VanguardEmblem',	'Vanguard Emblem',	'img/item/emblem/DA_18_EmblemVanguard.png',	'ChainVest',	'FryingPan');
+
+CREATE TABLE "public"."trait" (
+                                  "id" character varying(255) NOT NULL,
+                                  "name" character varying(255) NOT NULL,
+                                  "image_link" character varying(255),
+                                  CONSTRAINT "trait_pkey" PRIMARY KEY ("id")
+);
+
+CREATE UNIQUE INDEX trait_name_key ON "public"."trait" USING btree (name);
+
+INSERT INTO "public"."trait" ("id", "name", "image_link") VALUES
+                                                              ('Adaptor',	'Adaptor',	'img/trait/Trait_Icon_18_Adaptor.TFT_Set18.png'),
+                                                              ('Caustic',	'Caustic',	'img/trait/Trait_Icon_18_Caustic.TFT_Set18.png'),
+                                                              ('Inferno',	'Inferno',	'img/trait/Trait_Icon_18_Inferno.TFT_Set18.png'),
+                                                              ('Invoker',	'Invoker',	'img/trait/Trait_Icon_18_Invoker.TFT_Set18.png'),
+                                                              ('Lunar',	'Lunar',	'img/trait/Trait_Icon_18_Lunar.TFT_Set18.png'),
+                                                              ('Rapidfire',	'Rapidfire',	'img/trait/Trait_Icon_18_Rapidfire.TFT_Set18.png'),
+                                                              ('Vanguard',	'Vanguard',	'img/trait/Trait_Icon_18_Vanguard.TFT_Set18.png'),
+                                                              ('Juggernaut',	'Juggernaut',	'img/trait/Trait_Icon_18_Juggernaut.TFT_Set18.png'),
+                                                              ('Primal',	'Primal',	'img/trait/Trait_Icon_18_Primal.TFT_Set18.png'),
+                                                              ('Blackthorn',	'Blackthorn',	'img/trait/Trait_Icon_18_Blackthorn.TFT_Set18.png'),
+                                                              ('Defender',	'Defender',	'img/trait/Trait_Icon_18_Defender.TFT_Set18.png'),
+                                                              ('Executioner',	'Executioner',	'img/trait/Trait_Icon_18_Executioner.TFT_Set18.png'),
+                                                              ('Spellweaver',	'Spellweaver',	'img/trait/Trait_Icon_18_Spellweaver.TFT_Set18.png'),
+                                                              ('Sprykin',	'Sprykin',	'img/trait/Trait_Icon_18_Sprykin.TFT_Set18.png'),
+                                                              ('Summoner',	'Summoner',	'img/trait/Trait_Icon_18_Summoner.TFT_Set18.png'),
+                                                              ('Thornmaiden',	'Thornmaiden',	'img/trait/Trait_Icon_18_Thornmaiden.TFT_Set18.png'),
+                                                              ('FloraFatalis',	'Flora Fatalis',	'img/trait/Trait_Icon_18_FloraFatalis.TFT_Set18.png'),
+                                                              ('Brawler',	'Brawler',	'img/trait/Trait_Icon_18_Brawler.TFT_Set18.png'),
+                                                              ('Ravager',	'Ravager',	'img/trait/Trait_Icon_18_Ravager.TFT_Set18.png'),
+                                                              ('Elderwood',	'Elderwood',	'img/trait/Trait_Icon_18_Elderwood.TFT_Set18.png'),
+                                                              ('Blossom',	'Blossom',	'img/trait/Trait_Icon_18_Blossom.TFT_Set18.png'),
+                                                              ('EmeraldAspect',	'Emerald Aspect',	'img/trait/Trait_Icon_18_EmeraldAspect.TFT_Set18.png'),
+                                                              ('Riftbeast',	'Riftbeast',	'img/trait/Trait_Icon_18_Riftbeast.TFT_Set18.png'),
+                                                              ('Rival',	'Rival',	'img/trait/Trait_Icon_18_Rival.TFT_Set18.png'),
+                                                              ('Fae',	'Fae',	'img/trait/Trait_Icon_18_Fae.TFT_Set18.png'),
+                                                              ('Attuned',	'Attuned',	'img/trait/Trait_Icon_18_Attuned.TFT_Set18.png'),
+                                                              ('Hunter',	'Hunter',	'img/trait/Trait_Icon_18_Hunter.TFT_Set18.png'),
+                                                              ('OldGrowth',	'Old Growth',	'img/trait/Trait_Icon_18_OldGrowth.TFT_Set18.png'),
+                                                              ('Monolith',	'Monolith',	'img/trait/Trait_Icon_18_Monolith.TFT_Set18.png'),
+                                                              ('Greenfather',	'Greenfather',	'img/trait/Trait_Icon_18_Greenfather.TFT_Set18.png'),
+                                                              ('Coven',	'Coven',	'img/trait/Trait_Icon_18_Coven.TFT_Set18.png'),
+                                                              ('BountySeeker',	'Bounty Seeker',	'img/trait/Trait_Icon_18_BountySeeker.TFT_Set18.png'),
+                                                              ('ApexPredator',	'Apex Predator',	'img/trait/Trait_Icon_18_ApexPredator.TFT_Set18.png'),
+                                                              ('Eclipse',	'Eclipse',	'img/trait/Trait_Icon_18_Eclipse.TFT_Set18.png'),
+                                                              ('Solar',	'Solar',	'img/trait/Trait_Icon_18_Solar.TFT_Set18.png');
+
+CREATE TABLE "public"."unit" (
+                                 "id" character varying(255) NOT NULL,
+                                 "name" character varying(255) NOT NULL,
+                                 "tier" integer,
+                                 "image_link" character varying(255),
+                                 CONSTRAINT "unit_pkey" PRIMARY KEY ("id")
+);
+
+INSERT INTO "public"."unit" ("id", "name", "tier", "image_link") VALUES
+                                                                     ('Nidalee',	'Nidalee',	4,	'img/champion/TFT18_Nidalee_splash_centered_0.TFT_Set18.png'),
+                                                                     ('Amumu',	'Amumu',	4,	'img/champion/TFT18_Amumu_splash_centered_17.TFT_Set18.png'),
+                                                                     ('Sentinel',	'Sentinel',	4,	'img/champion/DA_Sentinel18.TFT_Set18.png'),
+                                                                     ('Vi',	'Vi',	3,	'img/champion/TFT18_Vi_splash_centered_39.TFT_Set18.png'),
+                                                                     ('Fiddlesticks',	'Fiddlesticks',	3,	'img/champion/TFT18_Fiddlesticks_splash_centered_46.TFT_Set18.png'),
+                                                                     ('Murkwolf',	'Murkwolf',	2,	'img/champion/DA_Murkwolf18.TFT_Set18.png'),
+                                                                     ('Karma',	'Karma',	1,	'img/champion/TFT18_Karma_splash_centered_70.TFT_Set18.png'),
+                                                                     ('Krug',	'Krug',	3,	'img/champion/DA_Krug18.TFT_Set18.png'),
+                                                                     ('Taric',	'Taric',	5,	'img/champion/TFT18_Taric_splash_centered_1.TFT_Set18.png'),
+                                                                     ('Brambleback',	'Brambleback',	4,	'img/champion/DA_Brambleback18.TFT_Set18.png'),
+                                                                     ('Scuttlecrab',	'Scuttlecrab',	2,	'img/champion/DA_Scuttlecrab18.TFT_Set18.png'),
+                                                                     ('MasterYi',	'Master Yi',	3,	'img/champion/TFT18_MasterYi_splash_centered_52.TFT_Set18.png'),
+                                                                     ('Gnar',	'Gnar',	5,	'img/champion/TFT18_Gnar_splash_centered_0.TFT_Set18.png'),
+                                                                     ('Cinderling',	'Cinderling',	1,	'img/champion/DA_Cinderling18.TFT_Set18.png'),
+                                                                     ('Draven',	'Draven',	5,	'img/champion/TFT18_Draven_splash_centered_5.TFT_Set18.png'),
+                                                                     ('Akali',	'Akali',	1,	'img/champion/TFT18_Akali_splash_centered_2.TFT_Set18.png'),
+                                                                     ('Lux',	'Lux',	5,	'img/champion/TFT18_Lux_splash_centered_7.TFT_Set18.png'),
+                                                                     ('Gromp',	'Gromp',	2,	'img/champion/DA_Gromp18_AP.TFT_Set18.png'),
+                                                                     ('Pebbles',	'Pebbles',	1,	'img/champion/DA_18_Pebbles.TFT_Set18.png'),
+                                                                     ('Xayah',	'Xayah',	1,	'img/champion/TFT18_Xayah_splash_centered_8.TFT_Set18.png'),
+                                                                     ('Ornn',	'Ornn',	1,	'img/champion/TFT18_Ornn_splash_centered_2.TFT_Set18.png'),
+                                                                     ('Hecarim',	'Hecarim',	3,	'img/champion/TFT18_Hecarim_splash_centered_5.TFT_Set18.png'),
+                                                                     ('Ezreal',	'Ezreal',	4,	'img/champion/TFT18_Ezreal_splash_centered_1.TFT_Set18.png'),
+                                                                     ('Azir',	'Azir',	3,	'img/champion/TFT18_Azir_splash_centered_5.TFT_Set18.png'),
+                                                                     ('RekSai',	'Rek Sai',	1,	'img/champion/TFT18_RekSai_splash_centered_17.TFT_Set18.png'),
+                                                                     ('Veigar',	'Veigar',	1,	'img/champion/TFT18_Veigar_splash_centered_13.TFT_Set18.png'),
+                                                                     ('Maokai',	'Maokai',	5,	'img/champion/TFT18_Maokai_splash_centered_0.TFT_Set18.png'),
+                                                                     ('Malphite',	'Malphite',	4,	'img/champion/TFT18_Malphite_splash_centered_27.TFT_Set18.png'),
+                                                                     ('Yorick',	'Yorick',	1,	'img/champion/TFT18_Yorick_splash_centered_30.TFT_Set18.png'),
+                                                                     ('Yunara',	'Yunara',	2,	'img/champion/TFT18_Yunara_splash_centered_0.TFT_Set18.png'),
+                                                                     ('Sett',	'Sett',	4,	'img/champion/TFT18_Sett_splash_centered_38.TFT_Set18.png'),
+                                                                     ('Ahri',	'Ahri',	4,	'img/champion/TFT18_Ahri_splash_centered_27.TFT_Set18.png'),
+                                                                     ('Ashe',	'Ashe',	5,	'img/champion/TFT18_Ashe_splash_centered_76.TFT_Set18.png'),
+                                                                     ('Elise',	'Elise',	2,	'img/champion/TFT18_Elise_splash_centered_24.TFT_Set18.png'),
+                                                                     ('Caitlyn',	'Caitlyn',	2,	'img/champion/TFT18_Caitlyn_splash_centered_30.TFT_Set18.png'),
+                                                                     ('Cassiopeia',	'Cassiopeia',	3,	'img/champion/TFT18_Cassiopeia_splash_centered_18.TFT_Set18.png'),
+                                                                     ('Morgana',	'Morgana',	4,	'img/champion/TFT18_Morgana_splash_centered_26.TFT_Set18.png'),
+                                                                     ('Rakan',	'Rakan',	1,	'img/champion/TFT18_Rakan_splash_centered_9.TFT_Set18.png'),
+                                                                     ('Lillia',	'Lillia',	4,	'img/champion/TFT18_Lillia_splash_centered_28.TFT_Set18.png'),
+                                                                     ('Kobuko',	'Kobuko',	1,	'img/champion/DA_18_Kobuko.TFT_Set18.png'),
+                                                                     ('Teemo',	'Teemo',	2,	'img/champion/DA_18_Teemo.TFT_Set18.png'),
+                                                                     ('Rammus',	'Rammus',	3,	'img/champion/TFT18_Rammus_splash_centered_26.TFT_Set18.png'),
+                                                                     ('Tristana',	'Tristana',	3,	'img/champion/TFT18_Tristana_splash_centered_61.TFT_Set18.png'),
+                                                                     ('Sivir',	'Sivir',	4,	'img/champion/TFT18_Sivir_splash_centered_61.TFT_Set18.png'),
+                                                                     ('Varus',	'Varus',	1,	'img/champion/TFT18_Varus_splash_centered_9.TFT_Set18.png'),
+                                                                     ('Kennen',	'Kennen',	5,	'img/champion/TFT18_Kennen_splash_centered_8.TFT_Set18.png'),
+                                                                     ('Aphelios',	'Aphelios',	4,	'img/champion/TFT18_Aphelios_splash_centered_0.TFT_Set18.png'),
+                                                                     ('Diana',	'Diana',	3,	'img/champion/TFT18_Diana_splash_centered_0.TFT_Set18.png'),
+                                                                     ('Alune',	'Alune',	5,	'img/champion/DA_18_Alune.TFT_Set18.png'),
+                                                                     ('Leona',	'Leona',	1,	'img/champion/TFT18_Leona_splash_centered_10.TFT_Set18.png'),
+                                                                     ('Kayle',	'Kayle',	2,	'img/champion/TFT18_Kayle_splash_centered_42.TFT_Set18.png'),
+                                                                     ('Sejuani',	'Sejuani',	2,	'img/champion/TFT18_Sejuani_splash_centered_26.TFT_Set18.png'),
+                                                                     ('KhaZix',	'Kha Zix',	3,	'img/champion/TFT18_KhaZix_splash_centered_0.TFT_Set18.png'),
+                                                                     ('Rengar',	'Rengar',	3,	'img/champion/TFT18_Rengar_splash_centered_0.TFT_Set18.png'),
+                                                                     ('KogMaw',	'Kog''Maw',	3,	'img/champion/TFT18_KogMaw_splash_centered_3.TFT_Set18.png'),
+                                                                     ('Zyra',	'Zyra',	4,	'img/champion/TFT18_Zyra_splash_centered_0.TFT_Set18.png'),
+                                                                     ('Soraka',	'Soraka',	4,	'img/champion/TFT18_Soraka_splash_centered_53.TFT_Set18.png'),
+                                                                     ('Ivern',	'Ivern',	5,	'img/champion/TFT18_Ivern_splash_centered_0.TFT_Set18.png'),
+                                                                     ('Alistar',	'Alistar',	2,	'img/champion/TFT18_Alistar_splash_centered_40.TFT_Set18.png'),
+                                                                     ('ElderDragon',	'Elder Dragon',	5,	'img/champion/DA_18_ElderDragon.TFT_Set18.png'),
+                                                                     ('LeBlanc',	'Le Blanc',	2,	'img/champion/TFT18_Leblanc_splash_centered_5.TFT_Set18.png'),
+                                                                     ('Shen',	'Shen',	2,	'img/champion/TFT18_Shen_splash_centered_16.TFT_Set18.png'),
+                                                                     ('Warwick',	'Warwick',	2,	'img/champion/TFT18_Warwick_splash_centered_35.TFT_Set18.png'),
+                                                                     ('Camille',	'Camille',	1,	'img/champion/TFT18_Camille_splash_centered_2.TFT_Set18.png'),
+                                                                     ('LuxBlackthorn',	'Lux (Blackthorn)',	5,	'img/champion/TFT18_Lux_splash_centered_7.TFT_Set18.png'),
+                                                                     ('LuxBlossom',	'Lux (Blossom)',	5,	'img/champion/TFT18_Lux_splash_centered_7.TFT_Set18.png'),
+                                                                     ('LuxCoven',	'Lux (Coven)',	5,	'img/champion/TFT18_Lux_splash_centered_7.TFT_Set18.png'),
+                                                                     ('LuxElderwood',	'Lux (Elderwood)',	5,	'img/champion/TFT18_Lux_splash_centered_7.TFT_Set18.png'),
+                                                                     ('LuxFae',	'Lux (Fae)',	5,	'img/champion/TFT18_Lux_splash_centered_7.TFT_Set18.png'),
+                                                                     ('LuxInferno',	'Lux (Inferno)',	5,	'img/champion/TFT18_Lux_splash_centered_7.TFT_Set18.png'),
+                                                                     ('LuxLunar',	'Lux (Lunar)',	5,	'img/champion/TFT18_Lux_splash_centered_7.TFT_Set18.png'),
+                                                                     ('LuxPrimal',	'Lux (Primal)',	5,	'img/champion/TFT18_Lux_splash_centered_7.TFT_Set18.png'),
+                                                                     ('LuxSolar',	'Lux (Solar)',	5,	'img/champion/TFT18_Lux_splash_centered_7.TFT_Set18.png'),
+                                                                     ('MamaBeak',	'Mama Beak',	3,	'img/champion/DA_CrimsonRaptor18.TFT_Set18.png');
+
+CREATE TABLE "public"."unit_trait" (
+                                       "unit_id" character varying(255) NOT NULL,
+                                       "trait_id" character varying(255) NOT NULL
+);
+
+INSERT INTO "public"."unit_trait" ("unit_id", "trait_id") VALUES
+                                                              ('Nidalee', 'Primal'),
+                                                              ('Nidalee', 'Adaptor'),
+                                                              ('Amumu', 'Inferno'),
+                                                              ('Amumu', 'Juggernaut'),
+                                                              ('Sentinel', 'Riftbeast'),
+                                                              ('Sentinel', 'Vanguard'),
+                                                              ('Sentinel', 'Invoker'),
+                                                              ('Vi', 'Primal'),
+                                                              ('Vi', 'Juggernaut'),
+                                                              ('Fiddlesticks', 'FloraFatalis'),
+                                                              ('Fiddlesticks', 'Defender'),
+                                                              ('Fiddlesticks', 'Spellweaver'),
+                                                              ('Murkwolf', 'Riftbeast'),
+                                                              ('Murkwolf', 'Ravager'),
+                                                              ('Karma', 'Blossom'),
+                                                              ('Karma', 'Spellweaver'),
+                                                              ('Krug', 'Riftbeast'),
+                                                              ('Krug', 'Brawler'),
+                                                              ('Taric', 'EmeraldAspect'),
+                                                              ('Taric', 'Vanguard'),
+                                                              ('Brambleback', 'Riftbeast'),
+                                                              ('Brambleback', 'Ravager'),
+                                                              ('Scuttlecrab', 'Riftbeast'),
+                                                              ('Scuttlecrab', 'Juggernaut'),
+                                                              ('MasterYi', 'Blossom'),
+                                                              ('MasterYi', 'Adaptor'),
+                                                              ('Gnar', 'Elderwood'),
+                                                              ('Gnar', 'Sprykin'),
+                                                              ('Gnar', 'Brawler'),
+                                                              ('Cinderling', 'Riftbeast'),
+                                                              ('Cinderling', 'Hunter'),
+                                                              ('Draven', 'BountySeeker'),
+                                                              ('Akali', 'Inferno'),
+                                                              ('Akali', 'Adaptor'),
+                                                              ('Akali', 'Ravager'),
+                                                              ('Gromp', 'Riftbeast'),
+                                                              ('Gromp', 'Adaptor'),
+                                                              ('Pebbles', 'Riftbeast'),
+                                                              ('Pebbles', 'Invoker'),
+                                                              ('Xayah', 'Elderwood'),
+                                                              ('Xayah', 'Fae'),
+                                                              ('Xayah', 'Rapidfire'),
+                                                              ('Ornn', 'Elderwood'),
+                                                              ('Ornn', 'Defender'),
+                                                              ('Hecarim', 'Elderwood'),
+                                                              ('Hecarim', 'Vanguard'),
+                                                              ('Ezreal', 'Elderwood'),
+                                                              ('Ezreal', 'Executioner'),
+                                                              ('Azir', 'Blackthorn'),
+                                                              ('Azir', 'Executioner'),
+                                                              ('Azir', 'Summoner'),
+                                                              ('RekSai', 'Blackthorn'),
+                                                              ('RekSai', 'Brawler'),
+                                                              ('Veigar', 'Blackthorn'),
+                                                              ('Veigar', 'Sprykin'),
+                                                              ('Veigar', 'Spellweaver'),
+                                                              ('Maokai', 'OldGrowth'),
+                                                              ('Maokai', 'Juggernaut'),
+                                                              ('Malphite', 'Blackthorn'),
+                                                              ('Malphite', 'Monolith'),
+                                                              ('Yorick', 'Blossom'),
+                                                              ('Yorick', 'Juggernaut'),
+                                                              ('Yorick', 'Summoner'),
+                                                              ('Yunara', 'Blossom'),
+                                                              ('Yunara', 'Executioner'),
+                                                              ('Sett', 'Blossom'),
+                                                              ('Sett', 'Brawler'),
+                                                              ('Ahri', 'Blossom'),
+                                                              ('Ahri', 'Spellweaver'),
+                                                              ('Ashe', 'Blossom'),
+                                                              ('Ashe', 'Hunter'),
+                                                              ('Elise', 'Coven'),
+                                                              ('Elise', 'Vanguard'),
+                                                              ('Caitlyn', 'Coven'),
+                                                              ('Caitlyn', 'Hunter'),
+                                                              ('Cassiopeia', 'Coven'),
+                                                              ('Cassiopeia', 'Spellweaver'),
+                                                              ('Morgana', 'Coven'),
+                                                              ('Morgana', 'Invoker'),
+                                                              ('Rakan', 'Fae'),
+                                                              ('Rakan', 'Juggernaut'),
+                                                              ('Rakan', 'Vanguard'),
+                                                              ('Lillia', 'Fae'),
+                                                              ('Lillia', 'Defender'),
+                                                              ('Kobuko', 'Sprykin'),
+                                                              ('Kobuko', 'Brawler'),
+                                                              ('Teemo', 'Sprykin'),
+                                                              ('Teemo', 'Invoker'),
+                                                              ('Rammus', 'Sprykin'),
+                                                              ('Rammus', 'Defender'),
+                                                              ('Tristana', 'Fae'),
+                                                              ('Tristana', 'Sprykin'),
+                                                              ('Tristana', 'Hunter'),
+                                                              ('Sivir', 'Primal'),
+                                                              ('Sivir', 'Hunter'),
+                                                              ('Varus', 'Inferno'),
+                                                              ('Varus', 'Rapidfire'),
+                                                              ('Kennen', 'Inferno'),
+                                                              ('Kennen', 'Executioner'),
+                                                              ('Aphelios', 'Lunar'),
+                                                              ('Aphelios', 'Rapidfire'),
+                                                              ('Diana', 'Lunar'),
+                                                              ('Diana', 'Ravager'),
+                                                              ('Diana', 'Vanguard'),
+                                                              ('Alune', 'Attuned'),
+                                                              ('Alune', 'Lunar'),
+                                                              ('Alune', 'Spellweaver'),
+                                                              ('Leona', 'Solar'),
+                                                              ('Leona', 'Defender'),
+                                                              ('LuxBlackthorn', 'Blackthorn'),
+                                                              ('LuxBlossom', 'Blossom'),
+                                                              ('LuxCoven', 'Coven'),
+                                                              ('LuxElderwood', 'Elderwood'),
+                                                              ('LuxFae', 'Fae'),
+                                                              ('LuxInferno', 'Inferno'),
+                                                              ('LuxLunar', 'Lunar'),
+                                                              ('LuxPrimal', 'Primal'),
+                                                              ('LuxSolar', 'Solar');
+
+
+ALTER TABLE ONLY "public"."build" ADD CONSTRAINT "fk_build_comp" FOREIGN KEY (comp_id) REFERENCES "public"."comp"(id);
+ALTER TABLE ONLY "public"."build" ADD CONSTRAINT "fk_build_unit" FOREIGN KEY (unit_id) REFERENCES "public"."unit"(id);
+ALTER TABLE ONLY "public"."build" ADD CONSTRAINT "fk_item1_build" FOREIGN KEY (item1_id) REFERENCES "public"."item"(id);
+ALTER TABLE ONLY "public"."build" ADD CONSTRAINT "fk_item2_build" FOREIGN KEY (item2_id) REFERENCES "public"."item"(id);
+ALTER TABLE ONLY "public"."build" ADD CONSTRAINT "fk_item3_build" FOREIGN KEY (item3_id) REFERENCES "public"."item"(id);
+
+ALTER TABLE ONLY "public"."item" ADD CONSTRAINT "fk_item_component1" FOREIGN KEY (component1_id) REFERENCES "public"."item"(id);
+ALTER TABLE ONLY "public"."item" ADD CONSTRAINT "fk_item_component2" FOREIGN KEY (component2_id) REFERENCES "public"."item"(id);
+
+ALTER TABLE ONLY "public"."unit_trait" ADD CONSTRAINT "fk_unit_trait_trait" FOREIGN KEY (trait_id) REFERENCES "public"."trait"(id);
+ALTER TABLE ONLY "public"."unit_trait" ADD CONSTRAINT "fk_unit_trait_unit" FOREIGN KEY (unit_id) REFERENCES "public"."unit"(id);

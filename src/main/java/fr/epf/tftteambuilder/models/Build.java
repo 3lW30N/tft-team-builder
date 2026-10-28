@@ -10,11 +10,15 @@ public class Build {
     @Column(name = "id", nullable = false)
     private Integer id;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "comp_id")
+    private Comp comp;
+
     @Column(name = "avg_placement")
     private Double avgPlacement;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @Column(name="unit_id")
+    @JoinColumn(name = "unit_id")
     private Unit unit;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -80,4 +84,19 @@ public class Build {
         this.stars = stars;
     }
 
+    public Comp getComp() {
+        return comp;
+    }
+
+    public void setComp(Comp comp) {
+        this.comp = comp;
+    }
+
+    public Unit getUnit() {
+        return unit;
+    }
+
+    public void setUnit(Unit unit) {
+        this.unit = unit;
+    }
 }

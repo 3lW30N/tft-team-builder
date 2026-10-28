@@ -1,7 +1,9 @@
 package fr.epf.tftteambuilder.repositories;
 
-import fr.epf.tftteambuilder.models.Build;
+import fr.epf.tftteambuilder.models.Comp;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface CompRepository extends JpaRepository<Build, Long> {
+import java.util.List;
+
+public interface CompRepository extends JpaRepository<Comp, Integer> {
 }
