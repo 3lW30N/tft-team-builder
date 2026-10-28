@@ -14,7 +14,7 @@ public class ItemService {
         this.itemRepository = itemRepository;
     }
 
-    private Optional<Item> craft(Item component1, Item component2) {
+    public Optional<Item> getCraftFrom(Item component1, Item component2) {
         return Optional.ofNullable(itemRepository.findCraft(component1.getId(), component2.getId()));
     }
 
@@ -35,7 +35,7 @@ public class ItemService {
     private void findCraftCombinations(List<Item> remainingComponents, List<Item> currentCombination, List<List<Item>> results) {
         for (int i = 0; i < remainingComponents.size() - 1; i++) {
             for (int j = i + 1; j < remainingComponents.size(); j++) {
-                Optional<Item> craftedItem = craft(remainingComponents.get(i), remainingComponents.get(j));
+                Optional<Item> craftedItem = getCraftFrom(remainingComponents.get(i), remainingComponents.get(j));
 
                 if (craftedItem.isEmpty()) {
                     continue;
@@ -45,12 +45,20 @@ public class ItemService {
                 nextCombination.add(craftedItem.get());
                 results.add(Collections.unmodifiableList(nextCombination));
 
-                List<Item> nextRemainingComponents = new ArrayList<>(remainingComponents);
-                nextRemainingComponents.remove(j);
-                nextRemainingComponents.remove(i);
+                List<Item> nextRemainingComponents = removeUsedComponents(remainingComponents, i, j);
                 findCraftCombinations(nextRemainingComponents, nextCombination, results);
             }
         }
+    }
+
+    private List<Item> removeUsedComponents(List<Item> components, int firstIndex, int secondIndex) {
+        List<Item> nextRemainingComponents = new ArrayList<>(components);
+        int lowerIndex = Math.min(firstIndex, secondIndex);
+        int higherIndex = Math.max(firstIndex, secondIndex);
+
+        nextRemainingComponents.remove(higherIndex);
+        nextRemainingComponents.remove(lowerIndex);
+        return nextRemainingComponents;
     }
 
 
