@@ -16,7 +16,7 @@ To stop and remove the database, run the following command:
 docker-compose down -v
 ```
 
-It also contains adminer, accessible on port 8080.
+It also contains adminer, accessible on port 8081.
 
 ### API
 Start the API server with Maven:
