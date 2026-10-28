@@ -1,0 +1,65 @@
+name: Test then Push Docker Image
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+      - feat/gh-actions
+  pull_request:
+
+jobs:
+  test-backend:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-java@v6
+        with:
+          java-version: '25'
+          distribution: temurin
+          cache: maven
+      - name: Run backend tests
+        run: |
+          mvn clean verify
+          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+            -Dsonar.projectKey=3lW30N_tft-team-builder \
+            -Dsonar.organization=3lw30n \
+            -Dsonar.host.url=https://sonarcloud.io \
+            -Dsonar.token=${{ secrets.SONAR_TOKEN }} \
+            --file ./pom.xml
+
+  build-and-push-docker-image:
+    needs: test-backend
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set Docker tag
+        id: docker_tag
+        shell: bash
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          if [ "$BRANCH" = "feat/gh-actions" ]; then
+            BRANCH="test"
+          fi
+          BRANCH="${BRANCH//\//-}"
+          echo "tag=${BRANCH}-v1.0.${GITHUB_RUN_NUMBER}" >> "$GITHUB_OUTPUT"
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_TOKEN }}
+
+      - name: Build image and push backend
+        uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ secrets.DOCKER_USERNAME }}/tft-team-builder-backend:${{ steps.docker_tag.outputs.tag }}

@@ -1,18 +1,65 @@
 package fr.epf.tftteambuilder.services;
 
 import fr.epf.tftteambuilder.models.Item;
+import fr.epf.tftteambuilder.repositories.ItemRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class ItemService {
+    private final ItemRepository itemRepository;
 
-    // TODO
-    // Gives the item crafted from a combination of two components
-    public Optional<Item> getCraft(Item component1, Item component2) {
-        return null;
+    public ItemService(ItemRepository itemRepository) {
+        this.itemRepository = itemRepository;
     }
 
-    // TODO
+    public Optional<Item> getCraftFrom(Item component1, Item component2) {
+        return Optional.ofNullable(itemRepository.findCraft(component1.getId(), component2.getId()));
+    }
+
+    /**
+     * Returns every possible set of crafts that can be made from the supplied
+     * components. A component can only be used once in a given combination.
+     */
+    public List<List<Item>> findCraftCombinations(List<Item> components) {
+        if (components == null || components.size() < 2) {
+            return List.of();
+        }
+
+        List<List<Item>> results = new ArrayList<>();
+        findCraftCombinations(new ArrayList<>(components), new ArrayList<>(), results);
+        return results;
+    }
+    // Backtracking
+    private void findCraftCombinations(List<Item> remainingComponents, List<Item> currentCombination, List<List<Item>> results) {
+        for (int i = 0; i < remainingComponents.size() - 1; i++) {
+            for (int j = i + 1; j < remainingComponents.size(); j++) {
+                Optional<Item> craftedItem = getCraftFrom(remainingComponents.get(i), remainingComponents.get(j));
+
+                if (craftedItem.isEmpty()) {
+                    continue;
+                }
+
+                List<Item> nextCombination = new ArrayList<>(currentCombination);
+                nextCombination.add(craftedItem.get());
+                results.add(Collections.unmodifiableList(nextCombination));
+
+                List<Item> nextRemainingComponents = removeUsedComponents(remainingComponents, i, j);
+                findCraftCombinations(nextRemainingComponents, nextCombination, results);
+            }
+        }
+    }
+
+    private List<Item> removeUsedComponents(List<Item> components, int firstIndex, int secondIndex) {
+        List<Item> nextRemainingComponents = new ArrayList<>(components);
+        int lowerIndex = Math.min(firstIndex, secondIndex);
+        int higherIndex = Math.max(firstIndex, secondIndex);
+
+        nextRemainingComponents.remove(higherIndex);
+        nextRemainingComponents.remove(lowerIndex);
+        return nextRemainingComponents;
+    }
+
+
 }
