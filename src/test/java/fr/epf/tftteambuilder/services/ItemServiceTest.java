@@ -11,7 +11,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.util.Optional;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
@@ -41,9 +40,10 @@ class ItemServiceTest {
         adaptiveHelm.setComponent2(tearOfTheGoddess);
 
         // When
+        when(itemRepository.findCraft("NegatronCloak", "TearOfTheGoddess")).thenReturn(adaptiveHelm);
         Optional<Item> craft = itemService.getCraft(negatronCloak, tearOfTheGoddess);
 
         // Then
-        assertTrue(craft.equals(adaptiveHelm));
+        assertThat(craft).contains(adaptiveHelm);
     }
 }

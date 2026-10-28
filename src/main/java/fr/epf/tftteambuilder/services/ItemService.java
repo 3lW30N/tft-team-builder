@@ -14,7 +14,8 @@ public class ItemService {
         this.itemRepository = itemRepository;
     }
 
-    private Optional<Item> craft(Item component1, Item component2) {
+    public Optional<Item> getCraft(Item component1, Item component2) {
+        if (component1 == null || component2 == null) return Optional.empty();
         return Optional.ofNullable(itemRepository.findCraft(component1.getId(), component2.getId()));
     }
 
@@ -35,7 +36,7 @@ public class ItemService {
     private void findCraftCombinations(List<Item> remainingComponents, List<Item> currentCombination, List<List<Item>> results) {
         for (int i = 0; i < remainingComponents.size() - 1; i++) {
             for (int j = i + 1; j < remainingComponents.size(); j++) {
-                Optional<Item> craftedItem = craft(remainingComponents.get(i), remainingComponents.get(j));
+                Optional<Item> craftedItem = getCraft(remainingComponents.get(i), remainingComponents.get(j));
 
                 if (craftedItem.isEmpty()) {
                     continue;
@@ -60,7 +61,7 @@ public class ItemService {
 
         // Quantité de chaque item recherché dans la composition.
         for (Item item : compositionItems) {
-            String name = item.getName();
+            String name = item.getId();
             dictionary.put(name, dictionary.getOrDefault(name, 0) + 1);
         }
 
@@ -72,7 +73,7 @@ public class ItemService {
             int score = 0;
 
             for (Item item : possibleItemCombinaison) {
-                String name = item.getName();
+                String name = item.getId();
                 int remaining = remainingItems.getOrDefault(name, 0);
 
                 if (remaining > 0) {
@@ -86,4 +87,5 @@ public class ItemService {
 
         return scores;
     }
+}
 
