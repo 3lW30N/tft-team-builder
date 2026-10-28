@@ -1,4 +1,4 @@
-name: CI
+name: Test then Push Docker Image
 
 on:
   push:
@@ -35,7 +35,6 @@ jobs:
 
   build-and-push-docker-image:
     needs: test-backend
-    if: github.event_name == 'push'
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
@@ -51,4 +50,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/tft-team-builder-backend:latest
+          tags: |
+            ${{ secrets.DOCKER_USERNAME }}/tft-team-builder-backend:${{ github.ref_name }}v1.0.${{ github.run_number }}
