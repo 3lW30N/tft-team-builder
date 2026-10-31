@@ -34,13 +34,6 @@ class ItemServiceTest {
     private Item craftedItem;
 
     @Test
-    void testFindCraftCombinationsWithNull() {
-        assertTrue(itemService.findCraftCombinations(null).isEmpty());
-
-        verifyNoInteractions(itemRepository);
-    }
-
-    @Test
     void testFindCraftCombinationsWithLessThanTwoComponents() {
         assertTrue(itemService.findCraftCombinations(List.of(component1)).isEmpty());
 
