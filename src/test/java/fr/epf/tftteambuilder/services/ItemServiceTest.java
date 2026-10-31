@@ -39,11 +39,15 @@ class ItemServiceTest {
         adaptiveHelm.setComponent1(negatronCloak);
         adaptiveHelm.setComponent2(tearOfTheGoddess);
 
+        when(itemRepository.findCraft("NegatronCloak", "TearOfTheGoddess"))
+                .thenReturn(adaptiveHelm);
+
         // When
         when(itemRepository.findCraft("NegatronCloak", "TearOfTheGoddess")).thenReturn(adaptiveHelm);
         Optional<Item> craft = itemService.getCraft(negatronCloak, tearOfTheGoddess);
 
         // Then
         assertThat(craft).contains(adaptiveHelm);
+
     }
 }
