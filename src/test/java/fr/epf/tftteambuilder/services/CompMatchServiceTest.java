@@ -12,6 +12,8 @@ import fr.epf.tftteambuilder.repositories.CompRepository;
 import fr.epf.tftteambuilder.repositories.UnitTraitRepository;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -86,6 +88,51 @@ class CompMatchServiceTest {
         CompMatchDto match = service.rank(new MatchRequest(
                 List.of(new MatchRequest.BoardUnit("Carry", 3)), List.of("Sword"))).getFirst();
         assertThat(match.score()).isEqualTo(100);
+    }
+
+    @Test
+    void handlesNullInputsUnmatchedUnitsAndEmptyComps() {
+        Comp unmatched = comp(2, build(unit("Carry")));
+        Comp empty = comp(1);
+        when(comps.findAll()).thenReturn(List.of(unmatched, empty));
+        when(traits.findAll()).thenReturn(List.of());
+
+        List<CompMatchDto> matches = service.rank(new MatchRequest(null, null));
+
+        assertThat(matches).extracting(match -> match.comp().id()).containsExactly(1, 2);
+        assertThat(matches).extracting(CompMatchDto::score).containsExactly(0, 0);
+        assertThat(matches.get(1).matchedUnits()).isEmpty();
+        assertThat(matches.get(1).missingUnits()).containsExactly("Carry");
+        assertThat(matches.get(1).reasons()).isEmpty();
+    }
+
+    @Test
+    void normalizesBoardStarsAndIgnoresInvalidItemIds() {
+        Unit carry = unit("Carry");
+        Unit support = unit("Support");
+        Comp comp = comp(1, build(carry, item("Sword")), build(support));
+        when(comps.findAll()).thenReturn(List.of(comp));
+        when(traits.findAll()).thenReturn(List.of(relation(carry, "Lunar")));
+
+        CompMatchDto match = service.rank(new MatchRequest(
+                new ArrayList<>(Arrays.asList(
+                        new MatchRequest.BoardUnit("Carry", 0),
+                        new MatchRequest.BoardUnit("Carry", 9),
+                        new MatchRequest.BoardUnit(null, 2),
+                        null
+                )),
+                Arrays.asList(null, " ", "Unknown")
+        )).getFirst();
+
+        assertThat(match.matchedUnits()).containsExactly("Carry");
+        assertThat(match.missingUnits()).containsExactly("Support");
+        assertThat(match.score()).isEqualTo(67);
+        assertThat(match.reasons()).containsExactly(
+                "You have 1/2 of the comp's units",
+                "Shares 1 carry",
+                "Upgraded units add 2 points",
+                "Strong trait overlap"
+        );
     }
 
     private int scoreFor(List<MatchRequest.BoardUnit> board) {

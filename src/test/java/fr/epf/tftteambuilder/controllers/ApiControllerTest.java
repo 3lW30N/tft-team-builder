@@ -4,9 +4,12 @@ import fr.epf.tftteambuilder.dto.CompDto;
 import fr.epf.tftteambuilder.dto.CompMatchDto;
 import fr.epf.tftteambuilder.dto.MatchRequest;
 import fr.epf.tftteambuilder.models.Comp;
+import fr.epf.tftteambuilder.models.Trait;
 import fr.epf.tftteambuilder.models.Unit;
+import fr.epf.tftteambuilder.models.UnitTrait;
 import fr.epf.tftteambuilder.repositories.CompRepository;
 import fr.epf.tftteambuilder.repositories.UnitRepository;
+import fr.epf.tftteambuilder.repositories.UnitTraitRepository;
 import fr.epf.tftteambuilder.services.CompMatchService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 
-@WebMvcTest(controllers = {CompController.class, UnitController.class})
+@WebMvcTest(controllers = {CompController.class, UnitController.class, UnitTraitController.class})
 class ApiControllerTest {
     @Autowired
     private MockMvc mockMvc;
@@ -38,6 +41,9 @@ class ApiControllerTest {
 
     @MockitoBean
     private CompMatchService compMatchService;
+
+    @MockitoBean
+    private UnitTraitRepository unitTraitRepository;
 
     @Test
     void getAllCompsReturnsCompositionDtos() throws Exception {
@@ -89,6 +95,41 @@ class ApiControllerTest {
     }
 
     @Test
+    void getAllUnitTraitsGroupsTraitIdsByUnit() throws Exception {
+        when(unitTraitRepository.findAll()).thenReturn(List.of(
+                relation(unit("Ahri"), trait("Arcana")),
+                relation(unit("Ahri"), trait("Sorcerer")),
+                relation(unit("Syndra"), trait("Sorcerer"))
+        ));
+
+        mockMvc.perform(get("/traits/all"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].unitId").value("Ahri"))
+                .andExpect(jsonPath("$[0].traitIds[0]").value("Arcana"))
+                .andExpect(jsonPath("$[0].traitIds[1]").value("Sorcerer"))
+                .andExpect(jsonPath("$[1].unitId").value("Syndra"))
+                .andExpect(jsonPath("$[1].traitIds[0]").value("Sorcerer"));
+    }
+
+    @Test
+    void getTraitsByUnitReturnsTraitList() throws Exception {
+        when(unitTraitRepository.findTraitsByUnitId("Ahri")).thenReturn(List.of(trait("Arcana")));
+
+        mockMvc.perform(get("/traits/{unitId}", "Ahri"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].id").value("Arcana"));
+    }
+
+    @Test
+    void getUnitsByTraitReturnsUnitList() throws Exception {
+        when(unitTraitRepository.findUnitsByTraitId("Arcana")).thenReturn(List.of(unit("Ahri")));
+
+        mockMvc.perform(get("/traits/units/{traitId}", "Arcana"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].id").value("Ahri"));
+    }
+
+    @Test
     void matchAcceptsBoardAndReturnsRankedCompositionJson() throws Exception {
         CompDto comp = new CompDto(7, "Arcana", 3.2, 0.15, 2.0, "Level 8", List.of());
         CompMatchDto match = new CompMatchDto(
@@ -134,5 +175,26 @@ class ApiControllerTest {
         comp.setName("Arcana");
         comp.setBuilds(List.of());
         return comp;
+    }
+
+    private static Unit unit(String id) {
+        Unit unit = new Unit();
+        unit.setId(id);
+        unit.setName(id);
+        return unit;
+    }
+
+    private static Trait trait(String id) {
+        Trait trait = new Trait();
+        trait.setId(id);
+        trait.setName(id);
+        return trait;
+    }
+
+    private static UnitTrait relation(Unit unit, Trait trait) {
+        UnitTrait relation = new UnitTrait();
+        relation.setUnit(unit);
+        relation.setTrait(trait);
+        return relation;
     }
 }
