@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
-
 @RequestMapping("unit")
 @RestController
 public class UnitController {

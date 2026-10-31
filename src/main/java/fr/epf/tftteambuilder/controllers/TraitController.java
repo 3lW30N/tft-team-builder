@@ -32,11 +32,6 @@ public class TraitController {
         return traitRepository.findById(id).orElse(null);
     }
 
-    @GetMapping("/{unitId}")
-    public List<Trait> getTraitsByUnit(@PathVariable String unitId) {
-        return unitTraitRepository.findTraitsByUnitId(unitId);
-    }
-
     @GetMapping("/units/{traitId}")
     public List<Unit> getUnitsOfTrait(@PathVariable String traitId) {
         return unitTraitRepository.findUnitsByTraitId(traitId);

@@ -14,6 +14,46 @@ public class ItemService {
         this.itemRepository = itemRepository;
     }
 
+    public Optional<Item> getCraft(Item component1, Item component2) {
+        if (component1 == null || component2 == null) return Optional.empty();
+        return Optional.ofNullable(itemRepository.findCraft(component1.getId(), component2.getId()));
+    }
+
+    public List<Integer> similarityScore(
+            List<List<Item>> craftCombinations,
+            List<Item> compositionItems)
+    {
+        Map<String, Integer> dictionary = new HashMap<>();
+
+        // Quantité de chaque item recherché dans la composition.
+        for (Item item : compositionItems) {
+            String name = item.getId();
+            dictionary.put(name, dictionary.getOrDefault(name, 0) + 1);
+        }
+
+        List<Integer> scores = new ArrayList<>();
+
+        for (List<Item> possibleItemCombinaison : craftCombinations) {
+            // Chaque combinaison dispose des mêmes quantités au départ.
+            Map<String, Integer> remainingItems = new HashMap<>(dictionary);
+            int score = 0;
+
+            for (Item item : possibleItemCombinaison) {
+                String name = item.getId();
+                int remaining = remainingItems.getOrDefault(name, 0);
+
+                if (remaining > 0) {
+                    remainingItems.put(name, remaining - 1);
+                    score++;
+                }
+            }
+
+            scores.add(score);
+        }
+
+        return scores;
+    }
+  
     public Optional<Item> getCraftFrom(Item component1, Item component2) {
         return Optional.ofNullable(itemRepository.findCraft(component1.getId(), component2.getId()));
     }

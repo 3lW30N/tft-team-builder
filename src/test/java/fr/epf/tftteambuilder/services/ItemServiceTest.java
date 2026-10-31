@@ -8,11 +8,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.List;
 import java.util.Optional;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.when;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class ItemServiceTest {
@@ -44,10 +44,81 @@ class ItemServiceTest {
                 .thenReturn(adaptiveHelm);
 
         // When
-        Optional<Item> craft = itemService.getCraftFrom(negatronCloak, tearOfTheGoddess);
+        when(itemRepository.findCraft("NegatronCloak", "TearOfTheGoddess")).thenReturn(adaptiveHelm);
+        Optional<Item> craft = itemService.getCraft(negatronCloak, tearOfTheGoddess);
 
         // Then
-        assertTrue(craft.isPresent());
-        assertThat(craft).isEqualTo(Optional.of(adaptiveHelm));
+        assertThat(craft).contains(adaptiveHelm);
+
+    }
+
+    @Test
+    void getCraftReturnsEmptyForNullComponentsOrUnknownCraft() {
+        assertThat(itemService.getCraft(null, component("Tear"))).isEmpty();
+        assertThat(itemService.getCraft(component("Sword"), null)).isEmpty();
+
+        when(itemRepository.findCraft("Sword", "Tear")).thenReturn(null);
+        assertThat(itemService.getCraft(component("Sword"), component("Tear"))).isEmpty();
+
+        verify(itemRepository).findCraft("Sword", "Tear");
+    }
+
+    @Test
+    void getCraftFromLooksUpCraftUsingComponentIds() {
+        Item sword = component("Sword");
+        Item tear = component("Tear");
+        Item crafted = component("BlueBuff");
+        when(itemRepository.findCraft("Sword", "Tear")).thenReturn(crafted);
+
+        assertThat(itemService.getCraftFrom(sword, tear)).contains(crafted);
+    }
+
+    @Test
+    void similarityScoreCountsDuplicateItemsOnlyUpToOwnedQuantity() {
+        Item sword = component("Sword");
+        Item bow = component("Bow");
+        Item tear = component("Tear");
+
+        assertThat(itemService.similarityScore(
+                List.of(List.of(sword, sword, bow), List.of(tear, bow), List.of()),
+                List.of(sword, bow, sword)
+        )).containsExactly(3, 1, 0);
+    }
+
+    @Test
+    void findCraftCombinationsHandlesNullAndEmptyComponents() {
+        assertThat(itemService.findCraftCombinations(null)).isEmpty();
+        assertThat(itemService.findCraftCombinations(List.of())).isEmpty();
+        verifyNoInteractions(itemRepository);
+    }
+
+    @Test
+    void findCraftCombinationsRecursivelyCraftsWithoutReusingComponents() {
+        Item a = component("A");
+        Item b = component("B");
+        Item c = component("C");
+        Item d = component("D");
+        Item ab = component("AB");
+        Item cd = component("CD");
+        when(itemRepository.findCraft("A", "B")).thenReturn(ab);
+        when(itemRepository.findCraft("C", "D")).thenReturn(cd);
+
+        List<List<Item>> combinations = itemService.findCraftCombinations(List.of(a, b, c, d));
+
+        assertThat(combinations).containsExactly(
+                List.of(ab),
+                List.of(ab, cd),
+                List.of(cd),
+                List.of(cd, ab)
+        );
+        verify(itemRepository, never()).findCraft("AB", "C");
+        verify(itemRepository, never()).findCraft("CD", "A");
+    }
+
+    private static Item component(String id) {
+        Item item = new Item();
+        item.setId(id);
+        item.setName(id);
+        return item;
     }
 }

@@ -1,36 +1,31 @@
-# Dev setup
+# TFT Team Builder
 
+## Démarrage
 
-## Backend
+Prérequis : Docker Desktop, Node.js et IntelliJ IDEA.
 
-### Database
-To start and init database, run the following command:
+### Services Docker
+
+Depuis le dossier `tft-team-builder` :
 
 ```bash
-docker-compose up -d --build
+docker compose up --build
 ```
 
-To stop and remove the database, run the following command:
+Cette commande démarre les services définis dans `docker-compose.yaml`.
+
+### Backend
+
+Ouvre le projet `tft-team-builder` dans IntelliJ IDEA, puis lance `TftTeamBuilderApplication` avec le bouton vert **Run**.
+
+### Frontend
+
+Dans un terminal, depuis le dossier `frontend` :
 
 ```bash
-docker-compose down -v
-```
-
-It also contains adminer, accessible on port 8081.
-
-### API
-Start the API server with Maven:
-
-## Frontend
-Clone the frontend repository next to this one.
-
-https://github.com/3lW30N/tft-team-builder-frontend
-
-Install dependencies and start the frontend server:
-
-```bash
-cd tft-team-builder-frontend
-npm install
+npm i
 npm run build
 npm start
 ```
+
+Le site est disponible sur `http://localhost:4200`.

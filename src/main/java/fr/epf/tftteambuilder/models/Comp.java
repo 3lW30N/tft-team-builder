@@ -27,8 +27,7 @@ public class Comp {
     @Column(name = "levelling")
     private String levelling;
 
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "comp_id")
+    @OneToMany(mappedBy = "comp", fetch = FetchType.LAZY)
     private List<Build> builds;
 
     public Integer getId() {

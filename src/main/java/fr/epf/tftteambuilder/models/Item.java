@@ -66,5 +66,4 @@ public class Item {
     public void setComponent2(Item component2) {
         this.component2 = component2;
     }
-
 }
