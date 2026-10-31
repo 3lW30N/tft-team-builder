@@ -1,5 +1,6 @@
 HELP.md
 target/
+.m2-work/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -33,3 +34,8 @@ build/
 .vscode/
 
 .DS_Store
+.env
+scripts/venv/
+
+frontend/node_modules
+frontend/package-lock.json
